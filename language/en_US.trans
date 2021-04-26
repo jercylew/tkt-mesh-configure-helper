@@ -1,0 +1,547 @@
+﻿Global.LanguageName=English
+Global.Ok=Ok
+Global.Cancel=Cancel
+Global.Save=Save
+Global.Close=Close
+Global.Done=Done
+Global.Apply=Apply
+Global.Quit=Quit
+Global.Error=Error
+@Replace
+Global.CompanyName=${CompanyShortName}
+Global.ProductName=Lighting System
+Global.Exit=Exit
+Global.Add=Add
+Global.Edit=Edit
+Global.Remove=Remove
+Global.ExportToTemplate=Export To Template
+Global.ImportFromTemplate=Import From Template
+Global.Name=Name
+Global.Description=Description
+Global.NameTitle=Name:
+Global.DescriptionTitle=Description:
+
+Global.ShowFullScreen=Show Full Screen
+Global.ShowMaximized=Show Maximized
+Global.ShowNormal=Show Normal
+Global.AlignLeft=AlignLeft
+Global.AlignRight=AlignRight
+Global.AlignHCenter=AlignHCenter
+Global.AlignTop=AlignTop
+Global.AlignBottom=AlignBottom
+Global.AlignVCenter=AlignVCenter
+Global.Name=Name
+Global.Size=Size
+Global.Property=Property
+Global.Value=Value
+Global.Luminaire=Luminaire
+Global.Brightness=Brightness
+Global.Status=Status
+Global.MotionSensor=Motion Sensor
+Global.LuxSensor=Lux Sensor
+Global.RealMotionSensor=Real Motion Sensor
+Global.VirtualMotionSensor=Virtual Motion Sensor
+Global.PMSensor=PM Sensor
+Global.CO1Sensor=CO1 Sensor
+Global.CO2Sensor=CO2 Sensor
+Global.LuxValue=Lux Value
+Global.Mesh=Mesh
+Global.Node=Node
+Global.NodeClass=Node Type
+Global.NodeProperty=Node Property
+Global.FontSize=Font Size
+Global.FontColor=Font Color
+Global.HorizontalAlignment=Horizontal Alignment
+Global.VerticalAlignment=Vertical Alignment
+Global.Width=Width
+Global.Height=Height
+Global.Text=Text
+Global.RemoveQuestion=Are you sure you want to delete this item?
+Global.DynamicText=Dynamic Text
+Global.StaticText=Static Text
+Global.Instructions=Instructions
+Global.DashboardEditFrameInstructions=(1)Please drag one of above items to centeral area and drop it to create a new item.<br>(2)Please click a item in centeral area and edit properties in property table.
+Global.Quit=Quit
+Global.QuitQuestion=Are you sure you want to quit?
+Global.DashboardElements=Dashboard Elements
+Global.Display=Display
+Global.AddDashboard=Add Dashboard
+Global.BackgroundImage=Background Image ...
+Global.Refresh=Refresh
+
+MainWidget.File=File
+MainWidget.Edit=Edit
+MainWidget.Alert=Alert
+MainWidget.Settings=Settings
+MainWidget.Help=Help
+MainWidget.SystemSettings=System Setting
+MainWidget.EnergyMonitoring=Energy Monitoring
+MainWidget.Luminaires=Luminaires
+MainWidget.Sensors=Sensors
+MainWidget.Status=Status
+MainWidget.LuxSensor=Lux Sensor
+MainWidget.MotionSensor=Motion Sensor
+MainWidget.VirtualMotionSensor=Virtual Motion Sensor
+MainWidget.Id=ID
+MainWidget.Name=Name
+MainWidget.Power=POWER
+MainWidget.PFValue=Pf Value
+MainWidget.Energy=ENERGY
+MainWidget.SystemOn=System On
+MainWidget.Refresh=Refresh
+MainWidget.GroupMapping=Groups/Mapping
+@Replace
+MainWidget.Copyright=Copyright © 2018 ${CompanyFullName}
+MainWidget.QuitQuestion=Are you sure to quit this application?
+MainWidget.Exit=Exit
+MainWidget.BackendOn=Use Schedule Control
+MainWidget.COMSetting="%1" COM Setting
+MainWidget.ResetAllNodes=Reset "%1" All Nodes
+MainWidget.Language=Language
+MainWidget.TemplateManagement=Template Management
+MainWidget.License=License
+MainWidget.About=About
+MainWidget.OpenDebugWindow=Open Debug Window
+MainWidget.Rename=Rename
+MainWidget.On=On
+MainWidget.Off=Off
+MainWidget.AllOn=All On
+MainWidget.AllOff=All Off
+MainWidget.Dimming=Dimming
+MainWidget.AllDimming=All Dimming
+MainWidget.Grouping=Grouping
+MainWidget.Order=Order
+MainWidget.OrderByID=Order By ID
+MainWidget.OrderByName=Order By Name
+MainWidget.ResetAllNodesQuestion=All groups of every node will be cleared, are you sure to reset all nodes?
+MainWidget.License=License
+MainWidget.About=About
+MainWidget.RenameLuminaries=Rename Luminaries
+MainWidget.RenameSensor=Rename Sensor
+MainWidget.RenameSensors=Rename Sensors
+MainWidget.RenameGroup=Rename Group
+MainWidget.RenameGroups=Rename Groups
+MainWidget.AddGroup=Add Group
+MainWidget.DeleteGroup=Delete Group
+MainWidget.DeleteGroupQuestion=Are you sure delete group '%1'?
+MainWidget.EditControlItemsTitle=Edit Control Items of '%1'
+MainWidget.AllGroups=All Groups
+MainWidget.Ungrouped=Ungrouped
+MainWidget.SystemOff=System Off
+MainWidget.SystemOffQuestion=Are you sure turn off all lights?
+MainWidget.SystemOn=SystemOn
+MainWidget.SystemOnQuestion=Are you sure turn on all lights?
+MainWidget.SelectYourDate=Select Your Date
+MainWidget.SelectDateError=Error, days between two days cannot larger than 1000!
+MainWidget.NumberOfSelectedLum=Number Of Selected Luminaires: %1
+MainWidget.TotalNumberInTheGroup=Total Number In The Group: %1
+MainWidget.DateRange=Date Range
+MainWidget.SearchTip=Enter your search here ...
+MainWidget.Meshes=Meshes
+MainWidget.MeshStatusNameTitle=Name
+MainWidget.MeshStatusLumNumberTitle=Number Of Luminaires
+MainWidget.MeshStatusSensorNumberTitle=Number Of Sensors
+MainWidget.MeshStatusNodeGroupNumberTitle=Number Of Groups
+MainWidget.MeshStatusBackendStateTitle=Status Of Schedule Control
+MainWidget.Started=Started
+MainWidget.Stoped=Stoped
+MainWidget.Add=Add
+MainWidget.Delete=Delete
+MainWidget.Rename=Rename
+MainWidget.StartBackend=Start Schedule Control
+MainWidget.StopBackend=Stop Schedule Control
+MainWidget.AddMesh=Add Mesh
+MainWidget.MeshName=Mesh Name
+MainWidget.RenameMesh=Rename Mesh
+MainWidget.NewMeshName=New Mesh Name
+MainWidget.DeleteMesh=Delete Mesh
+MainWidget.DeleteMeshQuestion=Are your sure delete mesh "%1"?
+MainWidget.VirtualComSetting=Virtual COM Settings
+MainWidget.ExportProjectSettings=Export Project Settings
+MainWidget.ImportProjectSettings=Import Project Settings
+MainWidget.RestartMeshLight=Restart MeshLight
+MainWidget.RestartQuestion=Restart this application to apply new settings, continue?
+MainWidget.HideNodeSetting=Hidden Nodes Setting
+MainWidget.Tip=Message
+MainWidget.PleaseSelectOneMeshFirst=Please select one mesh item first!
+MainWidget.DashboardManagement=Dashboard Management
+MainWidget.ScheduleParametersSetting=Schedule Parameters Setting
+
+VirtualComFrame.Name=Name:
+VirtualComFrame.IpOrDomain=IP/Domain:
+VirtualComFrame.Port=Port:
+
+MeshDetailsFrame.File=File
+MeshDetailsFrame.Edit=Edit
+MeshDetailsFrame.Alert=Alert
+MeshDetailsFrame.Settings=Settings
+MeshDetailsFrame.Help=Help
+MeshDetailsFrame.SystemSettings=System Setting
+MeshDetailsFrame.EnergyMonitoring=Energy Monitoring
+MeshDetailsFrame.Luminaires=Luminaires
+MeshDetailsFrame.Sensors=Sensors
+MeshDetailsFrame.Status=Status
+MeshDetailsFrame.LuxSensor=Lux Sensor
+MeshDetailsFrame.MotionSensor=Motion Sensor
+MeshDetailsFrame.Id=ID
+MeshDetailsFrame.Name=Name
+MeshDetailsFrame.Power=POWER
+MeshDetailsFrame.PFValue=Pf Value
+MeshDetailsFrame.Energy=ENERGY
+MeshDetailsFrame.SystemOn=System On
+MeshDetailsFrame.Refresh=Refresh
+MeshDetailsFrame.GroupMapping=Groups/Mapping
+@Replace
+MeshDetailsFrame.Copyright=Copyright © 2018 ${CompanyFullName}
+MeshDetailsFrame.QuitQuestion=Are you sure to quit this application?
+MeshDetailsFrame.Exit=Exit
+MeshDetailsFrame.BackendOn=Use Schedule Control
+MeshDetailsFrame.COMSetting=COM Setting
+MeshDetailsFrame.ResetAllNodes=Reset All Nodes
+MeshDetailsFrame.Language=Language
+MeshDetailsFrame.License=License
+MeshDetailsFrame.About=About
+MeshDetailsFrame.OpenDebugWindow=Open Debug Window
+MeshDetailsFrame.Rename=Rename
+MeshDetailsFrame.On=On
+MeshDetailsFrame.Off=Off
+MeshDetailsFrame.AllOn=All On
+MeshDetailsFrame.AllOff=All Off
+MeshDetailsFrame.Dimming=Dimming
+MeshDetailsFrame.AllDimming=All Dimming
+MeshDetailsFrame.Grouping=Grouping
+MeshDetailsFrame.Order=Order
+MeshDetailsFrame.OrderByID=Order By ID
+MeshDetailsFrame.OrderByName=Order By Name
+MeshDetailsFrame.OrderByOnlineStatus=Order By Online Status
+MeshDetailsFrame.OnlyShowOnline=Show Only Online Nodes
+MeshDetailsFrame.ResetAllNodesQuestion=All groups of every node will be cleared, are you sure to reset all nodes?
+MeshDetailsFrame.License=License
+MeshDetailsFrame.About=About
+MeshDetailsFrame.RenameLuminaries=Rename Luminaries
+MeshDetailsFrame.RenameSensor=Rename Sensor
+MeshDetailsFrame.RenameSensors=Rename Sensors
+MeshDetailsFrame.RenameGroup=Rename Group
+MeshDetailsFrame.RenameGroups=Rename Groups
+MeshDetailsFrame.AddGroup=Add Group
+MeshDetailsFrame.DeleteGroup=Delete Group
+MeshDetailsFrame.DeleteGroupQuestion=Are you sure delete group '%1'?
+MeshDetailsFrame.EditControlItemsTitle=Edit Control Items of '%1'
+MeshDetailsFrame.AllGroups=All Groups
+MeshDetailsFrame.Ungrouped=Ungrouped
+MeshDetailsFrame.SystemOff=System Off
+MeshDetailsFrame.SystemOffQuestion=Are you sure turn off all lights?
+MeshDetailsFrame.SystemOn=SystemOn
+MeshDetailsFrame.SystemOnQuestion=Are you sure turn on all lights?
+MeshDetailsFrame.SelectYourDate=Select Your Date
+MeshDetailsFrame.SelectDateError=Error, days between two days cannot larger than 1000!
+MeshDetailsFrame.NumberOfSelectedLum=Number Of Selected Luminaires: %1
+MeshDetailsFrame.TotalNumberInTheGroup=Total Number In The Group: %1
+MeshDetailsFrame.DateRange=Date Range
+MeshDetailsFrame.SearchTip=Enter your search here ...
+MeshDetailsFrame.ScheduleControlSettings=Schedule Control Settings
+MeshDetailsFrame.FindLum=Locate Luminaire
+
+RefrgTemperatureHumiditySensor.dateTextFormat=TEMP1: %1, TEMP2: %2, HUMI1: %3, HUMI2: %4, Vol: %5
+
+AddNodeGroupDialogFrame.GroupName=Group Name:
+AddNodeGroupDialogFrame.GroupColor=Group Color:
+
+AddTimePointDialogFrame.Time=Time:
+
+ComSettingDialogFrame.Port=Port:
+ComSettingDialogFrame.BaudRate=Baud Rate:
+ComSettingDialogFrame.DataBits=Data Bits:
+ComSettingDialogFrame.Parity=Parity:
+ComSettingDialogFrame.StopBits=Stop Bits:
+ComSettingDialogFrame.PortState=Port State:
+ComSettingDialogFrame.Enabled=Enabled:
+ComSettingDialogFrame.Closed=Closed
+ComSettingDialogFrame.Opened=Opened
+
+ControlItemEditDialogFrame.ControlType=Control Type:
+ControlItemEditDialogFrame.BasePower=Base Power(%):
+ControlItemEditDialogFrame.TrigPower=Triggered Power(%):
+ControlItemEditDialogFrame.TrigTime=Triggered Hold Time(S):
+ControlItemEditDialogFrame.HoldPower=Hold Power(%):
+ControlItemEditDialogFrame.HoldTime=Hold Time(S):
+ControlItemEditDialogFrame.BindSensorId=Bind Sensor Id:
+
+ControlItemEditDialogFrame.PowerPolicy=Power Policy:
+ControlItemEditDialogFrame.FeedBackLux=Feed Back Target Lux(Lux):
+ControlItemEditDialogFrame.FeedBackFloatLux=Feed Back Tolerance Lux(Lux):
+ControlItemEditDialogFrame.FeedBackStepPower=Feed Back Power Adjustment(%):
+ControlItemEditDialogFrame.NotFeedBackLuxOfPower0=Not Feed Back Lux Of Power 0(Lux):
+ControlItemEditDialogFrame.NotFeedBackLuxOfPower100=Not Feed Back Lux Of Power 100(Lux):
+ControlItemEditDialogFrame.FeedBack=Feed Back
+ControlItemEditDialogFrame.NotFeedBack=Not Feed Back
+
+ControlItemEditDialogFrame.Power=Power(%):
+@Replace
+HelpAboutFrame.CompanyLabel=${CompanyFullName}
+@Replace
+HelpAboutFrame.ContentText=Copyright, trademark and patent declaration\nMesh Light software and documentation system is designed and programmed by ${CompanyFullName}, all rights reserved worldwide. No reproduction is prohibited without authorization.
+
+LicenseDialogFrame.ThankYouForTrial=Thank You for Trail
+LicenseDialogFrame.YourSoftwareId=Your Software ID
+LicenseDialogFrame.RegistrationCode=Registration Code
+LicenseDialogFrame.Activation=Activation
+
+LuminaireDimmingDialog.Dimming=Dimming
+LuminaireDimmingDialog.Brightness=Brightness
+LuminaireDimmingDialog.Tip=Please modify brightness value then click "Apply" to apply it!
+
+NodeGroupFrame.GroupName=Group Name
+NodeGroupFrame.TotalPower=Total Power
+NodeGroupFrame.Nodes=Nodes
+
+RenameDialogFrame.SetNameOptions=Set Name Options
+RenameDialogFrame.SetNameOptionsTip=Using # to indicate the numberical enumerator positions
+RenameDialogFrame.Template=Template
+RenameDialogFrame.StartFrom=Start From:
+RenameDialogFrame.FixedNumber=Fixed Number
+RenameDialogFrame.AutoDetected=Auto Detected
+RenameDialogFrame.Preview=Preview
+RenameDialogFrame.CurrentName=Current Name
+RenameDialogFrame.NewName=New Name
+
+RenameOneDialogFrame.NewName=New Name:
+
+ResetAllNodeDialogFrame.StopAndClose=Stop And Close
+
+LanguageDialogFrame.CurrentLanguage=Current Language:
+
+HistoryDataChartFrame.Power=Power
+HistoryDataChartFrame.Date=Date
+
+TimeLineControlItemsEditDialogFrame.AddTimePoint=Add Time Point
+TimeLineControlItemsEditDialogFrame.RemoveTimePoint=Remove Time Point
+TimeLineControlItemsEditDialogFrame.EditControlItemTitle=Edit Control Item %1:%2
+TimeLineControlItemsEditDialogFrame.RemoveTimePointQuestion=Are you sure remove time point '%1:%2'?
+
+SensorListViewModel.ManChecked=Triggered
+SensorListViewModel.ManNotChecked=Not Triggered
+
+GroupPropertiesDialog.GroupProperties=Group Properties
+
+TimeLineControlItemListsEditDialogFrame.DialogTitle=Edit Scheduling Policy Of Group '%1'
+TimeLineControlItemsEditDialog.DialogTitle=Edit Scheduling Policy '%1'
+
+TimeLineControlItemsEditDialogFrame.Number=Number:
+TimeLineControlItemsEditDialogFrame.Name=Name:
+TimeLineControlItemsEditDialogFrame.Color=Color:
+TimeLineControlItemsEditDialogFrame.Description=Description:
+
+Global.Instractions=Instractions:\n\n(1)You can double click a row to edit scheduling policy.\n\n(2)Default scheduling policy (Number is "0") is fixed, it's basic information cannot be modified.\n\n(3)Please select some dates in calendar and drag a schedule policy to them, then schedule policy will be bound to dates that you selected.
+
+TimeLineControlItemTableViewModel.Time=Time
+TimeLineControlItemTableViewModel.Control=Control
+
+TemplateTimeLineControlPolicyListDialogFrame.TemplateListTitle=Template List
+TemplateTimeLineControlPolicyListDialogFrame.AddTemplate=Add Template
+TemplateTimeLineControlPolicyListDialogFrame.EditTemplate=Edit Template
+TemplateTimeLineControlPolicyListDialogFrame.RemoveTemplate=Remove Template
+TemplateTimeLineControlPolicyListDialogFrame.RemoveTemplateQuestion=Are you sure to remove template '%1' ?
+
+TimeLineControlItemsEditDialogFrame.ImportFromTemplateQuestion=Original configurations will be cleared, are you sure to import?
+
+TemplateTimeLineControlPolicyListDialogFrame.SetupTemplateDialogTitle=Setup Template '%1'
+TemplateTimeLineControlItemsEditDialogFrame.SetupTemplateItemDialogTitle=Setup Template Control Item '%1:%2'
+
+HideNodeSettingDialogFrame.Tip=Please input address of nodes that you want to hide in luminaire list! For example: 1, 20, 30, 110
+HideNodeSettingDialogFrame.HideLumWhenFoundSensor=Hide detected sensor node in luminaire list
+
+TimeLineControlPolicyTableViewModel.Number=Number
+TimeLineControlPolicyTableViewModel.Name=Name
+TimeLineControlPolicyTableViewModel.Color=Color
+TimeLineControlPolicyTableViewModel.Description=Description
+
+TimeLineControlPoliciesModel.DefaultSchedulePolicy=Default Schedule Policy
+
+Month.1=January
+Month.2=February
+Month.3=March
+Month.4=April
+Month.5=May
+Month.6=June
+Month.7=July
+Month.8=August
+Month.9=September
+Month.10=October
+Month.11=November
+Month.12=December
+
+VirtualComListViewModel.TCPServerItemText=%1 -- Device Type:TCP Server, Address:%2, Port:%3
+VirtualComListViewModel.TCPClientItemText=%1 -- Device Type:TCP Client, Address:%2
+
+VirtualComEditDialog.ComType=Device Type:
+VirtualComEditDialog.Address=Address:
+VirtualComEditDialog.Port=Port:
+
+Global.TCPClient=TCP Client Device
+Global.TCPServer=TCP Server Device
+
+VirtualComFrame.AddServerCom=Add TCP Server Device VCOM
+VirtualComFrame.AddClientCom=Add TCP Client Device VCOM
+VirtualComFrame.EditServerCom=Edit TCP Server Device VCOM
+VirtualComFrame.EditClientCom=Edit TCP Client Device VCOM
+VirtualComFrame.EditVCom=Edit Selected VCOM
+VirtualComFrame.DeleteVCom=Delete Selected VCOM
+VirtualComFrame.VComList=Virtual COM List
+VirtualComFrame.TcpClientGatewayList=TCP Client Device List
+
+Week.1=Monday
+Week.2=Tuesday
+Week.3=Wednesday
+Week.4=Thursday
+Week.5=Friday
+Week.6=Saturday
+Week.7=Sunday
+
+Global.ShowDaysOfThisMonth=Show Days Of This Month
+Global.ShowDaysOfThisYear=Show Days Of This Year
+
+Global.CommandInterval=Command sending interval(ms):
+Global.CheckInterval=State Detection Interval(s):
+Global.RuntimeParametersSetting=Runtime Parameters Setting
+Global.ScheduleParametersSetting=Schedule Parameters Setting
+Global.NodeOfflineDetectionSetting=Node Offline Detection Setting
+Global.NodeOfflineDetectionDelay=Node Offline Detection Delay(S):
+
+Global.AddVirtualMotionSensor=Add Virtual Motion Sensor
+Global.EditVirtualMotionSensor=Edit Virtual Motion Sensor
+Global.Name:=Name:
+Global.BindSensor=Bind Sensor
+Global.AllRealMotionSensors=All Real Motion Sensors
+Global.BindingRealMotionSensors=Binding Real Motion Sensors
+Global.RemoveVirtualSensor=Remove Virtual Sensor
+Global.RemoveQuestion=Are you sure to delete?
+
+MainWidget.VirtualMotionSensor=Virtual Motion Sensor
+Global.Triggered=Triggered
+Global.NotTriggered=Not Triggered
+
+Global.BackendSchedulingStatus=Backend Scheduling Status
+Global.RefreshRate:=Refresh Rate:
+Global.Low=Low
+Global.Middle=Middle
+Global.Fast=Fast
+Global.MeshName=MeshName
+Global.Port=Port
+Global.PortStatus=Port Status
+Global.SchedulingControlStatus=Scheduling Control Status
+Global.NumberOfBufferedCommands=Number Of Buffered Commands
+Global.Opened=Opened
+Global.Closed=Closed
+Global.NotOpened=Not Opened
+Global.Started=Started
+Global.NotStarted=Not Started
+Global.BackendSchedulingMonitor=Backend Scheduling Monitor
+
+Global.Loading=Loading ...
+Global.InitializingDataBase=Initializing Database ...
+Global.LoadingDataModel=Loading Data Model ...
+Global.Finished=Finished
+
+Global.VCOMPortNote=Attention: TCP Listening Port Of This System Is 9000
+Global.Discover=Discover
+
+Global.ClearBufferedCommand=Clear Buffered Commands
+
+Global.EditVirtualSwitchSensor=Edit Virtual Switch Sensor
+Global.AddVirtualSwitchSensor=Add Virtual Switch Sensor
+Global.ConfigureSwitchChannel=Configure Switch Channel
+Global.BindingRealSwitchSensorId:=Sensor Id Of Binding Real Switch Sensor:
+Global.DefaultBindingGroupId:=Default Binding Group Id:
+Global.Channel1=Channel 1
+Global.Channel2=Channel 2
+Global.Channel3=Channel 3
+Global.Channel4=Channel 4
+Global.Channel5=Channel 5
+Global.Channel6=Channel 6
+Global.switch_none=None
+Global.switch_group_on=Group On
+Global.switch_group_off=Group Off
+Global.switch_group_dimming_up=Group Dimming Up
+Global.switch_group_dimming_down=Group Dimming Down
+Global.switch_schedule_on=Group Schedule On
+Global.switch_schedule_off=Group Schedule Off
+Global.switch_in_work=On Duty
+Global.switch_not_work=Off Duty
+Global.VirtualSwitchSensorEditAttention=Attention: Please Select One Control Type In Each Combox
+
+Global.GroupId:=Group ID:
+Global.RealSwitchSensor=Real Switch Sensor
+Global.RealSwitchSensor2CH=Real Switch Sensor with 2 Channels
+Global.VirtualSwitchSensor=Virtual Switch Sensor
+Global.VirtualSwitchSensor2CH=Virtual Switch Sensor with 2 Channels
+
+Global.ScheduleType=Schedule Type
+Global.ScheduleByDate=By Date
+Global.ScheduleByOnDuty=On Duty
+Global.ScheduleByOffDuty=Off Duty
+Global.ScheduleOff=Off
+Global.ScheduleByDateConfiguration=Schedule "By Date" Configuration
+Global.ScheduleByOnDutyConfiguration=Schedule "On Duty" Configuration
+Global.ScheduleByOffDutyConfiguration=Schedule "Off Duty" Configuration
+
+Global.Reset=Reset
+Global.ResetMesh=Reset Mesh
+Global.ResetMeshQuestion=All luminaires and real sensors will be cleared, are you sure to reset this mesh?
+Global.BindingGroupId=Binding Group ID
+Global.TrigValue=Triggered Value
+
+Global.RealMotionAndLuxCameraSensor=Motion-Lux Camera
+Global.TemperatureHumiditySensor=Temperature-Humidity Sensor
+
+Global.ControlParameters=Control Parameters
+Global.Power=Power
+
+Global.BindLuxSensorResultAsTrigPower=Bind Lux Sensor Result As Triggered Power
+Global.DimmingInterval(Second):=Dimming Interval(Second):
+Global.Others=Others
+Global.NoOperation=No Operation
+
+Global.PageUp=Page Up
+Global.PageDown=Page Down
+Global.StressSensor=Stress Sensor
+Address: %1=Address: %1
+AP Status: %1=AP Status: %1
+
+Global.EnableCameraAP=Enable Camera AP
+Global.DisableCameraAP=Disable Camera AP
+Global.EnableCameraAPQuestion=Are you sure to enable camera AP (SSID: TKT_CAMERA_AP)?
+Global.DisableCameraAPQuestion=Are you sure to disable camera AP?
+
+Global.AddMQTTCom=Add MQTT VCOM
+Global.InputDeviceID:=Input Device ID:
+Global.EditMQTTCom=Edit MQTT VCOM
+
+Global.MQTTItemText=%1 -- Device Type:MQTT, Device ID:%2
+Global.TurnOffAutoNotificationWhenSchedulingIsStarted=Turn Off Auto Notification Of Luminaires When Scheduling Is Started
+Global.AutoRefreshNodesDuringMeshInitialization=Auto Refresh Nodes During Mesh Initialization
+Global.AutoRefreshSetting=Auto Refresh Setting
+Global.LogManager=Log Manager
+Global.Clear=Clear
+Global.AutoRefresh=Auto Refresh
+
+Select Your Log Folder=Select Your Log Folder
+Log In Disk=Log In Disk
+Log In Memory=Log In Memory
+Select Folder=Select Folder
+Open Folder=Open Folder
+Log Folder:=Log Folder:
+Enable Log To Disk=Enable (Log To Disk)
+
+LuxSensorFilterSettingDialogFrame.Tip=Please enter the IDs of Lux Sensors that need to be filtered! For example: 1, 20, 30, 110
+Global.LuxSensorFilterSetting=Lux Sensor Filter Setting
+Filter Coefficient:=Filter Coefficient:
+
+SwitchControlType.switch_date_schedule=Schedule By Date
+SwitchControlType.switch_onduty_schedule=Schedule By Onduty
+SwitchControlType.switch_offduty_schedule=Schedule By Offduty
+SwitchControlType.switch_schedule_off=Schedule Off
+SwitchControlType.switch_none=No Operation
+
+ControlItemEditDialogFrameOfRelayGroup.TrigModeUpperBottomTip=Controlled item will be turned on when detected value exceeds the upper threshold value, conversely turned off when drops bellow the bottom threshold value
+ControlItemEditDialogFrameOfRelayGroup.TrigModeBottomUpperTip=Controlled item will be turned on when detected value drops bellow the bottom threshold value, conversely turned off when exceeds the upper threshold value

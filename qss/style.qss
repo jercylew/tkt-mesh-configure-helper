@@ -1,0 +1,1220 @@
+#buttonTKTMeshClose, #buttonMeshClose{
+    border-image: url(:/images/back.png);
+    margin:2px;
+}
+
+#buttonTKTMeshClose:hover, #buttonMeshClose:hover{
+    margin:0px;
+}
+
+#buttonMeshSave{
+    border-image: url(:/images/save.png);
+    margin:2px;
+}
+
+#buttonMeshSave:hover{
+    border-image: url(:/images/save.png);
+    margin:0px;
+}
+
+/************ Common ****************/
+*{
+    font-family: "Microsoft YaHei";
+    color: #444444;
+    font-size: 14px;
+}
+
+QMenu::item:disabled{
+    color: #CCCCCC;
+}
+
+QMenu:disabled{
+    color: #CCCCCC;
+}
+
+QListView::item:hover {
+    border-radius: 5px;
+    background: #EEEEEE;
+    color: black;
+}
+
+QListView::item:selected {
+    border-radius: 5px;
+    background: #DDDDDD;
+    color: black;
+}
+
+QListView {
+    alternate-background-color: #F8F8F8;
+}
+
+#frameDialogHead{
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #545557, stop: 1.0 #545557);
+    border:none;
+}
+
+#buttonDialogClose
+{
+    background-color: transparent;
+    background-image: url(":/images/window_close.png");
+    border:none;
+}
+
+#labelDialogTitle
+{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#buttonDialogSave, #buttonDialogCancel, #buttonDialogBottomClose, #buttonDialogOk, #buttonDialogDone, #buttonDone, #buttonDialogBottomDone, #buttonCancel, #buttonOk, #buttonDialogApply
+{
+    background-color: #CCCCCC;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    border:none;
+}
+
+#labelDialogQuestion, #labelDialogAbout
+{
+    color: black;
+    font-size: 15px;
+}
+
+#frameDialogContainer{
+    background-color: white;
+    border:none;
+}
+
+
+/*************** MainWidget ******************/
+
+#frameMainHead
+{
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #545557, stop: 1.0 #545557);
+    border:none;
+}
+
+#frameMainBody
+{
+    background-color: #67696B;
+    border:none;
+}
+
+#frameMainBottom
+{
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #545557, stop: 1.0 #545557);
+    border:none;
+}
+
+#labelCornerLogo
+{
+    border-image: url(":/oem/images/corner_logo.png");
+}
+
+#actionButtonFile,
+#actionButtonEdit,
+#actionButtonAlert,
+#actionButtonSetting,
+#actionButtonHelp
+{
+    background-color:transparent;
+    border:none;
+    font-size:16px;
+    color:white;
+}
+
+#windowButtonMin{
+    background-color: transparent;
+    background-image: url(":/images/window_min.png");
+    border:none;
+}
+
+#windowButtonMaxNormal[max="false"]{
+    background-color: transparent;
+    background-image: url(":/images/window_normal.png");
+}
+
+#windowButtonMaxNormal{
+    background-color: transparent;
+    background-image: url(":/images/window_max.png");
+}
+
+#windowButtonClose{
+    background-color: transparent;
+    background-image: url(":/images/window_close.png");
+}
+
+#labelCalendarText{
+    font-size:20px;
+    font-weight:bold;
+    color:#FFFFFF;
+    background-color: #545557;
+}
+
+#labelCopyrightText{
+    font-size:12px;
+    color:white;
+}
+
+#labelMainBodyLeft{
+    background-color:transparent;
+}
+
+#labelMainBodyRight{
+    background-color:transparent;
+}
+
+#frameSystemSettingBar, #frameEnergyMonitoringBar{
+    background-color:transparent;
+    border:none;
+}
+
+#labelSystemSettingBarIcon[select="true"]{
+    background-color: white;
+    background-image: url(":/images/system_setting_bar_select.png");
+}
+
+#labelSystemSettingBarIcon{
+    background-color: #575A5B;
+    background-image: url(":/images/system_setting_bar_normal.png");
+}
+
+#labelEnergyMonitoringBarIcon[select="true"]{
+    background-color: white;
+    background-image: url(":/images/energy_monitoring_bar_select.png");
+}
+
+#labelEnergyMonitoringBarIcon{
+    background-color: #575A5B;
+    background-image: url(":/images/energy_monitoring_bar_normal.png");
+}
+
+#labelSystemSettingBarText[select="true"], #labelEnergyMonitoringBarText[select="true"]{
+    background-color: white;
+    font-size: 20px;
+    color: #575A5B;
+}
+
+#labelSystemSettingBarText, #labelEnergyMonitoringBarText{
+    background-color: #575A5B;
+    font-size: 20px;
+    color: white;
+}
+
+#labelSystemSettingBarLeft[select="true"]{
+    background-image: url(":/images/bar_left_select.png");
+}
+
+#labelSystemSettingBarLeft{
+    background-image: url(":/images/bar_left_normal.png");
+}
+
+#labelEnergyMonitoringBarRight[select="true"]{
+    background-image: url(":/images/bar_right_select.png");
+}
+
+#labelEnergyMonitoringBarRight{
+    background-image: url(":/images/bar_right_normal.png");
+}
+
+#labelBarInterLayer[select="left"]{
+    background-image: url(":/images/bar_interlayer_left_select.png");
+    border:none;
+}
+
+#labelBarInterLayer[select="right"]{
+    background-image: url(":/images/bar_interlayer_right_select.png");
+    border:none;
+}
+
+#buttonReset{
+    border-image: url(":/images/reset.png");
+}
+
+#buttonReset:hover{
+    border-image: url(":/images/reset_hover.png");
+}
+
+#buttonReset:pressed{
+    border-image: url(":/images/reset_press.png");
+}
+
+#buttonRefreshIcon{
+    border-image: url(":/images/refresh.png");
+}
+
+#buttonRefreshIcon:hover{
+    border-image: url(":/images/refresh_hover.png");
+}
+
+#buttonRefreshIcon:pressed{
+    border-image: url(":/images/refresh_press.png");
+}
+
+#buttonRefreshClientGatewayList{
+    border-image: url(":/images/refresh_black.png");
+}
+
+#buttonExecutersMenu, #buttonSensorsMenu{
+    border-image: url(":/images/menu.png");
+}
+
+#labelResetText, #labelRefreshText{
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+#labelSystemRefreshLine{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#frameMainBodyLeftContentArea{
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#frameLumHead, #frameSensorHead, #frameStatusHead, #frameLumHeadOfEnergyMonitoring, #frameMeshHead{
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FFFFFF, stop: 1.0 #EEEEEE);
+}
+
+#labelLumTitle, #labelSensorTitle, #labelStatusTitle, #labelGroupsMappingTitle, #labelLumTitleOfEnergyMonitoring, #labelMeshTitle{
+    font-size:25px;
+    color:#5C5E60;
+    font-weight:bold;
+}
+
+#listLumBody, #frameSensorBody, #frameStatusBody, #frameLumBodyOfEnergyMonitoring{
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+#listSensor{
+    border:none;
+}
+
+#frameStatusType,
+#frameStatusID,
+#frameStatusName,
+#frameStatusData,
+#frameMeshStatusName,
+#frameMeshStatusLumNumber,
+#frameMeshStatusSensorNumber,
+#frameMeshStatusNodeGroupNumber,
+#frameMeshStatusBackendState{
+    background-color: #CCCCCC;
+    border-radius: 5px;
+}
+
+#labelStatusTypeTitle,
+#labelStatusIDTitle,
+#labelStatusNameTitle,
+#labelStatusDataTitle,
+#labelMeshStatusNameTitle,
+#labelMeshStatusLumNumberTitle,
+#labelMeshStatusSensorNumberTitle,
+#labelMeshStatusNodeGroupNumberTitle,
+#labelMeshStatusBackendStateTitle{
+    font-size: 15px;
+    font-weight: bold;
+    color:#333333;
+}
+
+#labelStatusTypeValue,
+#labelStatusIDValue,
+#labelStatusNameValue,
+#labelStatusDataValue,
+#labelMeshStatusNameValue,
+#labelMeshStatusLumNumberValue,
+#labelMeshStatusSensorNumberValue,
+#labelMeshStatusNodeGroupNumberValue,
+#labelMeshStatusBackendStateValue{
+    font-size: 25px;
+    font-weight: bold;
+    color:#575A5B;
+}
+
+#combLumGroup, #combLumGroupOfEnergyMonitoring{
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FFFFFF, stop: 1.0 #EEEEEE);
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#combLumGroup::drop-down, #combLumGroupOfEnergyMonitoring::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    image: url(:/images/drop_down.png);
+}
+
+#labelLumNumber, #checkOnlyShowOnline{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#labelSensorNumberText{
+    color:#575A5B;
+    font-weight:bold;
+}
+
+#labelSensorNumberNumber{
+    color:white;
+    background-color:#575A5B;
+    border-radius:5px;
+}
+
+#labelSensorNumberIcon[type="lux_sensor"]{
+    background-image: url(":/images/lux_sensor.png");
+}
+
+#labelSensorNumberIcon[type="real_motion_sensor"]{
+    background-image: url(":/images/motion_sensor.png");
+}
+
+#labelSensorNumberIcon[type="real_motion_and_lux_camera_sensor"]{
+    background-image: url(":/images/real_motion_and_lux_camera_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="real_switch_sensor"]{
+    background-image: url(":/images/real_switch_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="real_switch_sensor_2ch"]{
+    background-image: url(":/images/real_switch_sensor_2ch_small.png");
+}
+
+#labelSensorNumberIcon[type="virtual_motion_sensor"]{
+    background-image: url(":/images/virtual_motion_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="virtual_switch_sensor"]{
+    background-image: url(":/images/virtual_switch_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="virtual_switch_sensor_2ch"]{
+    background-image: url(":/images/virtual_switch_sensor_2ch_small.png");
+}
+
+#labelSensorNumberIcon[type="pm_sensor"]{
+    background-image: url(":/images/pm_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="co1_sensor"]{
+    background-image: url(":/images/co1_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="co2_sensor"]{
+    background-image: url(":/images/co2_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="temp_hum_sensor"]{
+    background-image: url(":/images/temp_hum_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="refrg_temp_hum_sensor"]
+{
+    border-image:url(:/images/refrg_temp_hum_sensor_small.png);
+}
+
+#labelSensorNumberIcon[type="uvlight_sensor"]
+{
+    border-image:url(:/images/uvlight_sensor_small.png);
+}
+
+#labelSensorNumberIcon[type="hand_washing_sensor"]
+{
+    border-image:url(:/images/hand_washing_sensor_small.png);
+}
+
+#labelSensorNumberIcon[type="stress_sensor"]{
+    background-image: url(":/images/stress_sensor_small.png");
+}
+
+#labelSensorNumberIcon[type="formaldehyde_sensor"]{
+    background-image: url(":/images/formaldehyde_sensor_small.png");
+}
+
+#buttonAddSensor{
+    background-color: transparent;
+    background-image: url(":/images/add.png");
+    border:none;
+}
+
+#buttonDeleteSensor{
+    background-color: transparent;
+    background-image: url(":/images/delete.png");
+    border:none;
+}
+
+#frameSearch{
+    background-color: white;
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+#lineSearch{
+    background-color:white;
+    border:none;
+    font-size:15px;
+}
+
+#buttonSearch{
+    background-color:white;
+    background-image:url(":/images/search.png");
+    border:none;
+}
+
+#frameGroupsMappingHead{
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FFFFFF, stop: 1.0 #EEEEEE);
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+#listNodeGroups{
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+#buttonGroupsMappingApp{
+    background-color:transparent;
+    background-image:url(":/images/app.png");
+    border:none;
+}
+
+#buttonGroupsMappingSetup{
+    background-color:transparent;
+    background-image:url(":/images/setup.png");
+    border:none;
+}
+
+#buttonGroupMappingAdd{
+    background-color:transparent;
+    background-image:url(":/images/add.png");
+    border:none;
+}
+
+#buttonGroupMappingDelete{
+    background-color:transparent;
+    background-image:url(":/images/delete.png");
+    border:none;
+}
+
+#frameGroupsMapping{
+    background-color:white;
+    border-radius:5px;
+    border:2px solid #DDDDDD;
+}
+
+#buttonLumAppOfEnergyMonitoring{
+    background-color:transparent;
+    background-image:url(":/images/app.png");
+    border:none;
+}
+
+#buttonLumSetupOfEnergyMonitoring{
+    background-color:transparent;
+    background-image:url(":/images/setup.png");
+    border:none;
+}
+
+QListWidget{outline:0px;}
+
+#buttonGroup1{
+    border-image:url(":/images/button_group1.png");
+    border:none;
+}
+
+#buttonGroup2{
+    border-image:url(":/images/button_group2.png");
+    border:none;
+}
+
+#frameLumBodyOfEnergyMonitoring{
+    border:none;
+}
+
+#labelDebugModeText{
+    color: red;
+    background-color: white;
+}
+
+/************ ComSettingDialog ****************/
+#ComSettingDialog
+{
+    border: none;
+    background-color: transparent;
+}
+
+/************ LuminaireDimmingDialog ************/
+#labelDimmingDialogBrightnessTitle
+{
+    font-size:20px;
+}
+
+#labelDimmingDialogBrightnessValue
+{
+    font-size:20px;
+}
+
+/************* GroupPropertiesDialog **************/
+#labelGroupPropertiesImage
+{
+    border-image: url(":/images/group_properties.png");
+    border:none;
+}
+
+/************* NodeGroupFrame ***************/
+
+#NodeGroupFrame[row="even"]
+{
+    background-color: transparent;
+}
+
+#NodeGroupFrame[row="odd"]
+{
+    background-color: transparent;
+}
+
+NodeGroupFrame #labelGroupHead
+{
+    border-radius: 30px;
+}
+
+NodeGroupFrame #labelGroupName
+{
+    font-size:16px;
+    font-weight:bold;
+}
+
+NodeGroupFrame #labelNodeNumber
+{
+    font-size:24px;
+    font-weight:bold;
+}
+
+NodeGroupFrame #frameNodeNumber
+{
+    padding-bottom:-4px;
+}
+
+NodeGroupFrame #labelNodeNumberSuffix
+{
+    font-size:14px;
+}
+
+NodeGroupFrame #labelPercent
+{
+    font-size:16px;
+    font-weight:bold;
+}
+
+NodeGroupFrame #labelPowerTitle
+{
+    font-size:14px;
+    font-weight:bold;
+}
+
+NodeGroupFrame #labelPowerValue
+{
+    font-size:14px;
+    font-weight:bold;
+}
+
+NodeGroupFrame #line[schedule="on"]
+{
+    border:none;
+    background-color: #FF0000;
+}
+
+NodeGroupFrame #line[schedule="off"]
+{
+    border:none;
+    background-color: #888888;
+}
+
+/***
+NodeGroupFrame #frameContent
+{
+    background-color: transparent;
+}
+***/
+NodeGroupFrame #frameGroupShadow
+{
+    border-image:url(:/images/group_shadow.png);
+}
+
+/********** OneChannelLuminaireFrame **********/
+#OneChannelLuminaireFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#SolarOneChannelLuminaireFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#ADBoardFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+
+#WarningLightFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#labelIcon[status="light_offline"]
+{
+    border-image:url(:/images/luminaire_offline.png);
+}
+
+#labelIcon[status="light_online_on"]
+{
+    border-image:url(:/images/luminaire_online_on.png);
+}
+
+#labelIcon[status="light_online_off"]
+{
+    border-image:url(:/images/luminaire_online_off.png);
+}
+
+#labelIcon[status="warning_light_offline"]
+{
+    border-image:url(:/images/warning_light_offline.png);
+}
+
+#labelIcon[status="warning_light_online_on"]
+{
+    border-image:url(:/images/warning_light_online_on.png);
+}
+
+#labelIcon[status="warning_light_online_off"]
+{
+    border-image:url(:/images/warning_light_online_off.png);
+}
+
+#labelIcon[status="adboard_offline"]
+{
+    border-image:url(:/images/adboard_offline.png);
+}
+
+#labelIcon[status="adboard_online_on"]
+{
+    border-image:url(:/images/adboard_online_on.png);
+}
+
+#labelIcon[status="adboard_online_off"]
+{
+    border-image:url(:/images/adboard_online_off.png);
+}
+
+#labelIcon[status="solar_1ch_luminaire_offline"]
+{
+    border-image:url(:/images/solar_1ch_luminaire_offline.png);
+}
+
+#labelIcon[status="solar_1ch_luminaire_online_on"]
+{
+    border-image:url(:/images/solar_1ch_luminaire_online_on.png);
+}
+
+#labelIcon[status="solar_1ch_luminaire_online_off"]
+{
+    border-image:url(:/images/solar_1ch_luminaire_online_off.png);
+}
+
+#labelIcon[status="1ch_relay_offline"]
+{
+    border-image:url(:/images/1ch_relay_offline.png);
+}
+
+#labelIcon[status="1ch_relay_online_on"]
+{
+    border-image:url(:/images/1ch_relay_online_on.png);
+}
+
+#labelIcon[status="1ch_relay_online_off"]
+{
+    border-image:url(:/images/1ch_relay_online_off.png);
+}
+
+#labelIcon[status="uv_sterilizer_online_appointed_ok"]
+{
+    border-image:url(:/images/uv_sterilizer_online_appointed_ok.png);
+}
+
+#labelIcon[status="uv_sterilizer_online_appointed_failed"]
+{
+    border-image:url(:/images/uv_sterilizer_online_appointed_failed.png);
+}
+
+#labelIcon[status="uv_sterilizer_online_sterilized"]
+{
+    border-image:url(:/images/uv_sterilizer_online_sterilized.png);
+}
+
+#labelIcon[status="uv_sterilizer_online_sterilizing"]
+{
+    border-image:url(:/images/uv_sterilizer_online_sterilizing.png);
+}
+
+#labelIcon[status="uv_sterilizer_offline"]
+{
+    border-image:url(:/images/uv_sterilizer_offline.png);
+}
+
+
+/********** SensorFrame ************/
+#SensorFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#labelIcon[type="sensor_lux"]
+{
+    border-image:url(:/images/sensor_lux.png);
+}
+
+#labelIcon[type="sensor_motion"]
+{
+    border-image:url(:/images/sensor_motion.png);
+}
+
+#labelIcon[type="virtual_motion_sensor"]
+{
+    border-image:url(:/images/virtual_motion_sensor.png);
+}
+
+#labelIcon[type="real_switch_sensor"]
+{
+    border-image:url(:/images/real_switch_sensor.png);
+}
+
+#labelIcon[type="real_switch_sensor_2ch"]
+{
+    border-image:url(:/images/real_switch_sensor_2ch.png);
+}
+
+#labelIcon[type="real_motion_and_lux_camera_sensor"]
+{
+    border-image:url(:/images/real_motion_and_lux_camera_sensor.png);
+}
+
+#labelIcon[type="virtual_switch_sensor"]
+{
+    border-image:url(:/images/virtual_switch_sensor.png);
+}
+
+#labelIcon[type="virtual_switch_sensor_2ch"]
+{
+    border-image:url(:/images/virtual_switch_sensor_2ch.png);
+}
+
+#labelIcon[type="co1_sensor"]
+{
+    border-image:url(:/images/co1_sensor.png);
+}
+
+#labelIcon[type="stress_sensor"]
+{
+    border-image:url(:/images/stress_sensor.png);
+}
+
+#labelIcon[type="formaldehyde_sensor"]
+{
+    border-image:url(:/images/formaldehyde_sensor.png);
+}
+
+#labelIcon[type="co2_sensor"]
+{
+    border-image:url(:/images/co2_sensor.png);
+}
+
+#labelIcon[type="temp_hum_sensor"]
+{
+    border-image:url(:/images/temp_hum_sensor.png);
+}
+
+#labelIcon[type="refrg_temp_hum_sensor"]
+{
+    border-image:url(:/images/refrg_temp_hum_sensor.png);
+}
+
+#labelIcon[type="uvlight_sensor"]
+{
+    border-image:url(:/images/uvlight_sensor.png);
+}
+
+#labelIcon[type="hand_washing_sensor"]
+{
+    border-image:url(:/images/hand_washing_sensor.png);
+}
+
+#labelIcon[type="pm_sensor"]
+{
+    border-image:url(:/images/pm_sensor.png);
+}
+
+/*********** ControlItemEditDelegateFrame **********/
+#ControlItemEditDelegateFrame
+{
+    background-color:white;
+    border:2px solid #444444;
+}
+
+/*********** TimeLineControlItemsEditDialog ***********/
+#tableView
+{
+    border:none;
+}
+
+#frameTable
+{
+    background-color:white;
+    border:1px solid #BBBBBB;
+}
+
+#timeLineGraphFrameContainer
+{
+    border:1px solid #BBBBBB;
+}
+
+#buttonAdd, #buttonAddClientCom, #buttonAddServerCom, #buttonAddMQTTCom
+{
+    background-color:transparent;
+    background-image:url(":/images/add.png");
+    border:none;
+}
+
+#buttonAddClientCom
+{
+    background-color:transparent;
+    background-image:url(":/images/add_tcp_client_vcom.png");
+    border:none;
+}
+
+#buttonAddServerCom
+{
+    background-color:transparent;
+    background-image:url(":/images/add_tcp_server_vcom.png");
+    border:none;
+}
+
+#buttonAddMQTTCom
+{
+    background-color:transparent;
+    background-image:url(":/images/add_mqtt_vcom.png");
+    border:none;
+}
+
+
+#buttonEdit, #buttonEditVirtualCom
+{
+    background-color:transparent;
+    background-image:url(":/images/edit.png");
+    border:none;
+}
+
+#buttonRemove, #buttonDeleteVirtualCom
+{
+    background-color:transparent;
+    background-image:url(":/images/delete.png");
+    border:none;
+}
+
+#buttonDisplay
+{
+    background-color:transparent;
+    background-image:url(":/images/display.png");
+    border:none;
+}
+
+#buttonExportTemplate
+{
+    background-color:transparent;
+    background-image:url(":/images/export.png");
+    border:none;
+}
+
+#buttonLoadFrameTemplate
+{
+    background-color:transparent;
+    background-image:url(":/images/import.png");
+    border:none;
+}
+
+QPushButton:hover
+{
+    margin: 1px;
+}
+
+/*************** RenameDialog **************/
+
+#labelRenameBigTitle1, #labelRenameBigTitle2, #labelRenameBigTitle3, #labelRenameBigTitle4
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#labelRenameOptionText
+{
+    font-size: 12px;
+}
+
+#combNameTemplate
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#radioFixedNumber, #radioAutoDetected, #spinFixedNumber, #spinAutoDetected
+{
+    font-size: 15px;
+}
+
+/***************LicenseDialog************/
+#labelThankTitle
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#lineId, #lineRegCode
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#labelLicenseInfo
+{
+    font-size: 15px;
+    color:red;
+}
+
+#buttonActive
+{
+    background-color:green;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+/******* InputDialog ********/
+#labelInputTitle
+{
+    font-size:15px;
+    font-weight:bold;
+}
+
+#lineInputEdit
+{
+    font-size:15px;
+    font-weight:bold;
+}
+
+
+/******* HelpAboutFrame *****/
+#labelHelpAboutIcon
+{
+    border-image: url(:/oem/images/logo.png);
+}
+
+#labelHelpAboutTitle
+{
+    font-size: 30px;
+}
+
+#labelHelpAboutLicense
+{
+    font-size: 20px;
+}
+
+#labelHelpAboutVersion
+{
+    font-size: 22px;
+}
+
+#labelHelpAboutCompanyName
+{
+    font-size: 22px;
+}
+
+#labelHelpAboutCompanyUrl
+{
+    font-size: 22px;
+    color: #0000FF;
+}
+
+/********************************/
+#labelDialogProgress
+{
+    font-size: 25px;
+    color: #FF0000;
+}
+
+/***************************************************************/
+#buttonMeshBack
+{
+    border-image: url(":/images/window_close.png");
+}
+
+#labelMeshName
+{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#frameMeshMainBody, #stackMainBody
+{
+    background-color: #67696B;
+    border:none;
+}
+
+#frameMeshWelcome
+{
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
+
+#MeshFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#labelIcon[status="mesh"]
+{
+    border-image:url(:/images/mesh.png);
+}
+
+#labelIcon[status="remote_mesh"]
+{
+    border-image:url(:/images/remote_mesh.png);
+}
+
+
+#frameVirtualComDetail
+{
+    border: 1px solid #000000;
+}
+
+#frameControlItemListsContent{
+    border: 1px solid grey;
+}
+
+#tableControlItemList{
+    border: none;
+}
+
+#labelImportProgressText, #labelExportProgressText{
+    font-size: 20px;
+    color: red;
+}
+
+/************ custom *****************/
+QFrame[type="calendar.month.title"]
+{
+    background-color:#CCCCCC;
+    font-weight: bold;
+}
+
+QFrame[type="calendar.monthdetails.title"]
+{
+    background-color:#CCCCCC;
+}
+
+QLabel[type="calendar.monthdetails.title"]
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+QFrame[type="calendar.month.container"]
+{
+    border:1px solid #CCCCCC;
+}
+
+QFrame[type="calendar.monthdetails.container"]
+{
+    border:4px solid #CCCCCC;
+}
+
+QPushButton[type="calendar.month.details"]
+{
+    border-image: url(:/images/month_details.png);
+}
+
+QPushButton[type="calendar.month.list"]
+{
+    border-image: url(:/images/month_brief_list.png);
+}
+
+#tableControlPolicy
+{
+    border: 1px solid #AAAAAA;
+}
+
+#frameScheduleConfigurationContent
+{
+    border: 1px solid #AAAAAA;
+}
+
+#frameDragItem
+{
+    border: 1px solid #888888;
+}
+
+#frameWithBorder
+{
+    border: 1px solid #888888;
+}
+
+#buttonSensorNumberScrollUp
+{
+    border-image: url(:/images/sensor_number_scroll_up_enable.png);
+}
+
+#buttonSensorNumberScrollDown
+{
+    border-image: url(:/images/sensor_number_scroll_down_enable.png);
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                              stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 1px solid #C4C4C3;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 8ex;
+    min-height: 30px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+QTabBar::tab:selected{
+    background: #FFFFFF;
+}

@@ -1,0 +1,1297 @@
+﻿Global.LanguageName=中文
+Global.Ok=确定
+Global.Cancel=取消
+Global.Save=保存
+Global.Close=关闭
+Global.Done=确定
+Global.Apply=应用
+Global.Quit=退出
+Global.Error=错误
+@Replace
+Global.CompanyName=${CompanyShortName}
+Global.ProductName=照明系统
+Global.Exit=退出
+Global.Add=添加
+Global.Edit=编辑
+Global.Remove=删除
+Global.ExportToTemplate=导出为模板
+Global.ImportFromTemplate=从模板导入
+Global.Name=名称
+Global.Description=描述
+Global.NameTitle=名称:
+Global.DescriptionTitle=描述:
+
+Global.ShowFullScreen=全屏显示
+Global.ShowMaximized=最大化显示
+Global.ShowNormal=正常显示
+Global.AlignLeft=左对齐
+Global.AlignRight=右对齐
+Global.AlignHCenter=水平居中
+Global.AlignTop=上对齐
+Global.AlignBottom=下对齐
+Global.AlignVCenter=垂直居中
+Global.Name=名称
+Global.Size=尺寸
+Global.Property=属性
+Global.Value=值
+Global.Luminaire=灯具
+Global.Brightness=亮度
+Global.Status=状态
+Global.MotionSensor=微波感应传感器
+Global.LuxSensor=光照传感器
+Global.GasTransducer=气体传感器
+Global.LuxValue=照度
+Global.RealMotionSensor=实体微波传感器
+Global.VirtualMotionSensor=虚拟微波传感器
+Global.PMSensor=PM传感器
+Global.CO1Sensor=CO1传感器
+Global.CO2Sensor=CO2传感器
+Global.Mesh=Mesh
+Global.Node=节点
+Global.NodeClass=节点类型
+Global.NodeProperty=节点属性
+Global.FontSize=字体大小
+Global.FontColor=文字颜色
+Global.HorizontalAlignment=水平对齐
+Global.VerticalAlignment=垂直对齐
+Global.Width=宽度
+Global.Height=高度
+Global.Text=文字
+Global.RemoveQuestion=确定删除？
+Global.DynamicText=动态文字
+Global.StaticText=静态文字
+Global.Instructions=说明
+Global.DashboardEditFrameInstructions=(1)请拖动上面的元素到中间的编辑区域并释放，以此来创建一个新的元素。<br>(2)请选中中间的编辑区域的元素，并在属性表中编辑它的属性。
+Global.Quit=退出
+Global.QuitQuestion=确定退出？
+Global.DashboardElements=仪表板元素
+Global.Display=显示
+Global.AddDashboard=添加仪表板
+Global.BackgroundImage=背景图片 ...
+Global.Refresh=刷新
+
+MainWidget.File=文件
+MainWidget.Edit=编辑
+MainWidget.Alert=报警
+MainWidget.Settings=设置
+MainWidget.Help=帮助
+MainWidget.SystemSettings=系统设置
+MainWidget.EnergyMonitoring=电能监测
+MainWidget.Executers=执行器
+MainWidget.Sensors=传感器
+MainWidget.Status=状态
+MainWidget.LuxSensor=照度传感器
+MainWidget.MotionSensor=微波传感器
+MainWidget.VirtualMotionSensor=虚拟微波传感器
+MainWidget.Id=ID
+MainWidget.Name=名称
+MainWidget.Power=功率
+MainWidget.PFValue=Pf Value
+MainWidget.Energy=电能
+MainWidget.SystemOn=系统全开
+MainWidget.Refresh=刷新
+MainWidget.GroupMapping=分组/映射
+@Replace
+MainWidget.Copyright=Copyright © 2019 ${CompanyFullName}
+MainWidget.QuitQuestion=确定退出本系统？
+MainWidget.Exit=退出
+MainWidget.BackendOn=启用调度控制
+MainWidget.COMSetting="%1"串口设置
+MainWidget.ResetAllNodes=重置"%1"所有节点
+MainWidget.Language=语言
+MainWidget.TemplateManagement=模板管理
+MainWidget.License=授权
+MainWidget.About=关于
+MainWidget.OpenDebugWindow=打开调试窗口
+MainWidget.Rename=重命名
+MainWidget.On=打开
+MainWidget.Off=关闭
+MainWidget.AllOn=打开所有灯
+MainWidget.AllOff=关闭所有灯
+MainWidget.Dimming=调节灯亮度
+MainWidget.AllDimming=调节所有灯亮度
+MainWidget.Grouping=分组
+MainWidget.Order=排序
+MainWidget.OrderByID=按ID排序
+MainWidget.OrderByName=按名称排序
+MainWidget.ResetAllNodesQuestion=所有节点的分组信息将会被清除，确定重置所有节点？
+MainWidget.License=授权
+MainWidget.About=关于
+MainWidget.RenameLuminaries=重命名执行器
+MainWidget.RenameSensor=重命名传感器
+MainWidget.RenameSensors=重命名传感器
+MainWidget.RenameGroup=重命名组
+MainWidget.RenameGroups=重命名组
+MainWidget.AddGroup=添加组
+MainWidget.DeleteGroup=删除组
+MainWidget.DeleteGroupQuestion=确定删除分组 '%1'?
+MainWidget.EditControlItemsTitle=编辑控制单元 '%1'
+MainWidget.AllGroups=所有分组
+MainWidget.Ungrouped=未分组
+MainWidget.SystemOff=系统全关
+MainWidget.SystemOffQuestion=确定关闭所有灯具？
+MainWidget.SystemOn=系统全开
+MainWidget.SystemOnQuestion=确定打开所有灯具？
+MainWidget.SelectYourDate=选择日期
+MainWidget.SelectDateError=错误，两个日期相差不能超过1000天！
+MainWidget.NumberOfSelectedExecuter=选中执行器数量: %1
+MainWidget.TotalNumberInTheGroup=当前组所有执行器数量: %1
+MainWidget.DateRange=日期范围
+MainWidget.SearchTip=请输入您要搜索的内容
+MainWidget.Meshes=Mesh列表
+MainWidget.MeshStatusNameTitle=名称
+MainWidget.MeshStatusLumNumberTitle=灯节点数量
+MainWidget.MeshStatusSensorNumberTitle=传感器节点数量
+MainWidget.MeshStatusNodeGroupNumberTitle=分组数量
+MainWidget.MeshStatusBackendStateTitle=调度控制状态
+MainWidget.Started=已开启
+MainWidget.Stoped=未开启
+MainWidget.Add=添加
+MainWidget.Delete=删除
+MainWidget.Rename=重命名
+MainWidget.StartBackend=开启调度控制
+MainWidget.StopBackend=关闭调度控制
+MainWidget.AddMesh=添加Mesh
+MainWidget.MeshName=Mesh名称
+MainWidget.RenameMesh=重命名Mesh
+MainWidget.NewMeshName=新Mesh名称
+MainWidget.DeleteMesh=删除Mesh
+MainWidget.DeleteMesh=删除Mesh
+MainWidget.DeleteMeshQuestion=确定删除Mesh "%1"?
+
+MainWidget.VirtualComSetting=虚拟串口设置
+MainWidget.HideNodeSetting=隐藏节点设置
+MainWidget.Tip=消息
+MainWidget.PleaseSelectOneMeshFirst=请先选中一个Mesh！
+MainWidget.DashboardManagement=仪表板管理
+MainWidget.ScheduleParametersSetting=调度参数设置
+MainWindow.TemplateManagement=模板管理
+
+VirtualComFrame.Name=名称:
+VirtualComFrame.IpOrDomain=IP/域名:
+VirtualComFrame.Port=端口:
+
+MeshDetailsFrame.File=文件
+MeshDetailsFrame.Edit=编辑
+MeshDetailsFrame.Alert=报警
+MeshDetailsFrame.Settings=设置
+MeshDetailsFrame.Help=帮助
+MeshDetailsFrame.SystemSettings=系统设置
+MeshDetailsFrame.EnergyMonitoring=电能监测
+MeshDetailsFrame.Executers=执行器
+MeshDetailsFrame.Sensors=传感器
+MeshDetailsFrame.Status=状态
+MeshDetailsFrame.LuxSensor=照度传感器
+MeshDetailsFrame.MotionSensor=微波传感器
+MeshDetailsFrame.Id=ID
+MeshDetailsFrame.Name=名称
+MeshDetailsFrame.Power=功率
+MeshDetailsFrame.PFValue=Pf Value
+MeshDetailsFrame.Energy=电能
+MeshDetailsFrame.SystemOn=系统全开
+MeshDetailsFrame.Refresh=刷新
+MeshDetailsFrame.GroupMapping=分组/映射
+@Replace
+MeshDetailsFrame.Copyright=Copyright © 2018 ${CompanyFullName}
+MeshDetailsFrame.QuitQuestion=确定退出本系统？
+MeshDetailsFrame.Exit=退出
+MeshDetailsFrame.BackendOn=启用调度控制
+MeshDetailsFrame.COMSetting=串口设置
+MeshDetailsFrame.ResetAllNodes=重置所有节点
+MeshDetailsFrame.Language=语言
+MeshDetailsFrame.License=授权
+MeshDetailsFrame.About=关于
+MeshDetailsFrame.OpenDebugWindow=打开调试窗口
+MeshDetailsFrame.Rename=重命名
+MeshDetailsFrame.On=打开
+MeshDetailsFrame.Off=关闭
+MeshDetailsFrame.AllOn=打开所有灯
+MeshDetailsFrame.AllOff=关闭所有灯
+MeshDetailsFrame.Dimming=调节灯亮度
+MeshDetailsFrame.AllDimming=调节所有灯亮度
+MeshDetailsFrame.Grouping=分组
+MeshDetailsFrame.Order=排序
+MeshDetailsFrame.OrderByID=按ID排序
+MeshDetailsFrame.OrderByName=按名称排序
+MeshDetailsFrame.OrderByOnlineStatus=按在线状态排序
+MeshDetailsFrame.OnlyShowOnline=只显示在线节点
+MeshDetailsFrame.ResetAllNodesQuestion=所有节点的分组信息将会被清除，确定重置所有节点？
+MeshDetailsFrame.License=授权
+MeshDetailsFrame.About=关于
+MeshDetailsFrame.RenameLuminaries=重命名执行器
+MeshDetailsFrame.RenameSensor=重命名传感器
+MeshDetailsFrame.RenameSensors=重命名传感器
+MeshDetailsFrame.RenameGroup=重命名组
+MeshDetailsFrame.RenameGroups=重命名组
+MeshDetailsFrame.AddGroup=添加组
+MeshDetailsFrame.DeleteGroup=删除组
+MeshDetailsFrame.DeleteGroupQuestion=确定删除分组 '%1'?
+MeshDetailsFrame.EditControlItemsTitle=设置控制单元 '%1'
+MeshDetailsFrame.AllGroups=所有分组
+MeshDetailsFrame.Ungrouped=未分组
+MeshDetailsFrame.SystemOff=系统全关
+MeshDetailsFrame.SystemOffQuestion=确定关闭所有灯具？
+MeshDetailsFrame.SystemOn=系统全开
+MeshDetailsFrame.SystemOnQuestion=确定打开所有灯具？
+MeshDetailsFrame.SelectYourDate=选择日期
+MeshDetailsFrame.SelectDateError=错误，两个日期相差不能超过1000天！
+MeshDetailsFrame.NumberOfSelectedExecuter=选中执行器数量: %1
+MeshDetailsFrame.TotalNumberInTheGroup=当前组所有执行器数量: %1
+MeshDetailsFrame.DateRange=日期范围
+MeshDetailsFrame.SearchTip=请输入您要搜索的内容
+MeshDetailsFrame.ScheduleControlSettings=调度控制设置
+MeshDetailsFrame.FindLum=定位灯具
+MeshDetailsFrame.GroupingError=分组错误
+MeshDetailsFrame.GroupingErrorMessageDiffType=不能将不同类型的执行器分到同一组内
+MeshDetailsFrame.GroupingErrorMessageMatchType=所选执行器类型与组类型不匹配
+
+MainWidget.Meshes=Mesh网络
+MainWidget.MeshStatusNameTitle=名称
+MainWidget.MeshStatusLumNumberTitle=灯数量
+MainWidget.MeshStatusSensorNumberTitle=传感器数量
+MainWidget.MeshStatusNodeGroupNumberTitle=分组数量
+MainWidget.MeshStatusBackendStateTitle=调度控制状态
+MainWidget.Started=已开启
+MainWidget.Stoped=未开启
+
+MainWidget.ExportProjectSettings=导出项目配置
+MainWidget.ImportProjectSettings=导入项目配置
+MainWidget.RestartMeshLight=重启MeshLight
+MainWidget.RestartQuestion=需要重启本软件来启用新的项目配置，是否继续？
+
+RefrgTemperatureHumiditySensor.dateTextFormat=温度1: %1, 温度2: %2, 湿度1: %3, 湿度2: %4, 电量: %5
+UVLightSensor.Sterilizing=消毒中
+UVLightSensor.Stopped=已停止
+HandWashingSensor.Washing=有人洗手
+HandWashingSensor.Stopped=没人洗手
+
+AddNodeGroupDialogFrame.GroupName=组名称:
+AddNodeGroupDialogFrame.GroupColor=组颜色:
+
+AddTimePointDialogFrame.Time=时间:
+
+ComSettingDialogFrame.Port=端口:
+ComSettingDialogFrame.BaudRate=波特率:
+ComSettingDialogFrame.DataBits=数据位:
+ComSettingDialogFrame.Parity=校验位:
+ComSettingDialogFrame.StopBits=停止位:
+ComSettingDialogFrame.PortState=端口状态:
+ComSettingDialogFrame.Enabled=启用:
+ComSettingDialogFrame.Closed=已关闭
+ComSettingDialogFrame.Opened=已打开
+
+ControlItemEditDialogFrame.ControlType=控制类型:
+ControlItemEditDialogFrame.BasePower=基准功率(%):
+ControlItemEditDialogFrame.TrigPower=触发功率(%):
+ControlItemEditDialogFrame.TrigTime=触发时间(S):
+ControlItemEditDialogFrame.HoldPower=保持功率(%):
+ControlItemEditDialogFrame.HoldTime=保持时间(S):
+ControlItemEditDialogFrame.BindSensorId=绑定的传感器ID:
+
+ControlItemEditDialogFrame.PowerPolicy=功率策略:
+ControlItemEditDialogFrame.FeedBackLux=反馈照度(Lux):
+ControlItemEditDialogFrame.FeedBackFloatLux=反馈照度死区(Lux):
+ControlItemEditDialogFrame.FeedBackStepPower=反馈步进功率(%):
+ControlItemEditDialogFrame.NotFeedBackLuxOfPower0=不反馈0%功率时的照度(Lux):
+ControlItemEditDialogFrame.NotFeedBackLuxOfPower100=不反馈100%功率时的照度(Lux):
+ControlItemEditDialogFrame.FeedBack=反馈
+ControlItemEditDialogFrame.NotFeedBack=不反馈
+
+ControlItemEditDialogFrame.Power=功率(%):
+@Replace
+HelpAboutFrame.CompanyLabel=${CompanyFullName}
+@Replace
+HelpAboutFrame.ContentText=Copyright, trademark and patent declaration\nMesh Light software and documentation system is designed and programmed by ${CompanyFullName}, all rights reserved worldwide. No reproduction is prohibited without authorization.
+
+LicenseDialogFrame.ThankYouForTrial=感谢您的试用
+LicenseDialogFrame.YourSoftwareId=您的软件ID
+LicenseDialogFrame.RegistrationCode=注册码
+LicenseDialogFrame.Activation=激活
+
+LuminaireDimmingDialog.Dimming=调光
+LuminaireDimmingDialog.Brightness=光照
+LuminaireDimmingDialog.Tip=请改变光照大小然后点击“应用”按钮来应用
+
+UVSterilizerConfDialog.Config=启动消毒
+UVSterilizerConfDialog.Time=消毒时间
+Sterilize Immediately=立即消毒
+Auto Cycle=自动循环
+min=分钟
+
+NodeGroupFrame.GroupName=组名称
+NodeGroupFrame.TotalPower=总功率
+NodeGroupFrame.Nodes=节点
+
+RenameDialogFrame.SetNameOptions=设置名称选项
+RenameDialogFrame.SetNameOptionsTip=使用'#'号来指明可变编号区域！
+RenameDialogFrame.Template=模板
+RenameDialogFrame.StartFrom=开始数值:
+RenameDialogFrame.FixedNumber=固定数值
+RenameDialogFrame.AutoDetected=自动判定
+RenameDialogFrame.Preview=预览
+RenameDialogFrame.CurrentName=当前名称
+RenameDialogFrame.NewName=新名称
+
+RenameOneDialogFrame.NewName=新名称:
+
+ResetAllNodeDialogFrame.StopAndClose=停止并关闭
+
+LanguageDialogFrame.CurrentLanguage=当前语言
+
+HistoryDataChartFrame.Power=功率
+HistoryDataChartFrame.Date=日期
+
+TimeLineControlItemsEditDialogFrame.AddTimePoint=添加时间点
+TimeLineControlItemsEditDialogFrame.RemoveTimePoint=移除时间点
+TimeLineControlItemsEditDialogFrame.EditControlItemTitle=设置控制单元 %1:%2
+TimeLineControlItemsEditDialogFrame.RemoveTimePointQuestion=确定移除时间点 '%1:%2'?
+TimeLineControlItemsEditDialogFrame.ImportFromTemplateQuestion=原有的配置将会被清除，确定导入么？
+TimeLineControlItemsEditDialogFrame.Number=编号:
+TimeLineControlItemsEditDialogFrame.Name=名称:
+TimeLineControlItemsEditDialogFrame.Color=颜色:
+TimeLineControlItemsEditDialogFrame.Description=描述:
+TimeLineControlItemsEditDialogFrame.ExportTemplate=导出模板
+TimeLineControlItemsEditDialogFrame.NoTemplateToExport=没有可导出的模板
+
+SensorListViewModel.ManChecked=被触发
+SensorListViewModel.ManNotChecked=未被触发
+
+GroupPropertiesDialog.GroupProperties=组属性
+
+TimeLineControlItemListsEditDialogFrame.DialogTitle=编辑控制组'%1'的调度策略
+TimeLineControlItemsEditDialog.DialogTitle=编辑调度策略'%1'
+
+
+Global.Instractions=说明:\n\n(1)您可以双击某一行来编辑调度策略。\n\n(2)默认调度策略（编号为0）的基本信息是固定的，不能被修改。\n\n(3)在日历中选择一些日期并将调度策略拖到这些日期上，调度策略便绑定到了这些日期上。
+
+TimeLineControlItemTableViewModel.Time=时间
+TimeLineControlItemTableViewModel.Control=控制
+
+TemplateTimeLineControlPolicyListDialogFrame.TemplateListTitle=模板列表
+TemplateTimeLineControlPolicyListDialogFrame.AddTemplate=添加模板
+TemplateTimeLineControlPolicyListDialogFrame.EditTemplate=编辑模板
+TemplateTimeLineControlPolicyListDialogFrame.RemoveTemplate=删除模板
+TemplateTimeLineControlPolicyListDialogFrame.RemoveTemplateQuestion=确定删除模板‘%1'?
+
+
+
+TemplateTimeLineControlPolicyListDialogFrame.SetupTemplateDialogTitle=设置模板'%1'
+TemplateTimeLineControlItemsEditDialogFrame.SetupTemplateItemDialogTitle=设置模板的控制单元'%1:%2'
+
+HideNodeSettingDialogFrame.Tip=请输入您想在执行器列表中隐藏的节点的地址! 例如: 1, 20, 30, 110
+HideNodeSettingDialogFrame.HideLumWhenFoundSensor=隐藏灯列表中已检测到的传感器节点
+
+TimeLineControlPolicyTableViewModel.Number=编号
+TimeLineControlPolicyTableViewModel.Name=名称
+TimeLineControlPolicyTableViewModel.Color=颜色
+TimeLineControlPolicyTableViewModel.Description=描述
+
+TimeLineControlPoliciesModel.DefaultSchedulePolicy=默认调度策略
+
+Month.1=一月
+Month.2=二月
+Month.3=三月
+Month.4=四月
+Month.5=五月
+Month.6=六月
+Month.7=七月
+Month.8=八月
+Month.9=九月
+Month.10=十月
+Month.11=十一月
+Month.12=十二月
+
+VirtualComListViewModel.TCPServerItemText=%1 -- 设备类型:TCP服务器, 地址:%2, 端口:%3
+VirtualComListViewModel.TCPClientItemText=%1 -- 设备类型:TCP客户端, 地址:%2
+
+VirtualComEditDialog.ComType=设备类型:
+VirtualComEditDialog.Address=地址:
+VirtualComEditDialog.Port=端口:
+
+Global.TCPClient=TCP客户端类型设备
+Global.TCPServer=TCP服务器类型设备
+
+VirtualComFrame.AddServerCom=添加TCP服务器类型设备虚拟串口
+VirtualComFrame.AddClientCom=添加TCP客户端类型设备虚拟串口
+VirtualComFrame.EditServerCom=编辑TCP服务器类型设备虚拟串口
+VirtualComFrame.EditClientCom=编辑TCP客户端类型设备虚拟串口
+VirtualComFrame.EditVCom=编辑选中的虚拟串口
+VirtualComFrame.DeleteVCom=删除选中的虚拟串口
+VirtualComFrame.VComList=虚拟串口列表
+VirtualComFrame.TcpClientGatewayList=TCP客户端类型设备列表
+
+Week.1=星期一
+Week.2=星期二
+Week.3=星期三
+Week.4=星期四
+Week.5=星期五
+Week.6=星期六
+Week.7=星期日
+
+Global.ShowDaysOfThisMonth=显示本月
+Global.ShowDaysOfThisYear=显示一年
+
+Global.CommandInterval=控制命令发送间隔(毫秒):
+Global.CheckInterval=状态检测间隔(秒):
+Global.RuntimeParametersSetting=运行参数设置
+Global.ScheduleParametersSetting=调度参数设置
+Global.NodeOfflineDetectionSetting=节点离线检测设置
+Global.NodeOfflineDetectionDelay=节点离线检测延迟(秒):
+
+Global.AddVirtualMotionSensor=添加虚拟人体感应传感器
+Global.EditVirtualMotionSensor=编辑虚拟人体感应传感器
+Global.Name:=名称:
+Global.BindSensor=绑定传感器
+Global.AllRealMotionSensors=所有实体人体感应传感器
+Global.BindingRealMotionSensors=绑定的实体人体感应传感器
+Global.RemoveSensor=删除虚拟传感器
+Global.RemoveQuestion=确定删除么?
+
+MainWidget.VirtualMotionSensor=虚拟人体感应传感器
+Global.Triggered=被触发
+Global.NotTriggered=未被触发
+
+Global.BackendSchedulingStatus=后台调度任务状态
+Global.RefreshRate:=刷新速度:
+Global.Low=低速
+Global.Middle=中速
+Global.Fast=高速
+Global.MeshName=Mesh名称
+Global.Port=端口
+Global.PortStatus=端口状态
+Global.SchedulingControlStatus=调度控制状态
+Global.NumberOfBufferedCommands=缓冲的控制命令数量
+Global.Opened=已打开
+Global.Closed=已关闭
+Global.NotOpened=未打开
+Global.Started=已开启
+Global.NotStarted=未开启
+Global.BackendSchedulingMonitor=后台调度控制监控器
+
+Global.Loading=加载中 ...
+Global.InitializingDataBase=初始化数据库 ...
+Global.LoadingDataModel=加载数据模型 ...
+Global.Finished=完成
+
+Global.VCOMPortNote=注意: 本系统的TCP监听端口是9000
+Global.Discover=发现
+
+Global.ClearBufferedCommand=清空缓冲的命令
+
+Global.EditVirtualSwitchSensor=编辑虚拟开关传感器
+Global.AddVirtualSwitchSensor=添加虚拟开关传感器
+Global.ConfigureSwitchChannel=配置开关通道
+Global.BindingRealSwitchSensorId:=绑定的实体开关传感器ID:
+Global.DefaultBindingGroupId:=默认绑定的组ID:
+Global.Channel1=通道1
+Global.Channel2=通道2
+Global.Channel3=通道3
+Global.Channel4=通道4
+Global.Channel5=通道5
+Global.Channel6=通道6
+Global.switch_none=无
+Global.switch_group_on=组开灯控制
+Global.switch_group_off=组关灯控制
+Global.switch_group_dimming_up=增加组亮度控制
+Global.switch_group_dimming_down=降低组亮度控制
+Global.switch_schedule_on=启用组自动控制
+Global.switch_schedule_off=关闭组自动控制
+Global.switch_in_work=组上班控制
+Global.switch_not_work=组下班控制
+Global.VirtualSwitchSensorEditAttention=注意:<br>(1)请在下拉框中选择一个控制类型<br>(2)逻辑控制组ID列表格式如: 1,3,4
+
+Global.GroupId:=组ID:
+Global.RealSwitchSensor=实体开关传感器
+Global.RealSwitchSensor2CH=实体2路开关传感器
+Global.VirtualSwitchSensor=虚拟开关传感器
+Global.VirtualSwitchSensor2CH=虚拟2路开关传感器
+
+Global.ScheduleType=调度类型
+Global.ScheduleByDate=按日期调度
+Global.ScheduleByOnDuty=按上班调度
+Global.ScheduleByOffDuty=按下班调度
+Global.ScheduleOff=关闭调度
+Global.ScheduleByDateConfiguration="日期调度"配置
+Global.ScheduleByOnDutyConfiguration="上班调度"配置
+Global.ScheduleByOffDutyConfiguration="下班调度"配置
+
+Global.Reset=重置
+Global.ResetMesh=重置Mesh
+Global.ResetMeshQuestion=所有实体执行器和实体传感器都将被清除，确定重置这个Mesh?
+Global.BindingGroupId=绑定的组ID
+Global.TrigValue=触发值
+
+Global.RealMotionAndLuxCameraSensor='微波-光照'摄像头
+Global.TemperatureHumiditySensor=温湿度传感器
+
+Global.RefrgTemperatureHumiditySensor=冰箱温度监测传感器
+Global.UVLightSensor=刀具消毒传感器
+Global.HandWashingSensor=洗手消毒监测传感器
+
+Global.ControlParameters=控制参数
+Global.Power=功率
+
+Global.BindLuxSensorResultAsTrigPower=绑定光照传感器的计算结果作为触发功率
+Global.DimmingInterval(Second):=调光间隔(秒):
+Global.Others=其它
+Global.NoOperation=无操作
+
+Global.PageUp=向上翻页
+Global.PageDown=向下翻页
+Global.StressSensor=应力传感器
+Global.FormaldehydeSensor=甲醛传感器
+Address: %1=地址: %1
+AP Status: %1=AP状态: %1
+
+Global.EnableCameraAP=启用摄像头AP
+Global.DisableCameraAP=关闭摄像头AP
+Global.EnableCameraAPQuestion=确定启用摄像头AP (SSID: TKT_CAMERA_AP)?
+Global.DisableCameraAPQuestion=确定关闭AP?
+
+Global.AllocSwitchKeyGroup=配置开关按键功能
+
+Global.AddMQTTCom=添加MQTT虚拟串口
+Global.InputDeviceID:=输入设备ID:
+Global.EditMQTTCom=编辑MQTT虚拟串口
+Global.MQTTItemText=%1 -- 设备类型:MQTT, 设备ID:%2
+
+Global.TurnOffAutoNotificationWhenSchedulingIsStarted=当调度控制打开时关闭灯节点状态自动上报功能
+Global.AutoRefreshNodesDuringMeshInitialization=Mesh初始化时自动刷新节点
+Global.AutoRefreshSetting=自动刷新设置
+Global.LogManager=日志管理器
+Global.Clear=清空
+Global.AutoRefresh=自动刷新
+
+AllocSwitchKeyGroupFrame.NoOperation=无操作
+AllocSwitchKeyGroupFrame.Grouping=按键分组
+
+Select Your Log Folder=请选择日志文件夹
+Log In Disk=磁盘日志
+Log In Memory=内存日志
+Select Folder=选择文件夹
+Open Folder=打开文件夹
+Log Folder:=日志文件夹:
+Enable Log To Disk=启用(记录到磁盘)
+
+LuxSensorFilterSettingDialogFrame.Tip=请输入需要过滤的光照传感器的ID列表，例如: 1, 20, 30, 110
+Global.LuxSensorFilterSetting=光照传感器过滤器设置
+Filter Coefficient:=过滤器系数：
+
+Threshold Of Buffered Command Number In Busy Scheduling:=忙调度中的缓冲区命令阈值：
+Auto Refresh=自动刷新
+Scheduling Time Interval Between Two Groups(Second):=控制组间调度时间间隔(秒):
+Enable Debug Output=启用调试输出
+Ignore Motion Sensor Hold Time=忽略微波传感器的保持时间
+Hold Time will be ignored if it's value is 0=保持时间为0时会被忽略
+Please turn off Schedule Control first if you want to control executer manually!=如果您想手动控制执行器，请先关闭调度控制!
+Warning=警告
+Minimum Brightness Of Luminaire:=灯具最低亮度:
+MainWidget.Luminaires=灯具
+Control Policies=控制策略
+Configure=配置
+
+SwitchControlType.switch_date_schedule=按日期调度
+SwitchControlType.switch_onduty_schedule=按上班调度
+SwitchControlType.switch_offduty_schedule=按下班调度
+SwitchControlType.switch_schedule_off=关闭调度
+SwitchControlType.switch_none=无操作
+
+Are you sure to remove the control policy?=确定删除这个控制策略？
+Remove Control Policy=删除控制策略
+Add Control Policy=添加控制策略
+Name:=名称:
+Color:=颜色:
+Template=模板
+Delete Local Configuration Data=删除本地配置数据
+Are you sure to delete the local configuration data of selected sensors?=确定删除选中传感器的本地配置数据?
+Are you sure to delete the local configuration data of selected executers?=确定删除选中执行器的本地配置数据?
+One-Channel Luminaire=一通道调光灯
+One-Channel Relay=一通道继电器
+Warning Light=报警灯
+Solar One-Channel Luminaire=太阳能一通道调光灯
+UV Sterilizer=紫外刀具消毒柜
+Wifi Address: %1, =Wifi地址：%1，
+Appointed =配置
+Sterilizing=消毒
+Succeed=成功
+Failed=失败
+Completed=完成
+In process=进行中
+The group ID you entered already exists!=您输入的组ID已存在！
+Group ID:=组ID:
+Please input Group Name!=请输入组名称!
+Message=消息
+Logical Group IDs:=逻辑组ID列表:
+Bind COM Name To Mesh Name:=绑定串口名为MESH名:
+COM Name=串口名
+MESH Name=MESH名
+"Gateway-MESH" Detector="网关-MESH"识别器
+Unknown=未知
+Are you sure to save mesh?=确定保存MESH数据？
+Save=保存
+Save Data=保存数据
+Quit=退出
+Are you sure to quit mesh?=确定退出MESH配置？
+Show Only Online Executers=只显示在线执行器
+Show Only Available Executers=只显示有效执行器
+Show Only Available Sensors=只显示有效传感器
+Number Of Selected Executers: %1=选中的执行器数量: %1
+Total Number In Selected Group: %1=选中组中所有节点数量: %1
+Logical Group ID List:=逻辑组ID列表:
+Editor=编辑器
+Delete Configuration Data=删除配置数据
+Are you sure to delete the configuration data of selected executers?=确定删除选中的执行器节点的配置数据么？
+Are you sure to delete the configuration data of selected sensors?=确定删除选中的传感器节点的配置数据么？
+Type=类型
+ID=ID
+Name=名称
+Data=数据
+Lux Sensor=光照传感器
+Real Motion Sensor=实体微波传感器
+Virtual Motion Sensor=虚拟微波传感器
+PM Sensor=PM传感器
+CO1 Sensor=一氧化碳传感器
+CO2 Sensor=二氧化碳传感器
+Real Switch Sensor=实体开关传感器
+Real Switch Sensor with 2 Channels=实体2路开关传感器
+Virtual Switch Sensor=虚拟开关传感器
+Real Motion-Lux Camera=实体人体和光照摄像头
+Temperature-Humidity Sensor=温湿度传感器
+Stress Sensor=应力传感器
+Formaldehyde Sensor=甲醛传感器
+
+Refrigerator Temperature-Humidity Sensor=冰箱温度监测传感器
+Ultraviolet Light Sensor=刀具消毒传感器
+Hand Washing Sensor=洗手消毒监测传感器
+
+One-Channel Luminaire=一通道调光灯
+One-Channel Relay=一通道继电器
+Trigger Shield Time(MS):=触发屏蔽时间(毫秒):
+Close=关闭
+Update File:=升级文件:
+Select Update File ...=选择升级文件...
+Update=升级
+Waiting ...=等待中 ...
+Updating ...=升级中 ...
+Failed=失败
+Success=成功
+Update Nodes=升级主控机
+Scheduling Time Interval Between Two Groups(Second):=控制组间调度时间间隔(秒):
+Refresh=刷新
+Are you sure to update?=确定升级?
+Package Error=包错误
+ADBoard=广告灯箱
+luminaire_group=调光灯
+relay_group=继电器
+adboard_group=广告灯箱
+Group Type:=组类型
+Power(%)=功率(%)
+Display Mode=显示模式
+Triggered Value:=触发值:
+Hold Value:=保持值:
+Base Value:=基准值:
+Relay State:=继电器状态:
+Lux Of On(Lux):=继电器打开照度(Lux):
+Lux Of Off(Lux):=继电器关闭照度(Lux):
+Triggered State:=触发状态:
+Base State:=基准状态:
+Special Control=特殊控制
+Start Sterilizing=启动消毒
+Display Mode:=显示模式
+Special Control Of %1=%1特殊控制
+Group Special Control Of %1=%1组特殊控制
+Click the button to trigger once=点击按钮手动触发一次
+Trigger Once=触发一次
+
+
+
+Global.LanguageName=中文
+Ok=确定
+OK=确定
+Cancel=取消
+Save=保存
+Close=关闭
+Done=确定
+Apply=应用
+Quit=退出
+Error=错误
+
+@Replace
+Global.CompanyName=${CompanyShortName}
+Lighting System=照明系统
+Exit=退出
+Add=添加
+Edit=编辑
+Remove=删除
+Export To Template=导出为模板
+Import From Template=从模板导入
+Name=名称
+Description=描述
+Name:=名称:
+Description:=描述:
+
+Show Full Screen=全屏显示
+Show Maximized=最大化显示
+Show Normal=正常显示
+AlignLeft=左对齐
+AlignRight=右对齐
+AlignHCenter=水平居中
+AlignTop=上对齐
+AlignBottom=下对齐
+AlignVCenter=垂直居中
+
+Size=尺寸
+Property=属性
+Value=值
+Executer=执行器
+Brightness=亮度
+Status=状态
+Motion Sensor=微波感应传感器
+Gas Transducer=气体传感器
+Lux Sensor=光照传感器
+Lux Value=照度
+Real Motion Sensor=实体微波传感器
+Virtual Motion Sensor=虚拟微波传感器
+PM Sensor=PM传感器
+CO1 Sensor=CO1传感器
+CO2 Sensor=CO2传感器
+Mesh=Mesh
+Node=节点
+Node Type=节点类型
+Node Property=节点属性
+Font Size=字体大小
+Font Color=文字颜色
+Horizontal Alignment=水平对齐
+Vertical Alignment=垂直对齐
+Width=宽度
+Height=高度
+Text=文字
+Are you sure you want to delete this item?=确定删除？
+Dynamic Text=动态文字
+Static Text=静态文字
+Instructions=说明
+Global.DashboardEditFrameInstructions=(1)请拖动上面的元素到中间的编辑区域并释放，以此来创建一个新的元素。<br>(2)请选中中间的编辑区域的元素，并在属性表中编辑它的属性。
+Are you sure you want to quit?=确定退出？
+Dashboard Elements=仪表板元素
+Display=显示
+Add Dashboard=添加仪表板
+Background Image ...=背景图片 ...
+Refresh=刷新
+
+File=文件
+Alert=报警
+Settings=设置
+Help=帮助
+System Setting=系统设置
+Energy Monitoring=电能监测
+Executers=执行器
+Sensors=传感器
+Id=ID
+POWER=功率
+Pf Value=Pf Value
+ENERGY=电能
+System On=系统全开
+Groups/Mapping=分组/映射
+
+@Replace
+MainWidget.Copyright=Copyright © 2019 ${CompanyFullName}
+Are you sure to quit this application?=确定退出本系统？
+Use Schedule Control=启用调度控制
+"%1" COM Setting="%1"串口设置
+Reset '%1' All Nodes=重置'%1'所有节点
+Language=语言
+Template Management=模板管理
+License=授权
+About=关于
+Open Debug Window=打开调试窗口
+Rename=重命名
+On=打开
+Off=关闭
+All On=打开所有灯
+All Off=关闭所有灯
+Dimming=调节灯亮度
+All Dimming=调节所有灯亮度
+Grouping=分组
+Order=排序
+Order By ID=按ID排序
+Order By Name=按名称排序
+All groups of every node will be cleared, are you sure to reset all nodes?=所有节点的分组信息将会被清除，确定重置所有节点？
+Rename Luminaries=重命名执行器
+Rename Sensor=重命名传感器
+Rename Sensors=重命名传感器
+Rename Group=重命名组
+Rename Groups=重命名组
+Add Group=添加组
+Delete Group=删除组
+Are you sure delete group '%1'?=确定删除分组 '%1'?
+Edit Control Items of '%1'=编辑控制单元 '%1'
+All Groups=所有分组
+Ungrouped=未分组
+System Off=系统全关
+Are you sure turn off all lights?=确定关闭所有灯具？
+SystemOn=系统全开
+Are you sure turn on all lights?=确定打开所有灯具？
+Select Your Date=选择日期
+Error, days between two days cannot larger than 1000!=错误，两个日期相差不能超过1000天！
+Number Of Selected Executers: %1=选中执行器数量: %1
+Total Number In The Group: %1=当前组所有执行器数量: %1
+Date Range=日期范围
+Enter your search here ...=请输入您要搜索的内容
+Meshes=Mesh列表
+Number Of Executers=灯节点数量
+Number Of Sensors=传感器节点数量
+Number Of Groups=分组数量
+Status Of Schedule Control=调度控制状态
+Started=已开启
+Stoped=未开启
+Delete=删除
+Start Schedule Control=开启调度控制
+Stop Schedule Control=关闭调度控制
+Add Mesh=添加Mesh
+Mesh Name=Mesh名称
+MESH Name=Mesh名称
+Rename Mesh=重命名Mesh
+New Mesh Name=新Mesh名称
+Delete Mesh=删除Mesh
+Are your sure delete mesh "%1"?=确定删除Mesh "%1"?
+
+Virtual COM Settings=虚拟串口设置
+Hidden Nodes Setting=隐藏节点设置
+Message=消息
+Please select one mesh item first!=请先选中一个Mesh！
+Dashboard Management=仪表板管理
+Schedule Parameters Setting=调度参数设置
+
+IP/Domain:=IP/域名:
+Port:=端口:
+ID=ID
+
+@Replace
+MeshDetailsFrame.Copyright=Copyright © 2018 ${CompanyFullName}
+COM Setting=串口设置
+Reset All Nodes=重置所有节点
+Order By Online Status=按在线状态排序
+Show Only Online Nodes=只显示在线节点
+
+Schedule Control Settings=调度控制设置
+Locate Executer=定位灯具
+
+Export Project Settings=导出项目配置
+Import Project Settings=导入项目配置
+Restart MeshLight=重启MeshLight
+Restart this application to apply new settings, continue?=需要重启本软件来启用新的项目配置，是否继续？
+
+Group Name:=组名称:
+Group Color:=组颜色:
+
+Time:=时间:
+
+Baud Rate:=波特率:
+Data Bits:=数据位:
+Parity:=校验位:
+Stop Bits:=停止位:
+Port State:=端口状态:
+Enabled:=启用:
+Closed=已关闭
+Opened=已打开
+
+Control Type:=控制类型:
+Base Power(%):=基准功率(%):
+Triggered Power(%):=触发功率(%):
+Triggered Hold Time(S):=触发时间(S):
+Hold Power(%):=保持功率(%):
+Hold Time(S):=保持时间(S):
+Bind Sensor Id:=绑定的传感器ID:
+
+Power Policy:=功率策略:
+Feed Back Target Lux(Lux):=反馈照度(Lux):
+Feed Back Tolerance Lux(Lux):=反馈照度死区(Lux):
+Feed Back Power Adjustment(%):=反馈步进功率(%):
+Not Feed Back Lux Of Power 0(Lux):=不反馈0%功率时的照度(Lux):
+Not Feed Back Lux Of Power 100(Lux):=不反馈100%功率时的照度(Lux):
+Feed Back=反馈
+Not Feed Back=不反馈
+Power(%):=功率(%):
+
+Threshold Max Value:=上限值:
+Threshold Min Value:=下限值:
+Triggered Type:=触发类型
+Normally On=打开
+Timer=定时
+Triggered Mode:=触发模式:
+Upper - Botton=上下限
+Bottom - Upper=下上限
+ControlItemEditDialogFrameOfRelayGroup.TrigModeUpperBottomTip=超过上限值时继电器将被打开，反之低于下限值时继电器将被关闭（如空调制冷）
+ControlItemEditDialogFrameOfRelayGroup.TrigModeBottomUpperTip=低于下限值时继电器将被打开，反之超过上限值时继电器将被关闭（如空调制热）
+
+@Replace
+HelpAboutFrame.CompanyLabel=${CompanyFullName}
+
+@Replace
+HelpAboutFrame.ContentText=Copyright, trademark and patent declaration\nMesh Light software and documentation system is designed and programmed by ${CompanyFullName}, all rights reserved worldwide. No reproduction is prohibited without authorization.
+
+Thank You for Trail=感谢您的试用
+Your Software ID=您的软件ID
+Registration Code=注册码
+Activation=激活
+
+Please modify brightness value then click "Apply" to apply it!=请改变光照大小然后点击“应用”按钮来应用
+Group Name=组名称
+Total Power:=总功率:
+Nodes=节点
+
+Set Name Options=设置名称选项
+Using # to indicate the numberical enumerator positions=使用'#'号来指明可变编号区域！
+Template=模板
+Start From:=开始数值:
+Fixed Number=固定数值
+Auto Detected=自动判定
+Preview=预览
+Current Name=当前名称
+New Name=新名称
+New Name:=新名称:
+Stop And Close=停止并关闭
+Current Language:=当前语言
+
+Power=功率
+Date=日期
+
+Add Time Point=添加时间点
+Remove Time Point=移除时间点
+Edit Control Item %1:%2=设置控制单元 %1:%2
+Are you sure remove time point '%1:%2'?=确定移除时间点 '%1:%2'?
+
+Triggered=被触发
+Not Triggered=未被触发
+
+Group Properties=组属性
+
+Edit Scheduling Policy Of Group '%1'=编辑控制组'%1'的调度策略
+Edit Scheduling Policy '%1'=编辑调度策略'%1'
+
+Number:=编号:
+Color:=颜色:
+
+Global.Instractions=说明:\n\n(1)您可以双击某一行来编辑调度策略。\n\n(2)默认调度策略（编号为0）的基本信息是固定的，不能被修改。\n\n(3)在日历中选择一些日期并将调度策略拖到这些日期上，调度策略便绑定到了这些日期上。
+
+Time=时间
+Control=控制
+
+Template List=模板列表
+Add Template=添加模板
+Edit Template=编辑模板
+Remove Template=删除模板
+Are you sure to remove template '%1' ?=确定删除模板‘%1'?
+
+Original configurations will be cleared, are you sure to import?=原有的配置将会被清除，确定导入么？
+
+Setup Template '%1'=设置模板'%1'
+Setup Template Control Item '%1:%2'=设置模板的控制单元'%1:%2'
+
+Please input address of nodes that you want to hide in luminaire list! For example: 1, 20, 30, 110=请输入您想在执行器列表中隐藏的节点的地址! 例如: 1, 20, 30, 110
+Hide detected sensor node in luminaire list=隐藏灯列表中已检测到的传感器节点
+
+Number=编号
+Color=颜色
+
+Default Schedule Policy=默认调度策略
+
+January=一月
+February=二月
+March=三月
+April=四月
+May=五月
+June=六月
+July=七月
+August=八月
+September=九月
+October=十月
+November=十一月
+December=十二月
+
+Month.1=一月
+Month.2=二月
+Month.3=三月
+Month.4=四月
+Month.5=五月
+Month.6=六月
+Month.7=七月
+Month.8=八月
+Month.9=九月
+Month.10=十月
+Month.11=十一月
+Month.12=十二月
+
+Week.1=星期一
+Week.2=星期二
+Week.3=星期三
+Week.4=星期四
+Week.5=星期五
+Week.6=星期六
+Week.7=星期日
+%1 -- Device Type:TCP Server, Address:%2, Port:%3=%1 -- 设备类型:TCP服务器, 地址:%2, 端口:%3
+%1 -- Device Type:TCP Client, Address:%2=%1 -- 设备类型:TCP客户端, 地址:%2
+
+Device Type:=设备类型:
+Address:=地址:
+Global.TCPClient=TCP Client Device
+Global.TCPServer=TCP Server Device
+
+Add TCP Server Device VCOM=添加TCP服务器类型设备虚拟串口
+Add TCP Client Device VCOM=添加TCP客户端类型设备虚拟串口
+Edit TCP Server Device VCOM=编辑TCP服务器类型设备虚拟串口
+Edit TCP Client Device VCOM=编辑TCP客户端类型设备虚拟串口
+Edit Selected VCOM=编辑选中的虚拟串口
+Delete Selected VCOM=删除选中的虚拟串口
+Virtual COM List=虚拟串口列表
+TCP Client Device List=TCP客户端类型设备列表
+
+Monday=星期一
+Tuesday=星期二
+Wednesday=星期三
+Thursday=星期四
+Friday=星期五
+Saturday=星期六
+Sunday=星期日
+
+Show Days Of This Month=显示本月
+Show Days Of This Year=显示一年
+
+Command sending interval(ms):=控制命令发送间隔(毫秒):
+State Detection Interval(s):=状态检测间隔(秒):
+Runtime Parameters Setting=运行参数设置
+Node Offline Detection Setting=节点离线检测设置
+Node Offline Detection Delay(S):=节点离线检测延迟(秒):
+
+Add Virtual Motion Sensor=添加虚拟人体感应传感器
+Edit Virtual Motion Sensor=编辑虚拟人体感应传感器
+Bind Sensor=绑定传感器
+All Real Motion Sensors=所有实体人体感应传感器
+Binding Real Motion Sensors=绑定的实体人体感应传感器
+Remove Virtual Sensor=删除虚拟传感器
+Are you sure to delete?=确定删除么?
+Backend Scheduling Status=后台调度任务状态
+Refresh Rate:=刷新速度:
+Low=低速
+Middle=中速
+Fast=高速
+MeshName=Mesh名称
+Port=端口
+Port Status=端口状态
+Scheduling Control Status=调度控制状态
+Number Of Buffered Commands=缓冲的控制命令数量
+Not Opened=未打开
+Not Started=未开启
+Backend Scheduling Monitor=后台调度控制监控器
+
+Loading ...=加载中 ...
+Initializing Database ...=初始化数据库 ...
+Loading Data Model ...=加载数据模型 ...
+Finished=完成
+
+Attention: TCP Listening Port Of This System Is 9000=注意: 本系统的TCP监听端口是9000
+Discover=发现
+
+Clear Buffered Commands=清空缓冲的命令
+
+Edit Virtual Switch Sensor=编辑虚拟开关传感器
+Add Virtual Switch Sensor=添加虚拟开关传感器
+Configure Switch Channel=配置开关通道
+Sensor Id Of Binding Real Switch Sensor:=绑定的实体开关传感器ID:
+Default Binding Group Id:=默认绑定的组ID:
+Channel 1=通道1
+Channel 2=通道2
+Channel 3=通道3
+Channel 4=通道4
+Channel 5=通道5
+Channel 6=通道6
+None=无
+Group On=组开灯控制
+Group Off=组关灯控制
+Group Dimming Up=增加组亮度控制
+Group Dimming Down=降低组亮度控制
+Group Schedule On=启用组自动控制
+Group Schedule Off=关闭组自动控制
+Global.VirtualSwitchSensorEditAttention=注意:<br>(1)请在下拉框中选择一个控制类型<br>(2)逻辑控制组ID列表格式如: 1,3,4
+
+Group ID:=组ID:
+Real Switch Sensor=实体开关传感器
+Virtual Switch Sensor=虚拟开关传感器
+
+Schedule Type=调度类型
+By Date=按日期调度
+On Duty=按上班调度
+Off Duty=按下班调度
+Schedule "By Date" Configuration="日期调度"配置
+Schedule "On Duty" Configuration="上班调度"配置
+Schedule "Off Duty" Configuration="下班调度"配置
+
+Reset=重置
+Reset Mesh=重置Mesh
+All luminaires and real sensors will be cleared, are you sure to reset this mesh?=所有实体执行器和实体传感器都将被清除，确定重置这个Mesh?
+Binding Group ID=绑定的组ID
+Triggered Value=触发值
+Motion-Lux Camera='微波-光照'摄像头
+Temperature-Humidity Sensor=温湿度传感器
+
+Control Parameters=控制参数
+
+Bind Lux Sensor Result As Triggered Power=绑定光照传感器的计算结果作为触发功率
+Dimming Interval(Second):=调光间隔(秒):
+Others=其它
+No Operation=无操作
+
+Page Up=向上翻页
+Page Down=向下翻页
+Stress Sensor=应力传感器
+Formaldehyde Sensor=甲醛传感器
+Address: %1=地址: %1
+AP Status: %1=AP状态: %1
+
+Enable Camera AP=启用摄像头AP
+Disable Camera AP=关闭摄像头AP
+Are you sure to enable camera AP (SSID: TKT_CAMERA_AP)?=确定启用摄像头AP (SSID: TKT_CAMERA_AP)?
+Are you sure to disable camera AP?=确定关闭AP?
+
+Add MQTT VCOM=添加MQTT虚拟串口
+Input Device ID:=输入设备ID:
+Edit MQTT VCOM=编辑MQTT虚拟串口
+%1 -- Device Type:MQTT, Device ID:%2=%1 -- 设备类型:MQTT, 设备ID:%2
+
+Turn Off Auto Notification Of Executers When Scheduling Is Started=当调度控制打开时关闭灯节点状态自动上报功能
+Auto Refresh Nodes During Mesh Initialization=Mesh初始化时自动刷新节点
+Auto Refresh Setting=自动刷新设置
+Log Manager=日志管理器
+Clear=清空
+Auto Refresh=自动刷新
+
+Select Your Log Folder=请选择日志文件夹
+Log In Disk=磁盘日志
+Log In Memory=内存日志
+Select Folder=选择文件夹
+Open Folder=打开文件夹
+Log Folder:=日志文件夹:
+Enable (Log To Disk)=启用(记录到磁盘)
+
+LuxSensorFilterSettingDialogFrame.Tip=请输入需要过滤的光照传感器的ID列表，例如: 1, 20, 30, 110
+Lux Sensor Filter Setting=光照传感器过滤器设置
+Filter Coefficient:=过滤器系数：
+
+Threshold Of Buffered Command Number In Busy Scheduling:=忙调度中的缓冲区命令阈值：
+Scheduling Time Interval Between Two Groups(Second):=控制组间调度时间间隔(秒):
+Enable Debug Output=启用调试输出
+Ignore Motion Sensor Hold Time=忽略微波传感器的保持时间
+Hold Time will be ignored if it's value is 0=保持时间为0时会被忽略
+Please turn off Schedule Control first if you want to control executer manually!=如果您想手动控制执行器，请先关闭调度控制!
+Warning=警告
+Minimum Brightness Of Luminaire:=灯具最低亮度:
+Luminaires=灯具
+Control Policies=控制策略
+Configure=配置
+
+Schedule By Date=按日期调度
+Schedule By Onduty=按上班调度
+Schedule By Offduty=按下班调度
+Schedule Off=关闭调度
+
+Are you sure to remove the control policy?=确定删除这个控制策略？
+Remove Control Policy=删除控制策略
+Add Control Policy=添加控制策略
+Delete Local Configuration Data=删除本地配置数据
+Are you sure to delete the local configuration data of selected sensors?=确定删除选中传感器的本地配置数据?
+Are you sure to delete the local configuration data of selected executers?=确定删除选中执行器的本地配置数据?
+One-Channel Luminaire=一通道调光灯
+One-Channel Relay=一通道继电器
+Solar One-Channel Luminaire=太阳能一通道调光灯
+The group ID you entered already exists!=您输入的组ID已存在！
+Please input Group Name!=请输入组名称!
+Logical Group IDs:=逻辑组ID列表:
+Bind COM Name To Mesh Name:=绑定串口名为MESH名:
+COM Name=串口名
+"Gateway-MESH" Detector="网关-MESH"识别器
+Unknown=未知
+Type=类型
+Data=数据
+Real Motion-Lux Camera=实体人体和光照摄像头
+Show Only Online Executers=只显示在线执行器
+Show Only Available Executers=只显示有效执行器
+Show Only Available Sensors=只显示有效传感器
+Script=脚本
+Double Click To Edit=双击鼠标编辑
+Image List=图片列表
+Operate=操作
+Dashboard Image List=监视器图片列表
+Open File=打开文件
+Save File=保存文件
+Edit Script=编辑脚本
+Clear All Configurations=清除所有配置
+Are you sure to clear all configurations?=确定清除所有配置？
+'%1' COM Setting='%1'串口设置
+One Channel Relay=一通道继电器
+Static Image=静态图片
+Programmable Item=可编程控件
+Image Name=图片名称
+Style Sheet=样式表
+Fill UUID=填入UUID
+JavaScript Script=JavaScript脚本
+MESH Information=MESH信息
+Device List=设备列表
+JavaScript Methods=JavaScript方法
+Trigger Shield Time(MS):=触发屏蔽时间(毫秒):
+Date Interval:=日期间隔:
+Day(s)=天
+Raise=上升
+Lower=降低
+Select one or more images to import=选择一个或多个要导入的图片
+Default Mesh=默认Mesh
+Your License Is Expired!=你的注册码过期了!
+Your License Will Expire In %1 Days!=你的注册码还有%1天过期!
+Registration Failed, Please Check Your Registration Code!=注册失败，请检查您的注册码!
+Registration Success!=注册成功!
+Are you sure to remove this image?=你确定删除这张图片?
+Yes=是
+No=否
+Input=输入
+Registration Code:=注册码:
+Edit Text=修改文本
+Select Color=选择颜色
+ADBoard=广告灯箱
+luminaire_group=调光灯
+relay_group=继电器
+adboard_group=广告灯箱
+Group Type:=组类型
+Power(%)=功率(%)
+Display Mode=显示模式
+Triggered Value:=触发值:
+Hold Value:=保持值:
+Base Value:=基准值:
+Relay State:=继电器状态:
+Lux Of On(Lux):=继电器打开照度(Lux):
+Lux Of Off(Lux):=继电器关闭照度(Lux):
+Triggered State:=触发状态:
+Base State:=基准状态:
+Special Control=特殊控制
+Display Mode:=显示模式
+Special Control Of %1=%1特殊控制
+Group Special Control Of %1=%1组特殊控制
+Click the button to trigger once=点击按钮手动触发一次
+Trigger Once=触发一次
+Basic Control Parameters=基础控制参数
+Advanced Control Parameters=高级控制参数
+
+STATUS: %1, BRIGHTNESS: %2, COLOR: %3=状态: %1, 亮度: %2, 颜色: %3
+BRIGHTNESS: %1=亮度: %1
+Online=在线
+Offline=离线
+STATUS: %1=状态: %1
+DISPLAY MODE: %1=显示模式: %1
+CO1: %1=一氧化碳: %1
+CO2: %1=二氧化碳: %1
+LUX: %1=光照: %1
+KEY: %1=按键: %1
+STRESS: %1=压力: %1
+TEMP: %1, HUMI: %2=温度: %1, 湿度: %2
+TRIGGERED=被触发
+NOT TRIGGERED=未被触发
+ON=打开
+OFF=关闭

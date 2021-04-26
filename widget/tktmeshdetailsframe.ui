@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TKTMeshDetailsFrame</class>
+ <widget class="QFrame" name="TKTMeshDetailsFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1214</width>
+    <height>821</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageTKTMesh">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QGroupBox" name="groupTKTMesh">
+         <property name="title">
+          <string>TKTMesh</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QFrame" name="frameTKTMeshTitle">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="buttonTKTMeshClose">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelTKTMeshTitle">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>--</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_18">
+               <property name="text">
+                <string>连接状态:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelConnectionStatus">
+               <property name="text">
+                <string>Connected</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frameTKTMeshMain">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QTabWidget" name="tabTKTMeshDetails">
+               <property name="currentIndex">
+                <number>1</number>
+               </property>
+               <widget class="QWidget" name="tabHostInfo">
+                <attribute name="title">
+                 <string>TKTMesh主机信息</string>
+                </attribute>
+                <widget class="QGroupBox" name="groupBox_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>20</y>
+                   <width>471</width>
+                   <height>521</height>
+                  </rect>
+                 </property>
+                 <property name="title">
+                  <string>参数配置</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QFrame" name="frame">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout">
+                     <item row="8" column="0">
+                      <widget class="QLabel" name="label_16">
+                       <property name="text">
+                        <string>云平台地址:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="8" column="1">
+                      <widget class="QLineEdit" name="linePlatformAddress">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineHostName">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="lineHostID">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>主机注册状态:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>主机名称:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_6">
+                       <property name="text">
+                        <string>主机描述:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>主机ID:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_7">
+                       <property name="text">
+                        <string>主机密钥:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineHostDescription">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="0">
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>主机硬件版本:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLineEdit" name="lineHostKey">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="7" column="1">
+                      <widget class="QLineEdit" name="lineHostSoftVer">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="7" column="0">
+                      <widget class="QLabel" name="label_9">
+                       <property name="text">
+                        <string>主机软件版本:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="1">
+                      <widget class="QLineEdit" name="lineHostHardVer">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="9" column="0">
+                      <widget class="QLabel" name="label_17">
+                       <property name="text">
+                        <string>云平台端口:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLineEdit" name="lineHostCode">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_19">
+                       <property name="text">
+                        <string>主机CODE:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="9" column="1">
+                      <widget class="QLineEdit" name="linePlatformPort">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="10" column="1">
+                      <widget class="QLineEdit" name="lineCloudConfigAddress">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="10" column="0">
+                      <widget class="QLabel" name="label_23">
+                       <property name="text">
+                        <string>云配置地址:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QFrame" name="frame_2">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_3">
+                        <property name="spacing">
+                         <number>10</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QLabel" name="labelHostRegisterState">
+                          <property name="text">
+                           <string>未注册</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="Line" name="line">
+                          <property name="orientation">
+                           <enum>Qt::Vertical</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="checkClearRegisterState">
+                          <property name="text">
+                           <string>保存时清除注册状态</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_2">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>202</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="11" column="0">
+                      <widget class="QLabel" name="label_24">
+                       <property name="text">
+                        <string>云配置端口:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="11" column="1">
+                      <widget class="QLineEdit" name="lineCloudConfigPort">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <item>
+                     <spacer name="horizontalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="buttonRefreshHostInfo">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>刷新</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="buttonSaveHostInfo">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>保存</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QGroupBox" name="groupBox_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>530</x>
+                   <y>20</y>
+                   <width>161</width>
+                   <height>101</height>
+                  </rect>
+                 </property>
+                 <property name="title">
+                  <string>操作</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <item>
+                   <widget class="QPushButton" name="buttonRestartTKTMesh">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>重启TKTMesh</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="buttonRebootHost">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>重启TKTMesh主机</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="tabTKTMeshInfo">
+                <attribute name="title">
+                 <string>TKTMesh信息</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QGroupBox" name="groupBox">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="title">
+                    <string>Mesh列表</string>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_3">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_9">
+                      <item>
+                       <widget class="QPushButton" name="buttonRefreshMeshList">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>刷新</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_3">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="buttonAddMesh">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>添加Mesh</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="buttonRemoveMesh">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>删除Mesh</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="buttonRenameMesh">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>30</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>重命名Mesh</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <widget class="QTableView" name="tableMesh"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frameMeshBasicInfo">
+                   <property name="maximumSize">
+                    <size>
+                     <width>400</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <item>
+                     <widget class="QGroupBox" name="groupBox_5">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>200</height>
+                       </size>
+                      </property>
+                      <property name="title">
+                       <string>MESH基本信息与操作</string>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_8">
+                       <item>
+                        <widget class="QFrame" name="frame_4">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_2">
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_21">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>UUID:</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLabel" name="labelMeshUUID">
+                            <property name="text">
+                             <string>--</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_20">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>MESH名称:</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLabel" name="labelCurrentMeshName">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="text">
+                             <string>--</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="groupBox_4">
+                         <property name="title">
+                          <string>MESH基本信息</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_4">
+                          <item>
+                           <widget class="QFrame" name="frame_3">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QGridLayout" name="gridLayout_3">
+                             <item row="5" column="1">
+                              <widget class="QFrame" name="frameComEnableState">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                                <property name="spacing">
+                                 <number>10</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QRadioButton" name="radioComEnable">
+                                  <property name="text">
+                                   <string>启用</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QRadioButton" name="radioComDisable">
+                                  <property name="text">
+                                   <string>禁用</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <spacer name="horizontalSpacer_7">
+                                  <property name="orientation">
+                                   <enum>Qt::Horizontal</enum>
+                                  </property>
+                                  <property name="sizeHint" stdset="0">
+                                   <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                   </size>
+                                  </property>
+                                 </spacer>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                             <item row="0" column="1">
+                              <widget class="QFrame" name="frameAutoScheduleState">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                                <property name="spacing">
+                                 <number>10</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QRadioButton" name="radioAutoScheduleOn">
+                                  <property name="text">
+                                   <string>开</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QRadioButton" name="radioAutoScheduleOff">
+                                  <property name="text">
+                                   <string>关</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <spacer name="horizontalSpacer_8">
+                                  <property name="orientation">
+                                   <enum>Qt::Horizontal</enum>
+                                  </property>
+                                  <property name="sizeHint" stdset="0">
+                                   <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                   </size>
+                                  </property>
+                                 </spacer>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                             <item row="4" column="1">
+                              <widget class="QFrame" name="frameBindComNameToMeshNameState">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                                <property name="spacing">
+                                 <number>10</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QRadioButton" name="radioBindComNameToMeshNameYes">
+                                  <property name="text">
+                                   <string>是</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QRadioButton" name="radioBindComNameToMeshNameNo">
+                                  <property name="text">
+                                   <string>否</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <spacer name="horizontalSpacer_9">
+                                  <property name="orientation">
+                                   <enum>Qt::Horizontal</enum>
+                                  </property>
+                                  <property name="sizeHint" stdset="0">
+                                   <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                   </size>
+                                  </property>
+                                 </spacer>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                             <item row="0" column="0">
+                              <widget class="QLabel" name="label_11">
+                               <property name="text">
+                                <string>自动调度开关状态:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="1" column="0">
+                              <widget class="QLabel" name="label_12">
+                               <property name="text">
+                                <string>串口名称:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="5" column="0">
+                              <widget class="QLabel" name="label_14">
+                               <property name="text">
+                                <string>串口启用状态:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="1" column="1">
+                              <widget class="AsyncDataCombox" name="combComName">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="editable">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="2" column="0">
+                              <widget class="QLabel" name="label_13">
+                               <property name="text">
+                                <string>串口状态:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="4" column="0">
+                              <widget class="QLabel" name="label_15">
+                               <property name="text">
+                                <string>绑定串口名为MESH名:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="2" column="1">
+                              <widget class="QLabel" name="labelComState">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string>--</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="3" column="0">
+                              <widget class="QLabel" name="label_22">
+                               <property name="text">
+                                <string>接收数据包数:</string>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item row="3" column="1">
+                              <widget class="QLabel" name="labelReadDataFrames">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>30</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string>0</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="Line" name="line_2">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_5">
+                            <item>
+                             <spacer name="horizontalSpacer_4">
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>40</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="buttonRefreshMeshBasicInfo">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                              <property name="text">
+                               <string>刷新</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="buttonSaveTKTMeshInfo">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                              <property name="text">
+                               <string>保存</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="groupBox_6">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="title">
+                          <string>操作</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_4">
+                          <item row="1" column="1">
+                           <widget class="QPushButton" name="buttonMeshLog">
+                            <property name="minimumSize">
+                             <size>
+                              <width>120</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>MESH日志信息</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="0">
+                           <widget class="QPushButton" name="buttonRemoteConfig">
+                            <property name="minimumSize">
+                             <size>
+                              <width>120</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>远程配置MESH</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QPushButton" name="buttonDeviceList">
+                            <property name="minimumSize">
+                             <size>
+                              <width>120</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>设备列表</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QPushButton" name="buttonRuntimeParams">
+                            <property name="minimumSize">
+                             <size>
+                              <width>120</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>MESH运行参数配置</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tabAdvanceFeature">
+                <attribute name="title">
+                 <string>高级功能</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QGroupBox" name="groupBox_7">
+                   <property name="title">
+                    <string>API测试</string>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_13">
+                    <item>
+                     <widget class="QGroupBox" name="groupBox_8">
+                      <property name="title">
+                       <string>请求</string>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_15">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_10">
+                         <item>
+                          <widget class="QTextEdit" name="textRequest"/>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_5">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_11">
+                            <item>
+                             <widget class="QPushButton" name="buttonSendRequest">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                              <property name="text">
+                               <string>发送请求</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="buttonClearRequest">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                              <property name="text">
+                               <string>清空</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <spacer name="verticalSpacer_2">
+                              <property name="orientation">
+                               <enum>Qt::Vertical</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>20</width>
+                                <height>93</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="groupBox_10">
+                         <property name="title">
+                          <string>预设</string>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout">
+                          <item>
+                           <widget class="QPushButton" name="buttonGetPortNameToMeshNameMapping">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>获取串口与MESH名映射信息</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="horizontalSpacer">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>895</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QGroupBox" name="groupBox_9">
+                      <property name="title">
+                       <string>响应</string>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_11">
+                       <item>
+                        <widget class="QTextEdit" name="textResponse">
+                         <property name="readOnly">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_6">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_12">
+                          <item>
+                           <widget class="QPushButton" name="buttonClearResponse">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>清空</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="verticalSpacer_3">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>130</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>34</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageMesh"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AsyncDataCombox</class>
+   <extends>QComboBox</extends>
+   <header>widget/asyncdatacombox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
