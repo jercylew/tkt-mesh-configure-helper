@@ -1,6 +1,7 @@
 #include "dialogcontainer.h"
 #include "ui_dialogcontainer.h"
 #include <QVBoxLayout>
+#include <QStyle>
 
 DialogContainer::DialogContainer(bool closable, QWidget *parent) :
     QDialog(parent),

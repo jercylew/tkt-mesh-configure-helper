@@ -1,6 +1,5 @@
 #include "remoteconfigpreparedialogframe.h"
 #include "ui_remoteconfigpreparedialogframe.h"
-
 #include "callback/getmeshdbinfocallback.h"
 #include "callback/getmeshdbdatacallback.h"
 #include "callback/keepmeshremoteconfigopencallback.h"
@@ -14,6 +13,7 @@
 #include "globalsavingbox.h"
 #include "utils/tools.h"
 #include "domain/tktmesh.h"
+#include <QFile>
 
 RemoteConfigPrepareDialogFrame::RemoteConfigPrepareDialogFrame(PrepareMeshModel *prepareMeshModel, QWidget *parent) :
     QFrame(parent),
