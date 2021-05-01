@@ -75,13 +75,31 @@ void UVSterilizerConfDialog::on_buttonDialogApply_clicked()
 {
     //UV Sterilizing parameters
     bool bAutoSterilizeMode = ui->radBtnAutoCycle;
-    int nSterilizeTimeMin = ui->spinSterilizeTime->value();
-    int nCycleTime = 0;
+    int nValue = ui->spinSterilizeTime->value();
+    if (nValue < 0)
+    {
+        nValue = 0;
+    }
+    if (nValue > 120)
+    {
+        nValue = 120;
+    }
+    qint8 nSterilizeTimeMin = static_cast<qint8>(nValue);
 
+    qint16 nCycleTime = 0;
     //Currently, scheduling with Group mode not supported, only in Executer can send this command
     if (bAutoSterilizeMode)
     {
-        nCycleTime = ui->spinCycleTime->value();
+        nValue = ui->spinCycleTime->value();
+        if (nValue < 0)
+        {
+            nValue = 0;
+        }
+        if (nValue > 65535)
+        {
+            nValue = 65535;
+        }
+        nCycleTime = static_cast<qint16>(nValue);
     }
 
     m_meshModel->commandTaskManager()->runUVSterilizingCommand(addrList, nSterilizeTimeMin, nCycleTime, bAutoSterilizeMode);

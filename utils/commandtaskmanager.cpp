@@ -196,24 +196,27 @@ void CommandTaskManager::runSwitchKeyGroupSetup(quint8 key, quint8 group, bool h
     runCommand(command);
 }
 
-void CommandTaskManager::runUVSterilizingCommand(QList<quint16> addrList, int nSterilizeTime, int nCycleTime, bool bAutoCycle)
+void CommandTaskManager::runUVSterilizingCommand(QList<quint16> addrList, qint8 nSterilizeTime, qint16 nCycleTime, bool bAutoCycle)
 {
-//    ControlCommand *command;
-
-//    if (bAutoCycle)
-//    {
-//        command = new ControlCommand(CommandManager::getInstance()->getSetSwitchKeyForGroupCommand(key, group),
-//                                                     true, "UVSterilizing");
-//    }
-//    else
-//    {
-//        command = new ControlCommand(CommandManager::getInstance()->getSetSwitchKeyForGroupCommand(key, group),
-//                                                     true, "UVSterilizing");
-//    }
-
-//    command->setHighPriority(hightPriority);
-//    command->setLogExtraText(QString("Key[%1] to be assigned into group[%2]").arg(key).arg(group));
-//    runCommand(command);
+    QList<ControlCommand*> tmpList;
+    for(quint16 addr : addrList)
+    {
+        ControlCommand *command = nullptr;
+        if (bAutoCycle)
+        {
+            command = new ControlCommand(CommandManager::getInstance()->getUVSterilizeCommandAutoCycle(addr,
+                             nSterilizeTime, nCycleTime),false, "UVSterilizing-AutoCycle");
+        }
+        else
+        {
+            command = new ControlCommand(CommandManager::getInstance()->getUVSterilizeCommandImmediately(addr,
+                             nSterilizeTime),false, "UVSterilizing-Immediate");
+        }
+        command->setLogExtraText(QString("Address: %1, Sterilize Time: %2, Auto Cycle: %3, Cycle Time: %4")
+                                 .arg(addr&0xFF).arg(nSterilizeTime).arg(bAutoCycle).arg(nCycleTime));
+        tmpList.push_back(command);
+    }
+    runHighestPriorityCommands(tmpList);
 }
 
 int CommandTaskManager::bufferedCommandNumber()

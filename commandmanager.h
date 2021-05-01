@@ -19,8 +19,8 @@ public:
     QByteArray getGroupAllOffCommand(quint8 groupId);
     QByteArray getOnCommand(quint8 addr);
     QByteArray getOffCommand(quint8 addr);
-    QByteArray getUVSterilizeCommandAutoCycle(quint8 addr, int nSterizeTime, int nCycleTime);
-    QByteArray getUVSterilizeCommandImmediately(quint8 addr, int nSterizeTime);
+    QByteArray getUVSterilizeCommandAutoCycle(quint8 addr, qint8 nSterizeTime, qint16 nCycleTime);
+    QByteArray getUVSterilizeCommandImmediately(quint8 addr, qint8 nSterizeTime);
     QByteArray getDimmingCommand(quint8 addr, int brightness);
     QByteArray getAllDimmingCommand(quint8 brightness);
     QByteArray getAddG1Command(quint8 addr, quint8 groupId);

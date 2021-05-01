@@ -68,7 +68,7 @@ public:
     void runSetADBoardDisplayMode(quint8 addr, int mode);
     void runSetGroupADBoardDisplayMode(quint8 groupId, int mode, bool hightPriority=false, int calculateNumber=0);
     void runSwitchKeyGroupSetup(quint8 key, quint8 group, bool hightPriority = false, int calculateNumber = 0);
-    void runUVSterilizingCommand(QList<quint16> addrList, int nSterilizeTime, int nCycleTime, bool bAutoCycle);
+    void runUVSterilizingCommand(QList<quint16> addrList, qint8 nSterilizeTime, qint16 nCycleTime, bool bAutoCycle);
 
     int bufferedCommandNumber();
     void clearAllBufferedCommand();
