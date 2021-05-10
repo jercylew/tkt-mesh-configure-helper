@@ -879,6 +879,11 @@ NodeGroupFrame #frameGroupShadow
     border-image:url(:/images/pm_sensor.png);
 }
 
+#labelIcon[type="ozone_sensor"]
+{
+    border-image:url(:/images/ozone_sensor.png);
+}
+
 /*********** ControlItemEditDelegateFrame **********/
 #ControlItemEditDelegateFrame
 {
