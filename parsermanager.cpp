@@ -15,6 +15,7 @@
 #include "domain/temperaturehumiditysensor.h"
 #include "domain/stresssensor.h"
 #include "domain/formaldehydesensor.h"
+#include "domain/ozonesensor.h"
 #include "domain/refrgtemperaturehumiditysensor.h"
 #include "domain/uvlightsensor.h"
 #include "domain/handwashingsensor.h"
@@ -42,13 +43,12 @@
 #include "parser/refrgtemperaturehumditysensorparser.h"
 #include "parser/uvlightsensorparser.h"
 #include "parser/handwashingsensorparser.h"
-
 #include "parser/onechannelluminaireparser.h"
 #include "parser/onechannelrelayparser.h"
 #include "parser/adboardparser.h"
 #include "parser/uvsterilizerparser.h"
 #include "parser/warninglightparser.h"
-
+#include "parser/ozonesensorparser.h"
 
 #include "mesh_define.h"
 
@@ -158,6 +158,10 @@ ParserManager::ParserManager(QObject *parent) : QObject(parent)
     m_sensorTypeToParserMap.insert(Sensor::FormaldehydeSensor, sensorParser);
     m_sensorCodeToParserMap.insert(USER_NOTIFY_DATA_OF_FORMALDEHYDE_SENSOR, sensorParser);
 
+    sensorParser = new OzoneSensorParser;
+    m_sensorTypeTextToParserMap.insert(OzoneSensor::staticTypeText(), sensorParser);
+    m_sensorTypeToParserMap.insert(Sensor::OzoneSensor, sensorParser);
+    m_sensorCodeToParserMap.insert(USER_NOTIFY_DATA_OF_OZONE, sensorParser);
 
     sensorParser=new RefrgTemperatureHumditySensorParser;
     m_sensorTypeTextToParserMap.insert(RefrgTemperatureHumiditySensor::staticTypeText(), sensorParser);

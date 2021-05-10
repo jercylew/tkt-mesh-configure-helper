@@ -24,7 +24,8 @@ public:
         FormaldehydeSensor,
         RefrgTemperatureHumiditySensor,
         UVLightSensor,
-        HandWashingSensor
+        HandWashingSensor,
+        OzoneSensor
     };
     Sensor();
     virtual ~Sensor();

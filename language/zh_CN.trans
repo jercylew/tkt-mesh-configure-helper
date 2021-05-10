@@ -527,6 +527,7 @@ Global.TemperatureHumiditySensor=温湿度传感器
 Global.RefrgTemperatureHumiditySensor=冰箱温度监测传感器
 Global.UVLightSensor=刀具消毒传感器
 Global.HandWashingSensor=洗手消毒监测传感器
+Global.OzoneSensor=臭氧传感器
 
 Global.ControlParameters=控制参数
 Global.Power=功率
@@ -663,6 +664,9 @@ Formaldehyde Sensor=甲醛传感器
 Refrigerator Temperature-Humidity Sensor=冰箱温度监测传感器
 Ultraviolet Light Sensor=刀具消毒传感器
 Hand Washing Sensor=洗手消毒监测传感器
+
+Ozone Sensor=臭氧传感器
+Ozone: %1=臭氧: %1
 
 One-Channel Luminaire=一通道调光灯
 One-Channel Relay=一通道继电器

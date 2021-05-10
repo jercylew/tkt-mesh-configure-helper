@@ -24,11 +24,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
+    domain/ozonesensor.cpp \
     mainwindow.cpp \
     domain/tktmesh.cpp \
     model/tktmeshesmodel.cpp \
     model/tktmeshlistmodel.cpp \
     model/tktmeshtableviewmodel.cpp \
+    parser/ozonesensorparser.cpp \
     utils/tktmeshdiscoverhelper.cpp \
     utils/tools.cpp \
     addtktmeshdialog.cpp \
@@ -242,11 +244,13 @@ SOURCES += main.cpp\
     widget/uvsterilizerconfdialog.cpp
 
 HEADERS  += \
+    domain/ozonesensor.h \
     mainwindow.h \
     domain/tktmesh.h \
     model/tktmeshesmodel.h \
     model/tktmeshlistmodel.h \
     model/tktmeshtableviewmodel.h \
+    parser/ozonesensorparser.h \
     utils/tktmeshdiscoverhelper.h \
     utils/tools.h \
     addtktmeshdialog.h \

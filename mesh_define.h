@@ -27,6 +27,7 @@
 #define USER_NOTIFY_DATA_OF_HAND_WASHING_SENSOR     ((char)0x22) //Hand Washing Sensor
 #define USER_NOTIFY_DATA_OF_REFRG_TEMPERATURE_HUMIDITY_SENSOR     ((char)0x23) //Refrigerator Temperature Humidity Sensor
 #define USER_NOTIFY_DATA_OF_UV_STERILIZER           ((char)0x24) //紫外刀具消毒柜
+#define USER_NOTIFY_DATA_OF_OZONE                   ((char)0x0A) //Ozone Sensor
 
 /****网关类型码*****/
 #define NODE_TYPE_OF_USB_GATEWAY            ((char)0xA0) //网关
@@ -55,5 +56,6 @@
 #define NODE_TYPE_OF_REFRG_TEMPERATURE_HUMIDITY_SENSOR        ((char)0x93)    //Refrigerator Temperature Humidity Sensor
 #define NODE_TYPE_OF_ULTRAVIOLET_LIGHT_SENSOR   ((char)0x94)    //Ultraviolet Light Sensor
 #define NODE_TYPE_OF_HAND_WASHING_SENSOR        ((char)0x95)    //Hand Washing Sensor
+#define NODE_TYPE_OF_OZONE_SENSOR               ((char)0x92)    //OZONE Sensor
 
 #endif // MESH_DEFINE_H

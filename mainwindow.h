@@ -66,6 +66,7 @@ private:
 
     StatusDisplayDialog m_statusDisplayDialog;
     void connectToHost();
+    void fillCloudHostList();
 
     TKTMeshDetailsFrame *m_detailsFrame;
 };
