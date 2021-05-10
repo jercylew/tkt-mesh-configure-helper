@@ -447,6 +447,10 @@ QListView {
     background-image: url(":/images/formaldehyde_sensor_small.png");
 }
 
+#labelSensorNumberIcon[type="ozone_sensor"]{
+    background-image: url(":/images/ozone_sensor_small.png");
+}
+
 #buttonAddSensor{
     background-color: transparent;
     background-image: url(":/images/add.png");

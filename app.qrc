@@ -122,5 +122,7 @@
         <file>images/uv_sterilizer_online_appointed_ok.png</file>
         <file>images/uv_sterilizer_online_sterilized.png</file>
         <file>images/uv_sterilizer_online_sterilizing.png</file>
+        <file>images/ozone_sensor.png</file>
+        <file>images/ozone_sensor_small.png</file>
     </qresource>
 </RCC>

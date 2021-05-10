@@ -528,6 +528,7 @@ Global.RefrgTemperatureHumiditySensor=冰箱温度监测传感器
 Global.UVLightSensor=刀具消毒传感器
 Global.HandWashingSensor=洗手消毒监测传感器
 Global.OzoneSensor=臭氧传感器
+Global.FormaldehydeSensor=甲醛传感器
 
 Global.ControlParameters=控制参数
 Global.Power=功率

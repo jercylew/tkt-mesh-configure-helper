@@ -55,6 +55,7 @@
 #include "domain/handwashingsensor.h"
 #include "domain/uvsterilizer.h"
 #include "domain/ozonesensor.h"
+#include "domain/formaldehydesensor.h"
 #include "dialogbuilder.h"
 #include "parsermanager.h"
 
@@ -459,6 +460,11 @@ void MeshDetailsFrame::initSensorNumberDisplay()
     handWashingSensorNumberDisplayFrame->setNumber(m_meshModel->sensorsModel()->sensorNumber(Sensor::HandWashingSensor));
     m_sensorNumberDisplayFrameMap.insert(Sensor::HandWashingSensor, handWashingSensorNumberDisplayFrame);
     m_allSensorNumberDisplayFrameList.push_back(handWashingSensorNumberDisplayFrame);
+
+    SensorNumberDisplayFrame *formaldehydeSensorNumberDisplayFrame=new SensorNumberDisplayFrame(FormaldehydeSensor::staticTypeText(), "Global.FormaldehydeSensor");
+    formaldehydeSensorNumberDisplayFrame->setNumber(m_meshModel->sensorsModel()->sensorNumber(Sensor::FormaldehydeSensor));
+    m_sensorNumberDisplayFrameMap.insert(Sensor::FormaldehydeSensor, formaldehydeSensorNumberDisplayFrame);
+    m_allSensorNumberDisplayFrameList.push_back(formaldehydeSensorNumberDisplayFrame);
 
     SensorNumberDisplayFrame *ozoneSensorNumberDisplayFrame=new SensorNumberDisplayFrame(OzoneSensor::staticTypeText(), "Global.OzoneSensor");
     ozoneSensorNumberDisplayFrame->setNumber(m_meshModel->sensorsModel()->sensorNumber(Sensor::OzoneSensor));
