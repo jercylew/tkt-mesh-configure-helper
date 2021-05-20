@@ -14,6 +14,10 @@ public:
     void updateSensorFromUserDataNotify(MeshModel *meshModel,
                                         Sensor *newSensor, Sensor *oldSensor);
     void parseSensorToSensorFrame(Sensor *sensor, SensorFrame *sensorFrame);
+
+private:
+    qint64 m_nLastUpdateTimestamMSecs;
+    int m_nAccumulatedTimes;
 };
 
 #endif // HANDWASHINGSENSORPARSER_H

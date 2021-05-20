@@ -689,7 +689,23 @@ bool SensorsModel::parseADataFrame(const QByteArray &dataFrame)
                 parsed=false;
             }
         }
+        else if(dataFrame.at(7)==CMD_MARK_CODE_GROUP_G8_NOTIFY_DATA)
+        {
+            quint8 addr=(quint8)dataFrame.at(3);
+            QList<quint8> groupList;
+            for(int i=10; i<18; i++)
+            {
+                quint8 group=dataFrame.at(i);
+                if(group!=(quint8)0xFF)
+                {
+                    groupList.append(group);
+                }
+            }
+            setGroupList(addr, groupList);
+        }
     }while(false);
+
+    return parsed;
 }
 
 int SensorsModel::sensorNumber(Sensor::SensorType sensorType)

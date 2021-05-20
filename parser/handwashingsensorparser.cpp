@@ -4,7 +4,8 @@
 
 HandWashingSensorParser::HandWashingSensorParser()
 {
-
+    m_nLastUpdateTimestamMSecs = 0;
+    m_nAccumulatedTimes = 0;
 }
 
 HandWashingSensorParser::~HandWashingSensorParser()
@@ -16,11 +17,35 @@ void HandWashingSensorParser::parseUserDataFrameToSensor(const QByteArray &dataF
                                 Sensor *sensor)
 {
     SensorParser::parseUserDataFrameToSensor(dataFrame, sensor);
+    qint64 nCurrentTimestampMSecs = QDateTime::currentMSecsSinceEpoch();
+
+    //42 seconds, too long before getting the report
+    if ((nCurrentTimestampMSecs-m_nLastUpdateTimestamMSecs) > 42000)
+    {
+        qDebug() << "HandWashingSensorParser::parseUserDataFrameToSensor"
+                 << "Too long before getting the report, clear the counter";
+        m_nAccumulatedTimes = 0;
+    }
+    else
+    {
+        m_nAccumulatedTimes++;
+    }
+
+    bool bWashing = false;
+    if (m_nAccumulatedTimes >= 7)
+    {
+        qDebug() << "HandWashingSensorParser::parseUserDataFrameToSensor"
+                 << "Report times reach 7, set it to true";
+        bWashing = true;
+        m_nAccumulatedTimes = 0;
+    }
+
     HandWashingSensor *handWashingSensor = static_cast<HandWashingSensor*>(sensor);
     if(handWashingSensor)
     {
-        handWashingSensor->setWashing((dataFrame.at(12)&0xFF) == 0x01);
+        handWashingSensor->setWashing(bWashing);
     }
+    m_nLastUpdateTimestamMSecs = nCurrentTimestampMSecs;
 }
 
 void HandWashingSensorParser::updateSensorFromUserDataNotify(MeshModel *meshModel,
