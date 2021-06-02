@@ -203,7 +203,8 @@ void asyncAddControlItem(MeshDBHolder *dbWriteHolder, QMutex *dbWriteMutex, Time
             .arg(controlItem->policySubId)
             .arg(controlDataText);
     QSqlQuery query=dbWriteHolder->getDb().exec(cmd);
-    qDebug()<<"asyncAddControlItem, error="<<query.lastError().text();
+    qDebug()<<"asyncAddControlItem, error="<<query.lastError().text()
+           << "cmd=" << cmd;
     delete controlItem;
     delete controlDataJson;
 }

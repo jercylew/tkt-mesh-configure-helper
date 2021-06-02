@@ -2,6 +2,7 @@
 #include "ui_controlitemeditdialogframeofrelaygroup.h"
 #include "model/meshmodel.h"
 #include "db/meshdbmanager.h"
+#include <QMessageBox>
 
 #define ITEM_POWER_DATA             "power"
 #define ITEM_LUX_SENSOR_DATA        "lux_sensor"
@@ -37,6 +38,7 @@ ControlItemEditDialogFrameOfRelayGroup::ControlItemEditDialogFrameOfRelayGroup(M
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::CO2Sensor);
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::FormaldehydeSensor);
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::PMSensor);
+    ui->cmbGTBindSensorId->addAccessSensorType(Sensor::OzoneSensor);
 
     setControlItem(controlItem);
 }
@@ -85,16 +87,11 @@ void ControlItemEditDialogFrameOfRelayGroup::setControlItem(TimeLineControlItem 
     ui->spinMotionTriggerShieldMSec->setValue(controlItem->motionTypeTriggerShieldMSec);
 
     ui->cmbGTBindSensorId->setText(controlItem->gasTrnsdcrTypeBindSensorId);
-    ui->radGTTrigTypeOn->setChecked(controlItem->gasTrnsdcrTypeTrigTypeOn);
-    ui->radGTTrigTypeTimer->setChecked(controlItem->gasTrnsdcrTypeTrigTypeTimer);
     ui->radGTTrigModeUpperBottom->setChecked(controlItem->gasTrnsdcrTypeTrigModeUpperBottom);
     ui->radGTTrigModeBottomUpper->setChecked(controlItem->gasTrnsdcrTypeTrigModeBottomUpper);
     ui->spinGTThresholdMax->setValue(controlItem->gasTrnsdcrTypeMaxThreshold);
     ui->spinGTThresholdMin->setValue(controlItem->gasTrnsdcrTypeMinThreshold);
-    ui->spinGTTrigHoldTime->setValue(controlItem->gasTrnsdcrTypeTrigHoldTime);
     ui->spinGTTriggerShieldMSec->setValue(controlItem->gasTrnsdcrTypeTrigShieldMSec);
-    ui->radGTBaseStatusOn->setChecked(controlItem->gasTrnsdcrTypeTrigBaseStatusOn);
-    ui->radGTBaseStatusOff->setChecked(controlItem->gasTrnsdcrTypeTrigBaseStatusOff);
 }
 
 void ControlItemEditDialogFrameOfRelayGroup::setType(const QString &type)
@@ -149,6 +146,15 @@ void ControlItemEditDialogFrameOfRelayGroup::on_comboBox_activated(int)
 
 void ControlItemEditDialogFrameOfRelayGroup::on_buttonDone_clicked()
 {
+    QString type = ui->comboBox->currentData().toString();
+
+    if (type == ITEM_GAS_TRANSDUCER_DATA &&
+            ui->spinGTThresholdMax->value() < ui->spinGTThresholdMin->value())
+    {
+        QMessageBox::warning(this, "提示", "上限值必须大于下限值");
+        return;
+    }
+
     controlItem->controlType=ui->comboBox->currentData().toString();
 
     controlItem->powerTypePower=(ui->radioRelayOn->isChecked()?100:0);
@@ -177,16 +183,11 @@ void ControlItemEditDialogFrameOfRelayGroup::on_buttonDone_clicked()
     }
 
     controlItem->gasTrnsdcrTypeBindSensorId = ui->cmbGTBindSensorId->text();
-    controlItem->gasTrnsdcrTypeTrigTypeOn = ui->radGTTrigTypeOn->isChecked();
-    controlItem->gasTrnsdcrTypeTrigTypeTimer = ui->radGTTrigTypeTimer->isChecked();
     controlItem->gasTrnsdcrTypeTrigModeUpperBottom = ui->radGTTrigModeUpperBottom->isChecked();
     controlItem->gasTrnsdcrTypeTrigModeBottomUpper = ui->radGTTrigModeBottomUpper->isChecked();
     controlItem->gasTrnsdcrTypeMaxThreshold = ui->spinGTThresholdMax->value();
     controlItem->gasTrnsdcrTypeMinThreshold = ui->spinGTThresholdMin->value();
-    controlItem->gasTrnsdcrTypeTrigHoldTime = ui->spinGTTrigHoldTime->value();
     controlItem->gasTrnsdcrTypeTrigShieldMSec = ui->spinGTTriggerShieldMSec->value();
-    controlItem->gasTrnsdcrTypeTrigBaseStatusOn = ui->radGTBaseStatusOn->isChecked();
-    controlItem->gasTrnsdcrTypeTrigBaseStatusOff = ui->radGTBaseStatusOff->isChecked();
 
     emit accept();
 }

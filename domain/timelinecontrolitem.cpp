@@ -173,6 +173,14 @@ void TimeLineControlItem::controlDataToJson(QJsonObject *controlDataJson)
     controlDataJson->insert("lux_type_not_feed_back_lux_of_100", luxTypeNotFeedBackLuxOf100);
 
     //Gas Transducer
+    /* TODO
+     * Deprecated fields:
+     *      gasTrnsdcrTypeTrigTypeOn
+     *      gasTrnsdcrTypeTrigTypeTimer
+     *      gasTrnsdcrTypeTrigHoldTime
+     *      gasTrnsdcrTypeTrigBaseStatusOn
+     *      gasTrnsdcrTypeTrigBaseStatusOff
+     */
     controlDataJson->insert("gas_trnsdcr_type_trig_type_on", gasTrnsdcrTypeTrigTypeOn);
     controlDataJson->insert("gas_trnsdcr_type_trig_type_timer", gasTrnsdcrTypeTrigTypeTimer);
     controlDataJson->insert("gas_trnsdcr_type_trig_mode_upper_bottom", gasTrnsdcrTypeTrigModeUpperBottom);

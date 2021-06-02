@@ -545,3 +545,5 @@ SwitchControlType.switch_none=No Operation
 
 ControlItemEditDialogFrameOfRelayGroup.TrigModeUpperBottomTip=Controlled item will be turned on when detected value exceeds the upper threshold value, conversely turned off when drops bellow the bottom threshold value
 ControlItemEditDialogFrameOfRelayGroup.TrigModeBottomUpperTip=Controlled item will be turned on when detected value drops bellow the bottom threshold value, conversely turned off when exceeds the upper threshold value
+ControlItemEditDialogFrameOfRelayGroup.ThresholdMaxTip=Maximum threshold must be greater than the minimum one
+ControlItemEditDialogFrameOfRelayGroup.ThresholdMinTip=Maximum threshold must be greater than the minimum one

@@ -928,6 +928,8 @@ Upper - Botton=上下限
 Bottom - Upper=下上限
 ControlItemEditDialogFrameOfRelayGroup.TrigModeUpperBottomTip=超过上限值时继电器将被打开，反之低于下限值时继电器将被关闭（如空调制冷）
 ControlItemEditDialogFrameOfRelayGroup.TrigModeBottomUpperTip=低于下限值时继电器将被打开，反之超过上限值时继电器将被关闭（如空调制热）
+ControlItemEditDialogFrameOfRelayGroup.ThresholdMaxTip=上限值必须大于下限值
+ControlItemEditDialogFrameOfRelayGroup.ThresholdMinTip=上限值必须大于下限值
 
 @Replace
 HelpAboutFrame.CompanyLabel=${CompanyFullName}
