@@ -244,6 +244,7 @@ MeshDetailsFrame.FindLum=定位灯具
 MeshDetailsFrame.GroupingError=分组错误
 MeshDetailsFrame.GroupingErrorMessageDiffType=不能将不同类型的执行器分到同一组内
 MeshDetailsFrame.GroupingErrorMessageMatchType=所选执行器类型与组类型不匹配
+MeshDetailsFrame.SetSwicthMeshInfo=设置网关MESH名称
 
 MainWidget.Meshes=Mesh网络
 MainWidget.MeshStatusNameTitle=名称
@@ -419,6 +420,9 @@ VirtualComFrame.EditVCom=编辑选中的虚拟串口
 VirtualComFrame.DeleteVCom=删除选中的虚拟串口
 VirtualComFrame.VComList=虚拟串口列表
 VirtualComFrame.TcpClientGatewayList=TCP客户端类型设备列表
+
+SetMeshInfoDialogFrame.MeshName:=Mesh名称
+SetMeshInfoDialogFrame.MeshPassword:=Mesh密码
 
 Week.1=星期一
 Week.2=星期二

@@ -90,6 +90,8 @@ private slots:
 
     void on_buttonGetPortNameToMeshNameMapping_clicked();
 
+    void on_buttonSetMeshInfo_clicked();
+
 private:
     Ui::TKTMeshDetailsFrame *ui;
     TKTMeshModel *m_tktMeshModel;

@@ -58,6 +58,7 @@ private slots:
     void on_buttonStartCloudConfig_clicked();
 
 private:
+    bool isTextHostId(QString strText);
     Ui::MainWindow *ui;
     TKTMeshesModel *m_tktMeshesModel;
     TKTMeshTableViewModel *m_tktMeshTableViewModel;

@@ -164,7 +164,7 @@
              <item>
               <widget class="QTabWidget" name="tabTKTMeshDetails">
                <property name="currentIndex">
-                <number>1</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="tabHostInfo">
                 <attribute name="title">
@@ -1297,6 +1297,22 @@
                             </property>
                             <property name="text">
                              <string>获取串口与MESH名映射信息</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="buttonSetMeshInfo">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string>设置网关MESH名</string>
+                            </property>
+                            <property name="flat">
+                             <bool>false</bool>
                             </property>
                            </widget>
                           </item>

@@ -251,6 +251,7 @@ void MainWindow::fillCloudHostList()
     ui->cmbTargetHostId->addItem("浙大科创园食堂", "9f1010c620");
     ui->cmbTargetHostId->addItem("江南国际幼儿园", "61d69f7850");
     ui->cmbTargetHostId->addItem("九龙总部", "c28d689234");
+    ui->cmbTargetHostId->addItem("骄阳饮用水公司", "ebb38ccd94");
 
 
     //TOTO: Automatically get the list from cloud server
@@ -291,6 +292,24 @@ void MainWindow::on_buttonRemoteUpgrade_clicked()
     dialog->deleteLater();
 }
 
+bool MainWindow::isTextHostId(QString strText)
+{
+    if (strText.length() != 10)
+    {
+        return false;
+    }
+
+    for (int i = 0;i < 10;i++)
+    {
+        QChar ch = strText.at(i);
+        if (!ch.isLetterOrNumber()) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 void MainWindow::on_buttonStartCloudConfig_clicked()
 {
     if(m_tktMeshModel!=NULL)
@@ -300,7 +319,14 @@ void MainWindow::on_buttonStartCloudConfig_clicked()
     TKTMesh *tktMesh=new TKTMesh();
     tktMesh->setDbDataPackageMaxSizeInKB(ui->combDBPackageMaxSizeInKB->currentText().toInt());
     tktMesh->setInCloudConfigMode(true);
-    tktMesh->setHostID(ui->cmbTargetHostId->currentData().toString());
+
+    tktMesh->setHostID(ui->cmbTargetHostId->currentData().toString()); //Use this by default
+    QString strCurrentText = ui->cmbTargetHostId->currentText();
+    if (isTextHostId(strCurrentText))
+    {
+        tktMesh->setHostID(strCurrentText);
+    }
+
     tktMesh->setCloudConfigAddress(ui->lineCloudConfigAddress->text().trimmed());
     tktMesh->setCloudConfigConfigerPort(ui->lineCloudConfigPort->text().trimmed().toInt());
     m_tktMeshModel=new TKTMeshModel(tktMesh, this);

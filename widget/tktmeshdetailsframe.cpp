@@ -474,10 +474,6 @@ void TKTMeshDetailsFrame::on_buttonSendRequest_clicked()
         asyncTask->requestJson()->insert(strKey, json.value(strKey));
     }
 
-//    asyncTask->requestJson()->insert("topic", "request");
-//    asyncTask->requestJson()->insert("command", json.value("command"));
-//    asyncTask->requestJson()->insert("data", json.value("data"));
-
     m_tktMeshModel->tktMeshConnectionHolder()->apiWorkerController()->runAsyncTask(asyncTask);
 }
 
@@ -658,10 +654,44 @@ void TKTMeshDetailsFrame::on_buttonMeshLog_clicked()
 void TKTMeshDetailsFrame::on_buttonGetPortNameToMeshNameMapping_clicked()
 {
     QJsonObject request;
-//    request.insert("uuid", Tools::getRandomUUID());
     request.insert("topic", "request");
     request.insert("command", "get_port_name_to_mesh_name_mapping");
     QByteArray data=Tools::getDataArrayOfJsonObject(&request);
+    ui->textRequest->setText(QString::fromLatin1(data));
+    ui->textResponse->clear();
+    ui->buttonSendRequest->click();
+}
+
+void TKTMeshDetailsFrame::on_buttonSetMeshInfo_clicked()
+{
+    SwitchMeshInfo stMeshInfo;
+
+    QDialog *dialog = DialogBuilder::getInstance()->buildSetMeshInfoDialog(&stMeshInfo,
+                      tr("MeshDetailsFrame.SetSwicthMeshInfo"));
+
+    if (dialog->exec() != QDialog::Accepted)
+    {
+        return;
+    }
+
+    QString strSwitchMeshName = stMeshInfo.m_strMeshName;
+    QString strSwitchMeshPassword = stMeshInfo.m_strMeshPassword;
+
+    if (strSwitchMeshName.isEmpty() ||
+            strSwitchMeshName.isNull() ||
+            strSwitchMeshPassword.isEmpty() ||
+            strSwitchMeshPassword.isNull())
+    {
+        return;
+    }
+
+    QJsonObject request;
+    request.insert("topic", "request");
+    request.insert("command", "set_switch_mesh_info");
+    request.insert("mesh_name", strSwitchMeshName);
+    request.insert("mesh_password", strSwitchMeshPassword);
+
+    QByteArray data = Tools::getDataArrayOfJsonObject(&request);
     ui->textRequest->setText(QString::fromLatin1(data));
     ui->textResponse->clear();
     ui->buttonSendRequest->click();

@@ -20,6 +20,12 @@ class MeshLogManager;
 class MeshSavingBox;
 class PrepareMeshModel;
 
+typedef struct _SwitchMeshInfo_ {
+    QString m_strMeshName;
+    QString m_strMeshPassword;
+    QString m_strMeshLTK;
+} SwitchMeshInfo;
+
 class MeshModel : public QObject
 {
     Q_OBJECT

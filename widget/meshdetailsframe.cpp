@@ -1128,7 +1128,7 @@ void MeshDetailsFrame::doActionAllocSwitchKeyGroup()
 
 void MeshDetailsFrame::on_buttonGroupMappingAdd_clicked()
 {
-    QDialog *dialog=DialogBuilder::getInstance()->buildAddNodeGroupDialog(m_meshModel, tr("MeshDetailsFrame.AddGroup"));
+    QDialog *dialog = DialogBuilder::getInstance()->buildAddNodeGroupDialog(m_meshModel, tr("MeshDetailsFrame.AddGroup"));
     dialog->exec();
 }
 

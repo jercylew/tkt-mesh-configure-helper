@@ -5,6 +5,7 @@
 #include <QDialog>
 #include "domain/timelinecontrolitem.h"
 #include "model/templatetimelinecontrolitemlisteditmodel.h"
+#include "model/meshmodel.h"
 
 class NodeGroup;
 class PrepareMeshModel;
@@ -45,6 +46,8 @@ public:
     QDialog *buildControlItemEditDialog(MeshModel *meshModel, const QString &title, TimeLineControlItem *item);
 
     QDialog *buildAddNodeGroupDialog(MeshModel *meshModel, const QString &title);
+
+    QDialog *buildSetMeshInfoDialog(SwitchMeshInfo *switchMeshInfo, const QString &title);
 
     QDialog *buildAddTimePointDialog(const QString &title, int *minutes);
 
