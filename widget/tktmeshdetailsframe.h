@@ -92,6 +92,8 @@ private slots:
 
     void on_buttonSetMeshInfo_clicked();
 
+    void on_buttonSetGatewayId_clicked();
+
 private:
     Ui::TKTMeshDetailsFrame *ui;
     TKTMeshModel *m_tktMeshModel;

@@ -49,6 +49,8 @@ public:
 
     QDialog *buildSetMeshInfoDialog(SwitchMeshInfo *switchMeshInfo, const QString &title);
 
+    QDialog *buildSetGatewayIdDialog(int *pGatewayId, const QString &title);
+
     QDialog *buildAddTimePointDialog(const QString &title, int *minutes);
 
     QDialog *buildRenameDialog(MeshModel *meshModel, const QString &title, const QString &type, const QList<QString> &idList);

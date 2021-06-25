@@ -54,6 +54,7 @@ SOURCES += main.cpp\
     widget/asyncdatacombox.cpp \
     callback/getallcomcallback.cpp \
     statusdisplaydialog.cpp \
+    widget/setgatewayiddialogframe.cpp \
     widget/setmeshinfodialogframe.cpp \
     widget/tktmeshdetailsframe.cpp \
     callback/abstractcallbackalerter.cpp \
@@ -274,6 +275,7 @@ HEADERS  += \
     widget/asyncdatacombox.h \
     callback/getallcomcallback.h \
     statusdisplaydialog.h \
+    widget/setgatewayiddialogframe.h \
     widget/setmeshinfodialogframe.h \
     widget/tktmeshdetailsframe.h \
     callback/abstractcallbackalerter.h \
@@ -472,6 +474,7 @@ FORMS    += \
     connecthostdialog.ui \
     luminairedialog.ui \
     statusdisplaydialog.ui \
+    widget/setgatewayiddialogframe.ui \
     widget/setmeshinfodialogframe.ui \
     widget/tktmeshdetailsframe.ui \
     widget/dialogcontainer.ui \

@@ -37,6 +37,7 @@
 #include "widget/templatetimelinecontrolitemseditdialogframe.h"
 #include "widget/allocswitchkeygroupframe.h"
 #include "widget/setmeshinfodialogframe.h"
+#include "widget/setgatewayiddialogframe.h"
 
 #include "domain/sensor.h"
 #include "domain/virtualmotionsensor.h"
@@ -170,6 +171,15 @@ QDialog *DialogBuilder::buildAddNodeGroupDialog(MeshModel *meshModel, const QStr
 QDialog *DialogBuilder::buildSetMeshInfoDialog(SwitchMeshInfo *switchMeshInfo, const QString &title)
 {
     SetMeshInfoDialogFrame *frame = new SetMeshInfoDialogFrame(switchMeshInfo);
+    QDialog *dialog=buildDialog(frame, title);
+    connect(frame, SIGNAL(accept()), dialog, SLOT(accept()));
+    connect(frame, SIGNAL(reject()), dialog, SLOT(reject()));
+    return dialog;
+}
+
+QDialog *DialogBuilder::buildSetGatewayIdDialog(int *pGatewayId, const QString &title)
+{
+    SetGatewayIdDialogFrame *frame = new SetGatewayIdDialogFrame(pGatewayId);
     QDialog *dialog=buildDialog(frame, title);
     connect(frame, SIGNAL(accept()), dialog, SLOT(accept()));
     connect(frame, SIGNAL(reject()), dialog, SLOT(reject()));

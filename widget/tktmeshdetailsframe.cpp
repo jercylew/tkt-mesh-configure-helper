@@ -696,3 +696,26 @@ void TKTMeshDetailsFrame::on_buttonSetMeshInfo_clicked()
     ui->textResponse->clear();
     ui->buttonSendRequest->click();
 }
+
+void TKTMeshDetailsFrame::on_buttonSetGatewayId_clicked()
+{
+    int nGatewayId = 0;
+    QDialog *dialog = DialogBuilder::getInstance()->buildSetGatewayIdDialog(&nGatewayId,
+                      tr("MeshDetailsFrame.SetGatewayId"));
+
+    if (dialog->exec() != QDialog::Accepted)
+    {
+        return;
+    }
+
+
+    QJsonObject request;
+    request.insert("topic", "request");
+    request.insert("command", "set_gateway_id");
+    request.insert("gateway_id", nGatewayId);
+
+    QByteArray data = Tools::getDataArrayOfJsonObject(&request);
+    ui->textRequest->setText(QString::fromLatin1(data));
+    ui->textResponse->clear();
+    ui->buttonSendRequest->click();
+}
