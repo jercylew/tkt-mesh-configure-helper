@@ -2,6 +2,7 @@
 #include "ui_tktmeshdetailsframe.h"
 #include "model/tktmeshmodel.h"
 #include "domain/tktmesh.h"
+#include "globalsavingbox.h"
 
 #include "domain/tktmesh.h"
 #include "callback/gethostinfocallback.h"
@@ -96,6 +97,9 @@ TKTMeshDetailsFrame::TKTMeshDetailsFrame(TKTMeshModel *tktMeshModel, AbstractCal
 
     connect(m_meshDetailsFrame, SIGNAL(backToTKTMeshPage()),
             this, SLOT(doBackToTKTMeshPage()));
+
+    //Load mesh info by default
+    on_buttonRefreshMeshList_clicked();
 }
 
 void TKTMeshDetailsFrame::reloadHostInfo()
@@ -665,6 +669,13 @@ void TKTMeshDetailsFrame::on_buttonGetPortNameToMeshNameMapping_clicked()
 void TKTMeshDetailsFrame::on_buttonSetMeshInfo_clicked()
 {
     SwitchMeshInfo stMeshInfo;
+    Mesh *mesh = m_meshesModel->getByUUID(GlobalSavingBox::getInstance()->defaultMeshUUID());
+    if (mesh != nullptr)
+    {
+        stMeshInfo.m_strMeshLTK = mesh->gatewayMeshLtk();
+        stMeshInfo.m_strMeshName = mesh->gatewayMeshName();
+        stMeshInfo.m_strMeshPassword = mesh->gatewayMeshPassword();
+    }
 
     QDialog *dialog = DialogBuilder::getInstance()->buildSetMeshInfoDialog(&stMeshInfo,
                       tr("MeshDetailsFrame.SetSwicthMeshInfo"));
@@ -699,7 +710,12 @@ void TKTMeshDetailsFrame::on_buttonSetMeshInfo_clicked()
 
 void TKTMeshDetailsFrame::on_buttonSetGatewayId_clicked()
 {
-    int nGatewayId = 0;
+    quint8 nGatewayId = 0;
+    Mesh *mesh = m_meshesModel->getByUUID(GlobalSavingBox::getInstance()->defaultMeshUUID());
+    if (mesh != nullptr)
+    {
+        nGatewayId = mesh->gatewayMeshAddress();
+    }
     QDialog *dialog = DialogBuilder::getInstance()->buildSetGatewayIdDialog(&nGatewayId,
                       tr("MeshDetailsFrame.SetGatewayId"));
 

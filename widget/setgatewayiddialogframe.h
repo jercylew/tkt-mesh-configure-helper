@@ -13,7 +13,7 @@ class SetGatewayIdDialogFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit SetGatewayIdDialogFrame(int *pGatewayId, QWidget *parent = 0);
+    explicit SetGatewayIdDialogFrame(quint8 *pGatewayId, QWidget *parent = 0);
     ~SetGatewayIdDialogFrame();
 
 protected:
@@ -27,7 +27,7 @@ private slots:
 
 private:
     Ui::SetGatewayIdDialogFrame *ui;
-    int *m_ptrGatewayId;
+    quint8 *m_ptrGatewayId;
 
 signals:
     void accept();

@@ -34,6 +34,15 @@ public:
     int readFrames() const;
     void setReadFrames(int readFrames);
 
+    quint8 gatewayMeshAddress() { return m_nGatewayAddress; }
+    void setGatewayMeshAddress(quint8 nAddress) { m_nGatewayAddress = nAddress; }
+    QString gatewayMeshName() { return m_strGatewayMeshName; }
+    void setGatewayMeshName(QString strMeshName) { m_strGatewayMeshName = strMeshName; }
+    QString gatewayMeshPassword() { return m_strGatewayMeshPassword; }
+    void setGatewayMeshPassword(QString strMeshPassword) { m_strGatewayMeshPassword = strMeshPassword; }
+    QString gatewayMeshLtk() { return m_strGatewayMeshLtk; }
+    void setGatewayMeshLtk(QString strMeshLtk) { m_strGatewayMeshLtk = strMeshLtk; }
+
 private:
     QString m_meshUUID;
     QString m_meshName;
@@ -43,6 +52,10 @@ private:
     bool m_comIsEnabled;
     bool m_bindComNameToMeshName;
     int m_readFrames;
+    quint8 m_nGatewayAddress;
+    QString m_strGatewayMeshName;
+    QString m_strGatewayMeshLtk;
+    QString m_strGatewayMeshPassword;
 };
 
 #endif // MESH_H

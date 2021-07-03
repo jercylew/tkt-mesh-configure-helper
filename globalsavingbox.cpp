@@ -28,6 +28,11 @@ QString GlobalSavingBox::getDataRootDirPath()
     return QDir::tempPath();
 }
 
+QString GlobalSavingBox::defaultMeshUUID()
+{
+    return DEFAULT_MESH_UUID;
+}
+
 GlobalSavingBox::GlobalSavingBox(QObject *parent) : QObject(parent)
 {
     qDebug()<<"Temp Dir = "<<QDir::tempPath();

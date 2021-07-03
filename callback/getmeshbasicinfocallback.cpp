@@ -39,6 +39,10 @@ void GetMeshBasicInfoCallback::taskFinished(bool ok, AsyncApiRequestTask *asyncA
         mesh.setReadFrames(data.value("read_frames").toInt());
         mesh.setComIsEnabled(data.value("com_is_enabled").toBool());
         mesh.setBindComNameToMeshName(data.value("bind_com_name_to_mesh_name").toBool(false));
+        mesh.setGatewayMeshAddress((quint8)(data.value("mesh_address").toInt()));
+        mesh.setGatewayMeshName(data.value("mesh_name").toString());
+        mesh.setGatewayMeshPassword(data.value("mesh_password").toString());
+        mesh.setGatewayMeshLtk(data.value("mesh_ltk").toString());
         this->invoker()->loadMesh(&mesh);
         this->alerter()->setStatusText("获取默认Mesh信息成功!", "#0000FF");
     }

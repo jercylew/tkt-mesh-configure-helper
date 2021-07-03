@@ -37,6 +37,10 @@ void GetAllMeshCallback::taskFinished(bool ok, AsyncApiRequestTask *asyncApiRequ
             mesh->setComIsOpened(jsonObj.value("com_is_opened").toBool());
             mesh->setComIsEnabled(jsonObj.value("com_is_enabled").toBool());
             mesh->setBindComNameToMeshName(jsonObj.value("bind_com_name_to_mesh_name").toBool(false));
+            mesh->setGatewayMeshAddress((quint8)(jsonObj.value("mesh_address").toInt()));
+            mesh->setGatewayMeshName(jsonObj.value("mesh_name").toString());
+            mesh->setGatewayMeshPassword(jsonObj.value("mesh_password").toString());
+            mesh->setGatewayMeshLtk(jsonObj.value("mesh_ltk").toString());
             meshList.push_back(mesh);
         }
         this->invoker()->loadMeshList(meshList);

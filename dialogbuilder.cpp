@@ -177,7 +177,7 @@ QDialog *DialogBuilder::buildSetMeshInfoDialog(SwitchMeshInfo *switchMeshInfo, c
     return dialog;
 }
 
-QDialog *DialogBuilder::buildSetGatewayIdDialog(int *pGatewayId, const QString &title)
+QDialog *DialogBuilder::buildSetGatewayIdDialog(quint8 *pGatewayId, const QString &title)
 {
     SetGatewayIdDialogFrame *frame = new SetGatewayIdDialogFrame(pGatewayId);
     QDialog *dialog=buildDialog(frame, title);

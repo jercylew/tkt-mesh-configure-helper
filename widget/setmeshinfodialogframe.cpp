@@ -9,6 +9,9 @@ SetMeshInfoDialogFrame::SetMeshInfoDialogFrame(SwitchMeshInfo *pSwitchMeshInfo, 
     m_ptrSwitchMeshInfo(pSwitchMeshInfo)
 {
     ui->setupUi(this);
+
+    ui->edtMeshName->setText(m_ptrSwitchMeshInfo->m_strMeshName);
+    ui->edtMeshPassword->setText(m_ptrSwitchMeshInfo->m_strMeshPassword);
 }
 
 SetMeshInfoDialogFrame::~SetMeshInfoDialogFrame()

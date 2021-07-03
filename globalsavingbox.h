@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+#define DEFAULT_MESH_UUID   "00000000000000000000000000000000"
+
 class GlobalSavingBox : public QObject
 {
     Q_OBJECT
@@ -10,8 +12,8 @@ public:
     static GlobalSavingBox *getInstance();
 
     QString getMeshDBFilePath();
-
     QString getDataRootDirPath();
+    QString defaultMeshUUID();
 
     void setValue(const QString &key, const QString &value);
     QString getValue(const QString &key);

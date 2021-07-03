@@ -49,7 +49,7 @@ public:
 
     QDialog *buildSetMeshInfoDialog(SwitchMeshInfo *switchMeshInfo, const QString &title);
 
-    QDialog *buildSetGatewayIdDialog(int *pGatewayId, const QString &title);
+    QDialog *buildSetGatewayIdDialog(quint8 *pGatewayId, const QString &title);
 
     QDialog *buildAddTimePointDialog(const QString &title, int *minutes);
 

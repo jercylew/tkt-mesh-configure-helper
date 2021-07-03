@@ -73,6 +73,10 @@ void Mesh::load(Mesh *mesh)
     setComName(mesh->comName());
     setComIsEnabled(mesh->comIsEnabled());
     setComIsOpened(mesh->comIsOpened());
+    setGatewayMeshAddress(mesh->gatewayMeshAddress());
+    setGatewayMeshLtk(mesh->gatewayMeshLtk());
+    setGatewayMeshName(mesh->gatewayMeshName());
+    setGatewayMeshPassword(mesh->gatewayMeshPassword());
 }
 
 bool Mesh::bindComNameToMeshName() const

@@ -4,7 +4,7 @@
 #include <QIntValidator>
 #include "dialogbuilder.h"
 
-SetGatewayIdDialogFrame::SetGatewayIdDialogFrame(int *pGatewayId, QWidget *parent) :
+SetGatewayIdDialogFrame::SetGatewayIdDialogFrame(quint8 *pGatewayId, QWidget *parent) :
     QFrame(parent),
     ui(new Ui::SetGatewayIdDialogFrame),
     m_ptrGatewayId(pGatewayId)
@@ -13,6 +13,7 @@ SetGatewayIdDialogFrame::SetGatewayIdDialogFrame(int *pGatewayId, QWidget *paren
 
     QValidator *validator = new QIntValidator(0, 255, this);
     ui->edtGatewayId->setValidator(validator);
+    ui->edtGatewayId->setText(QString::number(*pGatewayId));
 }
 
 SetGatewayIdDialogFrame::~SetGatewayIdDialogFrame()
@@ -36,7 +37,7 @@ void SetGatewayIdDialogFrame::on_buttonDialogOk_clicked()
         return;
     }
 
-    *m_ptrGatewayId = ui->edtGatewayId->text().toInt();
+    *m_ptrGatewayId = (quint8)(ui->edtGatewayId->text().toInt());
 
     if (*m_ptrGatewayId > 255 || *m_ptrGatewayId < 0)
     {
