@@ -57,6 +57,8 @@ private:
     QAction *actionAllDimming;
     QAction *actionSpecialControl;
     QAction *actionStartSterilize;
+    QAction *actionWarningLightAlarmOn; //=Off
+    QAction *actionWarningLightAlarmOff;   //=On
     QMenu *menuGrouping;
 
     QMenu *menuOrder;
@@ -132,6 +134,9 @@ private slots:
     void doActionFindLum();
     void doActionScheduleControlSettings();
     void doActionStartSterilizing();
+
+    void doActionWarningLighAlarmOn();
+    void doActionWarningLighAlarmOff();
 
     void on_buttonGroupMappingAdd_clicked();
 

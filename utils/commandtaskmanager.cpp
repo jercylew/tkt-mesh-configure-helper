@@ -94,6 +94,30 @@ void CommandTaskManager::runOnCommand(QList<quint16> addrList)
     runCommands(tmpList);
 }
 
+void CommandTaskManager::runWarningLightAlarmOnCommand(QList<quint16> addrList)
+{
+    QList<ControlCommand*> tmpList;
+    for(quint16 addr : addrList)
+    {
+        ControlCommand *command=new ControlCommand(CommandManager::getInstance()->getWarningLightAlarmOnCommand(addr), false, "OneOn");
+        command->setLogExtraText(QString("Addr=%1").arg(addr&0xFF));
+        tmpList.push_back(command);
+    }
+    runCommands(tmpList);
+}
+
+void CommandTaskManager::runWarningLightAlarmOffCommand(QList<quint16> addrList)
+{
+    QList<ControlCommand*> tmpList;
+    for(quint16 addr : addrList)
+    {
+        ControlCommand *command=new ControlCommand(CommandManager::getInstance()->getWarningLightAlarmOffCommand(addr), false, "OneOff");
+        command->setLogExtraText(QString("Addr=%1").arg(addr&0xFF));
+        tmpList.push_back(command);
+    }
+    runCommands(tmpList);
+}
+
 void CommandTaskManager::runOffCommand(QList<quint16> addrList)
 {
     QList<ControlCommand*> tmpList;

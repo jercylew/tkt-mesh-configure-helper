@@ -49,6 +49,7 @@
 #include "domain/warninglight.h"
 #include "domain/onechannelluminaire.h"
 #include "domain/onechannelrelay.h"
+#include "domain/drycontactrelay.h"
 #include "domain/adboard.h"
 #include "domain/refrgtemperaturehumiditysensor.h"
 #include "domain/uvlightsensor.h"
@@ -56,6 +57,7 @@
 #include "domain/uvsterilizer.h"
 #include "domain/ozonesensor.h"
 #include "domain/formaldehydesensor.h"
+#include "domain/flammablegassensor.h"
 #include "dialogbuilder.h"
 #include "parsermanager.h"
 
@@ -280,6 +282,10 @@ void MeshDetailsFrame::initMenus()
     connect(actionSpecialControl, SIGNAL(triggered(bool)), this, SLOT(doActionSpecialControl()));
     actionStartSterilize=new QAction(tr("Start Sterilizing"));
     connect(actionStartSterilize, SIGNAL(triggered(bool)), this, SLOT(doActionStartSterilizing()));
+    actionWarningLightAlarmOn=new QAction(tr("Start Alarm"));
+    connect(actionWarningLightAlarmOn, SIGNAL(triggered(bool)), this, SLOT(doActionWarningLighAlarmOn()));
+    actionWarningLightAlarmOff=new QAction(tr("Stop Alarm"));
+    connect(actionWarningLightAlarmOff, SIGNAL(triggered(bool)), this, SLOT(doActionWarningLighAlarmOff()));
 
     menuGrouping=new QMenu(tr("MeshDetailsFrame.Grouping"));
 
@@ -471,6 +477,11 @@ void MeshDetailsFrame::initSensorNumberDisplay()
     m_sensorNumberDisplayFrameMap.insert(Sensor::OzoneSensor, ozoneSensorNumberDisplayFrame);
     m_allSensorNumberDisplayFrameList.push_back(ozoneSensorNumberDisplayFrame);
 
+    SensorNumberDisplayFrame *flammableGasSensorNumberDisplayFrame=new SensorNumberDisplayFrame(FlammableGasSensor::staticTypeText(), "Global.FlammableGasSensor");
+    flammableGasSensorNumberDisplayFrame->setNumber(m_meshModel->sensorsModel()->sensorNumber(Sensor::FlammableGasSensor));
+    m_sensorNumberDisplayFrameMap.insert(Sensor::FlammableGasSensor, flammableGasSensorNumberDisplayFrame);
+    m_allSensorNumberDisplayFrameList.push_back(flammableGasSensorNumberDisplayFrame);
+
     QHBoxLayout *layout=new QHBoxLayout;
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
@@ -649,6 +660,11 @@ void MeshDetailsFrame::fillExecuterMenus()
         if (e->typeText() == UVSterilizer::staticTypeText())
         {
             menuExecuters->addAction(actionStartSterilize);
+        }
+        else if (e->typeText() == WarningLight::staticTypeText())
+        {
+            menuExecuters->addAction(actionWarningLightAlarmOn);
+            menuExecuters->addAction(actionWarningLightAlarmOff);
         }
         else
         {
@@ -1110,6 +1126,38 @@ void MeshDetailsFrame::doActionStartSterilizing()
 //        group->setBrightness(dialog->getCurrentBrightness());
 //        dialog->deleteLater();
 //    }
+}
+
+void MeshDetailsFrame::doActionWarningLighAlarmOn()
+{
+    if(menuContext==ui->listExecuterBody)
+    {
+        QModelIndexList list=ui->listExecuterBody->selectionModel()->selectedIndexes();
+        QList<quint16> addrList;
+        int len=list.size();
+        for(int i=0; i<len; i++)
+        {
+            Executer *l=m_executerListViewModel->executerListModel()->at(list.at(i).row());
+            addrList.push_back(l->getBluetoothAddress());
+        }
+        m_meshModel->commandTaskManager()->runWarningLightAlarmOnCommand(addrList);
+    }
+}
+
+void MeshDetailsFrame::doActionWarningLighAlarmOff()
+{
+    if(menuContext==ui->listExecuterBody)
+    {
+        QModelIndexList list=ui->listExecuterBody->selectionModel()->selectedIndexes();
+        QList<quint16> addrList;
+        int len=list.size();
+        for(int i=0; i<len; i++)
+        {
+            Executer *l=m_executerListViewModel->executerListModel()->at(list.at(i).row());
+            addrList.push_back(l->getBluetoothAddress());
+        }
+        m_meshModel->commandTaskManager()->runWarningLightAlarmOffCommand(addrList);
+    }
 }
 
 void MeshDetailsFrame::doActionAllocSwitchKeyGroup()

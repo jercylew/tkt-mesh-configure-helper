@@ -451,6 +451,10 @@ QListView {
     background-image: url(":/images/ozone_sensor_small.png");
 }
 
+#labelSensorNumberIcon[type="flammable_gas_sensor"]{
+    background-image: url(":/images/flammable_gas_sensor_small.png");
+}
+
 #buttonAddSensor{
     background-color: transparent;
     background-image: url(":/images/add.png");
@@ -761,6 +765,21 @@ NodeGroupFrame #frameGroupShadow
     border-image:url(:/images/1ch_relay_online_off.png);
 }
 
+#labelIcon[status="dry_contact_relay_offline"]
+{
+    border-image:url(:/images/dry_contact_relay_offline.png);
+}
+
+#labelIcon[status="dry_contact_relay_online_on"]
+{
+    border-image:url(:/images/dry_contact_relay_online_on.png);
+}
+
+#labelIcon[status="dry_contact_relay_online_off"]
+{
+    border-image:url(:/images/dry_contact_relay_online_off.png);
+}
+
 #labelIcon[status="uv_sterilizer_online_appointed_ok"]
 {
     border-image:url(:/images/uv_sterilizer_online_appointed_ok.png);
@@ -882,6 +901,11 @@ NodeGroupFrame #frameGroupShadow
 #labelIcon[type="ozone_sensor"]
 {
     border-image:url(:/images/ozone_sensor.png);
+}
+
+#labelIcon[type="flammable_gas_sensor"]
+{
+    border-image:url(:/images/flammable_gas_sensor.png);
 }
 
 /*********** ControlItemEditDelegateFrame **********/

@@ -19,12 +19,14 @@
 #include "domain/refrgtemperaturehumiditysensor.h"
 #include "domain/uvlightsensor.h"
 #include "domain/handwashingsensor.h"
+#include "domain/flammablegassensor.h"
 
 #include "domain/onechannelluminaire.h"
 #include "domain/onechannelrelay.h"
 #include "domain/adboard.h"
 #include "domain/uvsterilizer.h"
 #include "domain/warninglight.h"
+#include "domain/drycontactrelay.h"
 
 //Parsers
 #include "parser/luxsensorparser.h"
@@ -49,6 +51,8 @@
 #include "parser/uvsterilizerparser.h"
 #include "parser/warninglightparser.h"
 #include "parser/ozonesensorparser.h"
+#include "parser/drycontactrelayparser.h"
+#include "parser/flammablegassensorparser.h"
 
 #include "mesh_define.h"
 
@@ -163,6 +167,11 @@ ParserManager::ParserManager(QObject *parent) : QObject(parent)
     m_sensorTypeToParserMap.insert(Sensor::OzoneSensor, sensorParser);
     m_sensorCodeToParserMap.insert(USER_NOTIFY_DATA_OF_OZONE, sensorParser);
 
+    sensorParser = new FlammableGasSensorParser;
+    m_sensorTypeTextToParserMap.insert(FlammableGasSensor::staticTypeText(), sensorParser);
+    m_sensorTypeToParserMap.insert(Sensor::FlammableGasSensor, sensorParser);
+    m_sensorCodeToParserMap.insert(USER_NOTIFY_DATA_OF_FLAMMABLE_GAS, sensorParser);
+
     sensorParser=new RefrgTemperatureHumditySensorParser;
     m_sensorTypeTextToParserMap.insert(RefrgTemperatureHumiditySensor::staticTypeText(), sensorParser);
     m_sensorTypeToParserMap.insert(Sensor::RefrgTemperatureHumiditySensor, sensorParser);
@@ -185,6 +194,10 @@ ParserManager::ParserManager(QObject *parent) : QObject(parent)
     executerParser=new OneChannelRelayParser;
     m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_1CH_RELAY, executerParser);
     m_executerTypeTextToParserMap.insert(OneChannelRelay::staticTypeText(), executerParser);
+
+    executerParser=new DryContactRelayParser;
+    m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY, executerParser);
+    m_executerTypeTextToParserMap.insert(DryContactRelay::staticTypeText(), executerParser);
 
     executerParser=new ADBoardParser;
     m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_ADBOARD, executerParser);

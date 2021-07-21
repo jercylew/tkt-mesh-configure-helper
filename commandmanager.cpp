@@ -78,6 +78,30 @@ QByteArray CommandManager::getOnCommand(quint8 addr)
     return data;
 }
 
+QByteArray CommandManager::getWarningLightAlarmOnCommand(quint8 addr)
+{
+    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 fd 11 02 01 01 01 00");
+    data[10]=(char)(sequenceNumber);
+    data[11]=(char)(sequenceNumber>>8);
+    data[12]=(char)(sequenceNumber>>16);
+
+    data[15]=(char)(addr);
+    sequenceNumber++;
+    return data;
+}
+
+QByteArray CommandManager::getWarningLightAlarmOffCommand(quint8 addr)
+{
+    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 fd 11 02 01 01 00 00");
+    data[10]=(char)(sequenceNumber);
+    data[11]=(char)(sequenceNumber>>8);
+    data[12]=(char)(sequenceNumber>>16);
+
+    data[15]=(char)(addr);
+    sequenceNumber++;
+    return data;
+}
+
 QByteArray CommandManager::getOffCommand(quint8 addr)
 {
     QByteArray data=QByteArray::fromHex("00 02 14 10 00 04 00 12 15 00 00 00 00 00 00 00 00 d0 11 02 00 00 00");

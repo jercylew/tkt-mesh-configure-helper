@@ -124,5 +124,10 @@
         <file>images/uv_sterilizer_online_sterilizing.png</file>
         <file>images/ozone_sensor.png</file>
         <file>images/ozone_sensor_small.png</file>
+        <file>images/dry_contact_relay_offline.png</file>
+        <file>images/dry_contact_relay_online_off.png</file>
+        <file>images/dry_contact_relay_online_on.png</file>
+        <file>images/flammable_gas_sensor.png</file>
+        <file>images/flammable_gas_sensor_small.png</file>
     </qresource>
 </RCC>

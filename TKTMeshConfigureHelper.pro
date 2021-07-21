@@ -243,7 +243,12 @@ SOURCES += main.cpp\
     domain/uvsterilizer.cpp \
     parser/uvsterilizerparser.cpp \
     widget/uvsterilizerframe.cpp \
-    widget/uvsterilizerconfdialog.cpp
+    widget/uvsterilizerconfdialog.cpp \
+    domain/flammablegassensor.cpp \
+    domain/drycontactrelay.cpp \
+    parser/drycontactrelayparser.cpp \
+    parser/flammablegassensorparser.cpp \
+    widget/drycontactrelayframe.cpp
 
 HEADERS  += \
     domain/ozonesensor.h \
@@ -466,7 +471,12 @@ HEADERS  += \
     domain/uvsterilizer.h \
     parser/uvsterilizerparser.h \
     widget/uvsterilizerframe.h \
-    widget/uvsterilizerconfdialog.h
+    widget/uvsterilizerconfdialog.h \
+    domain/flammablegassensor.h \
+    domain/drycontactrelay.h \
+    parser/drycontactrelayparser.h \
+    parser/flammablegassensorparser.h \
+    widget/drycontactrelayframe.h
 
 FORMS    += \
     mainwindow.ui \
@@ -526,7 +536,8 @@ FORMS    += \
     widget/exporttimelinecontrolitemtemplatedialogframe.ui \
     widget/allocswitchkeygroupframe.ui \
     widget/uvsterilizerframe.ui \
-    widget/uvsterilizerconfdialog.ui
+    widget/uvsterilizerconfdialog.ui \
+    widget/drycontactrelayframe.ui
 
 DISTFILES += \
     app.rc

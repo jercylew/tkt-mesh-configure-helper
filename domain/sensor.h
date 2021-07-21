@@ -25,7 +25,8 @@ public:
         RefrgTemperatureHumiditySensor,
         UVLightSensor,
         HandWashingSensor,
-        OzoneSensor
+        OzoneSensor,
+        FlammableGasSensor
     };
     Sensor();
     virtual ~Sensor();

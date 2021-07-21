@@ -16,6 +16,7 @@
 #define USER_NOTIFY_DATA_OF_PM_SENSROR              ((char)0x06)  //PM传感器
 #define USER_NOTIFY_DATA_OF_SWITCH_SENSOR           ((char)0x09)  //开关传感器
 #define USER_NOTIFY_DATA_OF_SWITCH_SENSOR_2CH               ((char)0x11)  //2路开关传感器
+#define USER_NOTIFY_DATA_OF_FLAMMABLE_GAS           ((char)0x12)  //Flammable Gas Sensor
 #define USER_NOTIFY_DATA_OF_MOTION_AND_LUX_CAMERA_SENSOR    ((char)0x07) //人体感应和光照摄像头
 #define USER_NOTIFY_DATA_OF_TEMPERATURE_HUMIDITY_SENSOR     ((char)0x08) //温湿度传感器
 #define USER_NOTIFY_DATA_OF_STRESS_SENSOR           ((char)0x0B) //应力传感器
@@ -40,6 +41,7 @@
 #define NODE_TYPE_OF_1CH_RELAY              ((char)0xFC) //一通道继电器
 #define NODE_TYPE_OF_ADBOARD                ((char)0xFA) //广告灯箱
 #define NODE_TYPE_OF_UV_STERILIZER          ((char)0xF3) //紫外刀具消毒柜
+#define NODE_TYPE_OF_DRY_CONTACT_RELAY      ((char)0xF5) //Dry Contact Relay
 
 /****传感器类型码*******/
 #define NODE_TYPE_OF_MOTION_SENSOR           ((char)0x9E)  //微波人体移动传感器
@@ -57,5 +59,6 @@
 #define NODE_TYPE_OF_ULTRAVIOLET_LIGHT_SENSOR   ((char)0x94)    //Ultraviolet Light Sensor
 #define NODE_TYPE_OF_HAND_WASHING_SENSOR        ((char)0x95)    //Hand Washing Sensor
 #define NODE_TYPE_OF_OZONE_SENSOR               ((char)0x92)    //OZONE Sensor
+#define NODE_TYPE_OF_FLAMMABLE_GAS_SENSOR       ((char)0x91)    //Flammable Gas Sensor
 
 #endif // MESH_DEFINE_H

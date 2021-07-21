@@ -20,11 +20,13 @@
 #include "domain/uvlightsensor.h"
 #include "domain/handwashingsensor.h"
 #include "domain/ozonesensor.h"
+#include "domain/flammablegassensor.h"
 
 #include "domain/onechannelluminaire.h"
 #include "domain/onechannelrelay.h"
 #include "domain/adboard.h"
 #include "domain/uvsterilizer.h"
+#include "domain/drycontactrelay.h"
 #include <QDebug>
 
 #include "domain/timelinecontrolitemofluminairegroup.h"
@@ -179,6 +181,7 @@ void ObjectFactory::loadMetaObjectInfo()
     qRegisterMetaType<StressSensor>(StressSensor::staticTypeText().toLatin1());
     qRegisterMetaType<FormaldehydeSensor>(FormaldehydeSensor::staticTypeText().toLatin1());
     qRegisterMetaType<OzoneSensor>(OzoneSensor::staticTypeText().toLatin1());
+    qRegisterMetaType<FlammableGasSensor>(FlammableGasSensor::staticTypeText().toLatin1());
     qRegisterMetaType<RefrgTemperatureHumiditySensor>(RefrgTemperatureHumiditySensor::staticTypeText().toLatin1());
     qRegisterMetaType<UVLightSensor>(UVLightSensor::staticTypeText().toLatin1());
     qRegisterMetaType<HandWashingSensor>(HandWashingSensor::staticTypeText().toLatin1());
@@ -187,6 +190,7 @@ void ObjectFactory::loadMetaObjectInfo()
     qRegisterMetaType<OneChannelRelay>(OneChannelRelay::staticTypeText().toLatin1());
     qRegisterMetaType<ADBoard>(ADBoard::staticTypeText().toLatin1());
     qRegisterMetaType<UVSterilizer>(UVSterilizer::staticTypeText().toLatin1());
+    qRegisterMetaType<DryContactRelay>(DryContactRelay::staticTypeText().toLatin1());
 
     /************** TypeCode To TypeText *****************/
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_LUX_SENSOR, LuxSensor::staticTypeText());
@@ -207,6 +211,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_LIGHT, OneChannelLuminaire::staticTypeText());
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_ADBOARD, ADBoard::staticTypeText());
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_UV_STERILIZER, UVSterilizer::staticTypeText());
+    m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_FLAMMABLE_GAS, FlammableGasSensor::staticTypeText());
 
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_LUX_SENSOR, LuxSensor::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_MOTION_SENSOR, RealMotionSensor::staticTypeText());
@@ -226,8 +231,10 @@ void ObjectFactory::loadMetaObjectInfo()
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_LIGHT, OneChannelLuminaire::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_WARNING_LIGHT, WarningLight::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_1CH_RELAY, OneChannelRelay::staticTypeText());
+    m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY, DryContactRelay::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_ADBOARD, ADBoard::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_UV_STERILIZER, UVSterilizer::staticTypeText());
+    m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_FLAMMABLE_GAS_SENSOR, FlammableGasSensor::staticTypeText());
 
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_LUX_SENSOR);
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_MOTION_SENSOR);
@@ -241,6 +248,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_STRESS_SENSOR);
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_FORMALDEHYDE_SENSOR);
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_OZONE_SENSOR);
+    m_sensorNodeTypeSet.insert(NODE_TYPE_OF_FLAMMABLE_GAS_SENSOR);
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_REFRG_TEMPERATURE_HUMIDITY_SENSOR);
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_ULTRAVIOLET_LIGHT_SENSOR);
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_HAND_WASHING_SENSOR);
@@ -257,6 +265,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_sensorUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_STRESS_SENSOR);
     m_sensorUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_FORMALDEHYDE_SENSOR);
     m_sensorUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_OZONE);
+    m_sensorUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_FLAMMABLE_GAS);
     m_sensorUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_REFRG_TEMPERATURE_HUMIDITY_SENSOR);
     m_sensorUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_UVLIGHT_SENSOR);
     m_sensorUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_HAND_WASHING_SENSOR);
@@ -268,6 +277,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_1CH_RELAY);
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_ADBOARD);
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_UV_STERILIZER);
+    m_executerNodeTypeSet.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY);
 
     m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_LIGHT);
 //    m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_WARNING_LIGHT);

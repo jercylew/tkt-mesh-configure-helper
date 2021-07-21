@@ -59,6 +59,8 @@ public:
     void runGroupAllOffCommand(quint8 groupId, bool highPriority=false, int calculateNumber=0);
     void runOnCommand(QList<quint16> addrList);
     void runOffCommand(QList<quint16> addrList);
+    void runWarningLightAlarmOnCommand(QList<quint16> addrList);
+    void runWarningLightAlarmOffCommand(QList<quint16> addrList);
     void runDimmingCommand(QList<quint16> addrList, int brightness);
     void runAllDimmingCommand(quint8 brightness);
     void runGroupDimmingCommand(quint8 groupId, quint8 brightness, bool hightPriority=false, int calculateNumber=0);
