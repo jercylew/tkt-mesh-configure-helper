@@ -39,6 +39,7 @@ ControlItemEditDialogFrameOfRelayGroup::ControlItemEditDialogFrameOfRelayGroup(M
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::FormaldehydeSensor);
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::PMSensor);
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::OzoneSensor);
+    ui->cmbGTBindSensorId->addAccessSensorType(Sensor::FlammableGasSensor);
 
     setControlItem(controlItem);
 }
