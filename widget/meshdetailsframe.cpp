@@ -73,6 +73,7 @@ MeshDetailsFrame::MeshDetailsFrame(MeshModel *meshModel, QWidget *parent) :
     m_mapExecuterType[OneChannelLuminaire::staticTypeText()] = NodeGroup::LuminaireGroup;
     m_mapExecuterType[WarningLight::staticTypeText()] = NodeGroup::LuminaireGroup;
     m_mapExecuterType[OneChannelRelay::staticTypeText()] = NodeGroup::RelayGroup;
+    m_mapExecuterType[DryContactRelay::staticTypeText()] = NodeGroup::RelayGroup;
 
     m_meshModel=meshModel;
     m_sensorNumberCurrentPage=0;
