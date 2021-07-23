@@ -1,21 +1,21 @@
-#ifndef DRYCONTACTRELAY_H
-#define DRYCONTACTRELAY_H
+#ifndef ALARMLOUDSPEAKER_H
+#define ALARMLOUDSPEAKER_H
+
 
 #include "executer.h"
 
-#define DRY_CONTACT_RELAY_TYPE_TEXT  "dry_contact_relay"
-#define DRY_CONTACT_RELAY_SHORT_TYPE_TEXT   "DCTR"
+#define ALARM_LOUDSPEAKER_TYPE_TEXT  "alarm_loudspeaker"
+#define ALARM_LOUDSPEAKER_SHORT_TYPE_TEXT   "ASPK"
 
-class DryContactRelay : public Executer
+class AlarmLoudspeaker : public Executer
 {
 public:
-    DryContactRelay();
+    AlarmLoudspeaker();
 
     QString typeText();
     QString shortTypeText();
     static QString staticTypeText();
     QString displayEnglishTypeText();
-    QString dataText();
 
     bool isLuminaire() { return false; }
 
@@ -24,8 +24,10 @@ public:
     bool on() const;
     void setOn(bool on);
 
+    QString dataText();
+
 private:
     bool m_on;
 };
 
-#endif // DRYCONTACTRELAY_H
+#endif // ALARMLOUDSPEAKER_H

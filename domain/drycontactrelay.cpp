@@ -20,6 +20,11 @@ QString DryContactRelay::staticTypeText()
     return DRY_CONTACT_RELAY_TYPE_TEXT;
 }
 
+QString DryContactRelay::displayEnglishTypeText()
+{
+    return "Dry Contact Relay";
+}
+
 void DryContactRelay::loadInUpdateExecuter(Executer *executer)
 {
     Executer::loadInUpdateExecuter(executer);
@@ -41,4 +46,11 @@ bool DryContactRelay::on() const
 void DryContactRelay::setOn(bool on)
 {
     m_on = on;
+}
+
+QString DryContactRelay::dataText()
+{
+    QString onText = QObject::tr("ON");
+    QString offText = QObject::tr("OFF");
+    return QObject::tr("STATUS: %1").arg(on()?onText:offText);
 }

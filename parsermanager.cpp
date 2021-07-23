@@ -27,6 +27,7 @@
 #include "domain/uvsterilizer.h"
 #include "domain/warninglight.h"
 #include "domain/drycontactrelay.h"
+#include "domain/alarmloudspeaker.h"
 
 //Parsers
 #include "parser/luxsensorparser.h"
@@ -53,6 +54,7 @@
 #include "parser/ozonesensorparser.h"
 #include "parser/drycontactrelayparser.h"
 #include "parser/flammablegassensorparser.h"
+#include "parser/alarmloudspeakerparser.h"
 
 #include "mesh_define.h"
 
@@ -198,6 +200,10 @@ ParserManager::ParserManager(QObject *parent) : QObject(parent)
     executerParser=new DryContactRelayParser;
     m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY, executerParser);
     m_executerTypeTextToParserMap.insert(DryContactRelay::staticTypeText(), executerParser);
+
+    executerParser=new AlarmLoudspeakerParser;
+    m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_ALARM_LOUDSPEAKER, executerParser);
+    m_executerTypeTextToParserMap.insert(AlarmLoudspeaker::staticTypeText(), executerParser);
 
     executerParser=new ADBoardParser;
     m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_ADBOARD, executerParser);

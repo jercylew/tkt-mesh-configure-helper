@@ -780,6 +780,21 @@ NodeGroupFrame #frameGroupShadow
     border-image:url(:/images/dry_contact_relay_online_off.png);
 }
 
+#labelIcon[status="alarm_loudspeaker_online_on"]
+{
+    border-image:url(:/images/alarm_loudspeaker_online_on.png);
+}
+
+#labelIcon[status="alarm_loudspeaker_online_off"]
+{
+    border-image:url(:/images/alarm_loudspeaker_online_off.png);
+}
+
+#labelIcon[status="alarm_loudspeaker_offline"]
+{
+    border-image:url(:/images/alarm_loudspeaker_offline.png);
+}
+
 #labelIcon[status="uv_sterilizer_online_appointed_ok"]
 {
     border-image:url(:/images/uv_sterilizer_online_appointed_ok.png);

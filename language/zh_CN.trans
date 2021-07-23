@@ -617,6 +617,8 @@ Are you sure to delete the local configuration data of selected executers?=确�
 One-Channel Luminaire=一通道调光灯
 One-Channel Relay=一通道继电器
 Warning Light=报警灯
+Dry Contact Relay=干接点继电器
+Alarm Loudspeaker=告警喇叭
 Solar One-Channel Luminaire=太阳能一通道调光灯
 UV Sterilizer=紫外刀具消毒柜
 Wifi Address: %1, =Wifi地址：%1，
@@ -1293,6 +1295,8 @@ Click the button to trigger once=点击按钮手动触发一次
 Trigger Once=触发一次
 Basic Control Parameters=基础控制参数
 Advanced Control Parameters=高级控制参数
+Start Alarm=开启报警
+Stop Alarm=关闭报警
 
 STATUS: %1, BRIGHTNESS: %2, COLOR: %3=状态: %1, 亮度: %2, 颜色: %3
 BRIGHTNESS: %1=亮度: %1

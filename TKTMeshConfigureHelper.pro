@@ -248,7 +248,10 @@ SOURCES += main.cpp\
     domain/drycontactrelay.cpp \
     parser/drycontactrelayparser.cpp \
     parser/flammablegassensorparser.cpp \
-    widget/drycontactrelayframe.cpp
+    widget/drycontactrelayframe.cpp \
+    domain/alarmloudspeaker.cpp \
+    parser/alarmloudspeakerparser.cpp \
+    widget/alarmloudspeakerframe.cpp
 
 HEADERS  += \
     domain/ozonesensor.h \
@@ -476,7 +479,10 @@ HEADERS  += \
     domain/drycontactrelay.h \
     parser/drycontactrelayparser.h \
     parser/flammablegassensorparser.h \
-    widget/drycontactrelayframe.h
+    widget/drycontactrelayframe.h \
+    domain/alarmloudspeaker.h \
+    parser/alarmloudspeakerparser.h \
+    widget/alarmloudspeakerframe.h
 
 FORMS    += \
     mainwindow.ui \
@@ -537,7 +543,8 @@ FORMS    += \
     widget/allocswitchkeygroupframe.ui \
     widget/uvsterilizerframe.ui \
     widget/uvsterilizerconfdialog.ui \
-    widget/drycontactrelayframe.ui
+    widget/drycontactrelayframe.ui \
+    widget/alarmloudspeakerframe.ui
 
 DISTFILES += \
     app.rc

@@ -58,6 +58,7 @@
 #include "domain/ozonesensor.h"
 #include "domain/formaldehydesensor.h"
 #include "domain/flammablegassensor.h"
+#include "domain/alarmloudspeaker.h"
 #include "dialogbuilder.h"
 #include "parsermanager.h"
 
@@ -74,6 +75,7 @@ MeshDetailsFrame::MeshDetailsFrame(MeshModel *meshModel, QWidget *parent) :
     m_mapExecuterType[WarningLight::staticTypeText()] = NodeGroup::LuminaireGroup;
     m_mapExecuterType[OneChannelRelay::staticTypeText()] = NodeGroup::RelayGroup;
     m_mapExecuterType[DryContactRelay::staticTypeText()] = NodeGroup::RelayGroup;
+    m_mapExecuterType[AlarmLoudspeaker::staticTypeText()] = NodeGroup::RelayGroup;
 
     m_meshModel=meshModel;
     m_sensorNumberCurrentPage=0;

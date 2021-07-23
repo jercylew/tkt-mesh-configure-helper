@@ -27,6 +27,7 @@
 #include "domain/adboard.h"
 #include "domain/uvsterilizer.h"
 #include "domain/drycontactrelay.h"
+#include "domain/alarmloudspeaker.h"
 #include <QDebug>
 
 #include "domain/timelinecontrolitemofluminairegroup.h"
@@ -191,6 +192,7 @@ void ObjectFactory::loadMetaObjectInfo()
     qRegisterMetaType<ADBoard>(ADBoard::staticTypeText().toLatin1());
     qRegisterMetaType<UVSterilizer>(UVSterilizer::staticTypeText().toLatin1());
     qRegisterMetaType<DryContactRelay>(DryContactRelay::staticTypeText().toLatin1());
+    qRegisterMetaType<AlarmLoudspeaker>(AlarmLoudspeaker::staticTypeText().toLatin1());
 
     /************** TypeCode To TypeText *****************/
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_LUX_SENSOR, LuxSensor::staticTypeText());
@@ -232,6 +234,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_WARNING_LIGHT, WarningLight::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_1CH_RELAY, OneChannelRelay::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY, DryContactRelay::staticTypeText());
+    m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_ALARM_LOUDSPEAKER, AlarmLoudspeaker::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_ADBOARD, ADBoard::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_UV_STERILIZER, UVSterilizer::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_FLAMMABLE_GAS_SENSOR, FlammableGasSensor::staticTypeText());
@@ -278,6 +281,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_ADBOARD);
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_UV_STERILIZER);
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY);
+    m_executerNodeTypeSet.insert(NODE_TYPE_OF_ALARM_LOUDSPEAKER);
 
     m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_LIGHT);
 //    m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_WARNING_LIGHT);

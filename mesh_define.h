@@ -41,6 +41,7 @@
 #define NODE_TYPE_OF_1CH_RELAY              ((char)0xFC) //一通道继电器
 #define NODE_TYPE_OF_ADBOARD                ((char)0xFA) //广告灯箱
 #define NODE_TYPE_OF_UV_STERILIZER          ((char)0xF3) //紫外刀具消毒柜
+#define NODE_TYPE_OF_ALARM_LOUDSPEAKER      ((char)0xF4) //Alarm Loudspeaker
 #define NODE_TYPE_OF_DRY_CONTACT_RELAY      ((char)0xF5) //Dry Contact Relay
 
 /****传感器类型码*******/
