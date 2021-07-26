@@ -1183,10 +1183,8 @@ void MeshDetailsFrame::on_buttonGroupMappingAdd_clicked()
     dialog->exec();
 }
 
-bool MeshDetailsFrame::isSelectedExecutersDifferentType()
+bool MeshDetailsFrame::isSelectedExecutersDifferentType(QModelIndexList list)
 {
-    QModelIndexList list = ui->listExecuterBody->selectionModel()->selectedIndexes();
-
     if (list.size() <= 1)
     {
         return false;
@@ -1250,9 +1248,8 @@ bool MeshDetailsFrame::isSelectedSensorsDifferentType()
     return bRet;
 }
 
-bool MeshDetailsFrame::isGroupTypeMatch(quint8 groupId)
+bool MeshDetailsFrame::isGroupTypeMatch(quint8 groupId, QModelIndexList list)
 {
-    QModelIndexList list = ui->listExecuterBody->selectionModel()->selectedIndexes();
     Executer *e = m_executerListViewModel->executerListModel()->at(list.at(0).row());
     int type = m_mapExecuterType[e->typeText()];
     NodeGroup *group = m_meshModel->nodeGroupsModel()->getNodeGroup(groupId);
@@ -1267,14 +1264,20 @@ void MeshDetailsFrame::doGroupActionTriggered(bool checked, quint8 groupId)
         return;
     }
 
-    if (isSelectedExecutersDifferentType())
+    QModelIndexList list = ui->listExecuterBody->selectionModel()->selectedIndexes();
+    if (list.size() == 0)
+    {
+        return;
+    }
+
+    if (isSelectedExecutersDifferentType(list))
     {
         QMessageBox::critical(this, tr("MeshDetailsFrame.GroupingError"),
                               tr("MeshDetailsFrame.GroupingErrorMessageDiffType"));
         return;
     }
 
-    if (!isGroupTypeMatch(groupId))
+    if (!isGroupTypeMatch(groupId, list))
     {
         QMessageBox::critical(this, tr("MeshDetailsFrame.GroupingError"),
                               tr("MeshDetailsFrame.GroupingErrorMessageMatchType"));
@@ -1287,7 +1290,6 @@ void MeshDetailsFrame::doGroupActionTriggered(bool checked, quint8 groupId)
                 .arg((quint16)groupId);
     if(menuContext==ui->listExecuterBody)
     {
-        QModelIndexList list=ui->listExecuterBody->selectionModel()->selectedIndexes();
         QList<quint16> addrList;
         for(int i=0; i<list.size(); i++)
         {

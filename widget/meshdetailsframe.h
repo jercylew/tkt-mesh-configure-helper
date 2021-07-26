@@ -33,9 +33,9 @@ public:
 
 private:
     bool checkAndPopupManuallyControlWarning();
-    bool isSelectedExecutersDifferentType();
+    bool isSelectedExecutersDifferentType(QModelIndexList list = QModelIndexList());
     bool isSelectedSensorsDifferentType();
-    bool isGroupTypeMatch(quint8 groupId);
+    bool isGroupTypeMatch(quint8 groupId, QModelIndexList list);
     void updateLumGroupCombox();
     void setExecuterListViewCurrentGroup(quint8 groupId);
     void initMenus();
