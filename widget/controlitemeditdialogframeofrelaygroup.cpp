@@ -1,13 +1,16 @@
 #include "controlitemeditdialogframeofrelaygroup.h"
 #include "ui_controlitemeditdialogframeofrelaygroup.h"
-#include "model/meshmodel.h"
 #include "db/meshdbmanager.h"
+#include "dialogbuilder.h"
 #include <QMessageBox>
+#include <QTextEdit>
+#include <QLabel>
 
 #define ITEM_POWER_DATA             "power"
 #define ITEM_LUX_SENSOR_DATA        "lux_sensor"
 #define ITEM_MOTION_SENSOR_DATA     "motion_sensor"
 #define ITEM_GAS_TRANSDUCER_DATA    "gas_transducer"
+#define ITEM_COMPOSITE_SENSOR_DATA    "composite_sensor"
 #define ITEM_NO_OPERATION_DATA      "no_operation"
 
 ControlItemEditDialogFrameOfRelayGroup::ControlItemEditDialogFrameOfRelayGroup(MeshModel *meshModel, TimeLineControlItem *controlItem, QWidget *parent) :
@@ -21,6 +24,7 @@ ControlItemEditDialogFrameOfRelayGroup::ControlItemEditDialogFrameOfRelayGroup(M
     ui->comboBox->addItem(tr("Lux Sensor"), ITEM_LUX_SENSOR_DATA);
     ui->comboBox->addItem(tr("Motion Sensor"), ITEM_MOTION_SENSOR_DATA);
     ui->comboBox->addItem(tr("Gas Transducer"), ITEM_GAS_TRANSDUCER_DATA);
+    ui->comboBox->addItem(tr("Composite Sensor"), ITEM_COMPOSITE_SENSOR_DATA);
     ui->comboBox->addItem(tr("No Operation"), ITEM_NO_OPERATION_DATA);
 
     ui->buttonDone->setCursor(Qt::PointingHandCursor);
@@ -41,6 +45,7 @@ ControlItemEditDialogFrameOfRelayGroup::ControlItemEditDialogFrameOfRelayGroup(M
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::OzoneSensor);
     ui->cmbGTBindSensorId->addAccessSensorType(Sensor::FlammableGasSensor);
 
+    ui->labelSensorGroupAddState->setText(tr("Added %1 sensors in %2 groups").arg(0).arg(0));
     setControlItem(controlItem);
 }
 
@@ -113,6 +118,10 @@ void ControlItemEditDialogFrameOfRelayGroup::setType(const QString &type)
     else if(type==ITEM_GAS_TRANSDUCER_DATA)
     {
         ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->pageGasTransducer));
+    }
+    else if(type==ITEM_COMPOSITE_SENSOR_DATA)
+    {
+        ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->pageCompositeSensors));
     }
     else
     {
@@ -190,7 +199,83 @@ void ControlItemEditDialogFrameOfRelayGroup::on_buttonDone_clicked()
     controlItem->gasTrnsdcrTypeMinThreshold = ui->spinGTThresholdMin->value();
     controlItem->gasTrnsdcrTypeTrigShieldMSec = ui->spinGTTriggerShieldMSec->value();
 
+    //Composite Sensor Policy
+    controlItem->compositeSensorTypeCmpExpr = getCompositeSensorComparisionExpression();
+    qDebug() << "EXPRESSION:" << controlItem->compositeSensorTypeCmpExpr;
+    controlItem->compositeSensorTypeTrigShieldMSec = 1000;
+
     emit accept();
+}
+
+QString ControlItemEditDialogFrameOfRelayGroup::CmpOptr2String(QString strOptr)
+{
+    QString strOptrText = "";
+    if (strOptr == ">")
+    {
+        strOptrText = tr("Greater than");
+    }
+    else if (strOptr == "<")
+    {
+        strOptrText = tr("Less than");
+    }
+    else if (strOptr == "==")
+    {
+        strOptrText = tr("Equal");
+    }
+    else
+    {
+        strOptrText = "?";
+    }
+
+    return strOptrText;
+}
+
+QString ControlItemEditDialogFrameOfRelayGroup::getAndCmpExpressionGroup(const QVector<SensorDataComparision *> &vecCmp)
+{
+    QString strExpr = "";
+    if (vecCmp.empty())
+    {
+        return strExpr;
+    }
+
+    QString strCmpItem = QString("%1%2%3%4").arg(
+                vecCmp.at(0)->m_strSensorId, vecCmp.at(0)->m_strValue,
+                vecCmp.at(0)->m_strOperator,
+                QString::number(vecCmp.at(0)->m_dDataThresold));
+
+    strExpr.append(strCmpItem);
+    for (int i = 1;i < vecCmp.size();i++)
+    {
+        strCmpItem = QString("&&%1%2%3%4").arg(
+                    vecCmp.at(i)->m_strSensorId, vecCmp.at(i)->m_strValue,
+                    vecCmp.at(i)->m_strOperator,
+                    QString::number(vecCmp.at(i)->m_dDataThresold));
+        strExpr.append(strCmpItem);
+    }
+
+    return strExpr;
+}
+
+QString ControlItemEditDialogFrameOfRelayGroup::getCompositeSensorComparisionExpression()
+{
+    QString strExpression = "";
+    if (m_vecSensorDataCmpORGroups.empty())
+    {
+        return strExpression;
+    }
+    strExpression.append(getAndCmpExpressionGroup(m_vecSensorDataCmpORGroups.at(0)));
+
+    for (int i = 1;i < m_vecSensorDataCmpORGroups.size();i++)
+    {
+        if (m_vecSensorDataCmpORGroups.at(i).empty())
+        {
+            continue;
+        }
+        strExpression.append("||");
+        strExpression.append(getAndCmpExpressionGroup(m_vecSensorDataCmpORGroups.at(i)));
+    }
+
+    return strExpression;
 }
 
 void ControlItemEditDialogFrameOfRelayGroup::on_buttonCancel_clicked()
@@ -231,8 +316,97 @@ void ControlItemEditDialogFrameOfRelayGroup::on_tabWidget_currentChanged(int)
     {
         ui->comboBox->setCurrentIndex(ui->comboBox->findData(ITEM_GAS_TRANSDUCER_DATA));
     }
+    else if (currentPage == ui->pageCompositeSensors)
+    {
+        ui->comboBox->setCurrentIndex(ui->comboBox->findData(ITEM_COMPOSITE_SENSOR_DATA));
+    }
     else
     {
         ui->comboBox->setCurrentIndex(ui->comboBox->findData(ITEM_NO_OPERATION_DATA));
     }
+}
+
+
+void ControlItemEditDialogFrameOfRelayGroup::on_btnAddANDGroup_clicked()
+{
+    QVector<SensorDataComparision*> vecCmp;
+    QDialog *dialog = DialogBuilder::getInstance()->buildAddANDOperationGroupDialog(m_meshModel,
+                      tr("CompositeSensor.AddANDOperationsGroup"), &vecCmp);
+
+    if (dialog->exec() != QDialog::Accepted)
+    {
+        return;
+    }
+
+    if (vecCmp.isEmpty())
+    {
+        return;
+    }
+
+    QTextEdit *txtANDGroup = new QTextEdit(ui->pageCompositeSensors);
+    QString strHtml = QString("<div><div style='display:inline-block'>%1%2 %3 %4</div>")
+            .arg(vecCmp.at(0)->m_strSensorId,
+                 vecCmp.at(0)->m_strValue,
+                 CmpOptr2String(vecCmp.at(0)->m_strOperator),
+                 QString::number(vecCmp.at(0)->m_dDataThresold));
+    for (int i = 1;i < vecCmp.size();i++)
+    {
+        strHtml.append(tr("<h3 style='display:inline-block'>且</h3> "));
+        strHtml.append(QString("<div style='display:inline-block'>%1%2 %3 %4</div>")
+                       .arg(vecCmp.at(i)->m_strSensorId,
+                            vecCmp.at(i)->m_strValue,
+                            CmpOptr2String(vecCmp.at(i)->m_strOperator),
+                            QString::number(vecCmp.at(i)->m_dDataThresold)));
+    }
+    strHtml.append("</div>");
+    txtANDGroup->setHtml(strHtml);
+    txtANDGroup->setReadOnly(true);
+
+    if (m_vecSensorDataCmpORGroups.size()>0)
+    {
+        QLabel *labelORGroup = new QLabel(ui->pageCompositeSensors);
+        labelORGroup->setText(tr("Or"));
+        ui->vLayoutORGroups->addWidget(labelORGroup);
+        m_vecORCmpGroupVLayoutChildren.append(labelORGroup);
+    }
+    ui->vLayoutORGroups->addWidget(txtANDGroup);
+    m_vecORCmpGroupVLayoutChildren.append(txtANDGroup);
+    m_vecSensorDataCmpORGroups.append(vecCmp);
+
+    int nNrOfGroups = m_vecSensorDataCmpORGroups.size();
+    for (int i = 0;i < vecCmp.size();i++)
+    {
+        if (m_mapSensorCmpCount.contains(vecCmp.at(i)->m_strSensorId))
+        {
+            m_mapSensorCmpCount[vecCmp.at(i)->m_strSensorId]++;
+        }
+        else
+        {
+            m_mapSensorCmpCount.insert(vecCmp.at(i)->m_strSensorId, 1);
+        }
+    }
+
+    ui->labelSensorGroupAddState->setText(tr("Added %1 sensors in %2 groups")
+                                          .arg(m_mapSensorCmpCount.size())
+                                          .arg(nNrOfGroups));
+}
+
+void ControlItemEditDialogFrameOfRelayGroup::on_btnClearGroups_clicked()
+{
+    for (int i = 0;i < m_vecORCmpGroupVLayoutChildren.size();i++)
+    {
+        ui->vLayoutORGroups->removeWidget(m_vecORCmpGroupVLayoutChildren.at(i));
+        delete m_vecORCmpGroupVLayoutChildren[i];
+    }
+    m_vecORCmpGroupVLayoutChildren.clear();
+
+    for (int i = 0;i < m_vecSensorDataCmpORGroups.size();i++)
+    {
+        m_vecSensorDataCmpORGroups[i].clear();
+    }
+
+    m_vecSensorDataCmpORGroups.clear();
+    m_mapSensorCmpCount.clear();
+    ui->labelSensorGroupAddState->setText(tr("Added %1 sensors in %2 groups")
+                                          .arg(0).arg(0));
 }

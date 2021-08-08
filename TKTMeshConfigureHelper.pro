@@ -27,6 +27,8 @@ SOURCES += main.cpp\
     domain/ozonesensor.cpp \
     mainwindow.cpp \
     domain/tktmesh.cpp \
+    model/sensordatacomparisionlistmodel.cpp \
+    model/sensordatacomparisiontableviewmodel.cpp \
     model/tktmeshesmodel.cpp \
     model/tktmeshlistmodel.cpp \
     model/tktmeshtableviewmodel.cpp \
@@ -51,6 +53,8 @@ SOURCES += main.cpp\
     callback/defaultcallback.cpp \
     domain/luminaire.cpp \
     callback/getluminairecallback.cpp \
+    widget/addandcomparisionitemdialogframe.cpp \
+    widget/addandoperationgroupdialogframe.cpp \
     widget/asyncdatacombox.cpp \
     callback/getallcomcallback.cpp \
     statusdisplaydialog.cpp \
@@ -257,6 +261,8 @@ HEADERS  += \
     domain/ozonesensor.h \
     mainwindow.h \
     domain/tktmesh.h \
+    model/sensordatacomparisionlistmodel.h \
+    model/sensordatacomparisiontableviewmodel.h \
     model/tktmeshesmodel.h \
     model/tktmeshlistmodel.h \
     model/tktmeshtableviewmodel.h \
@@ -280,6 +286,8 @@ HEADERS  += \
     callback/defaultcallback.h \
     domain/luminaire.h \
     callback/getluminairecallback.h \
+    widget/addandcomparisionitemdialogframe.h \
+    widget/addandoperationgroupdialogframe.h \
     widget/asyncdatacombox.h \
     callback/getallcomcallback.h \
     statusdisplaydialog.h \
@@ -490,6 +498,8 @@ FORMS    += \
     connecthostdialog.ui \
     luminairedialog.ui \
     statusdisplaydialog.ui \
+    widget/addandcomparisionitemdialogframe.ui \
+    widget/addandoperationgroupdialogframe.ui \
     widget/setgatewayiddialogframe.ui \
     widget/setmeshinfodialogframe.ui \
     widget/tktmeshdetailsframe.ui \

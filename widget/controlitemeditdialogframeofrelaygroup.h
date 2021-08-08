@@ -3,6 +3,7 @@
 
 #include <QFrame>
 #include "domain/timelinecontrolitem.h"
+#include "model/meshmodel.h"
 
 namespace Ui {
     class ControlItemEditDialogFrameOfRelayGroup;
@@ -32,13 +33,23 @@ private slots:
 
     void on_tabWidget_currentChanged(int);
 
+    void on_btnAddANDGroup_clicked();
+
+    void on_btnClearGroups_clicked();
+
 private:
     Ui::ControlItemEditDialogFrameOfRelayGroup *ui;
     void setType(const QString &type);
     TimeLineControlItem *controlItem;
     MeshModel *m_meshModel;
+    QVector<QVector<SensorDataComparision*>> m_vecSensorDataCmpORGroups;
+    QVector<QWidget*> m_vecORCmpGroupVLayoutChildren;
+    QMap<QString, int> m_mapSensorCmpCount;
 
     void setControlItem(TimeLineControlItem *controlItem);
+    QString getCompositeSensorComparisionExpression();
+    QString getAndCmpExpressionGroup(const QVector<SensorDataComparision*> &vecCmp);
+    QString CmpOptr2String(QString strOptr);
 
 signals:
     void accept();

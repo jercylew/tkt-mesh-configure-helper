@@ -49,6 +49,12 @@ public:
 
     QDialog *buildSetMeshInfoDialog(SwitchMeshInfo *switchMeshInfo, const QString &title);
 
+    QDialog *buildAddANDOperationGroupDialog(MeshModel *meshModel, const QString &title,
+                                             QVector<SensorDataComparision*> *pvecSensorsANDOperation);
+
+    QDialog *buildAddANDOperationItemDialog(MeshModel *meshModel, const QString &title,
+                                             SensorDataComparision *ptrSensorsANDOperation);
+
     QDialog *buildSetGatewayIdDialog(quint8 *pGatewayId, const QString &title);
 
     QDialog *buildAddTimePointDialog(const QString &title, int *minutes);

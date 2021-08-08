@@ -26,6 +26,13 @@ typedef struct _SwitchMeshInfo_ {
     QString m_strMeshLTK;
 } SwitchMeshInfo;
 
+typedef struct _SensorDataComparision_ {
+    QString m_strSensorId;
+    QString m_strValue;     //If the sensor has only one data, this is not needed
+    QString m_strOperator;  // > or <
+    double m_dDataThresold;
+} SensorDataComparision;
+
 class MeshModel : public QObject
 {
     Q_OBJECT

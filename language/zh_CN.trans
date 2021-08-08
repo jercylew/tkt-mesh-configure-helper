@@ -248,6 +248,12 @@ MeshDetailsFrame.GroupingErrorMessageMatchType=所选执行器类型与组类型
 MeshDetailsFrame.SetSwicthMeshInfo=设置网关MESH名称
 MeshDetailsFrame.SetGatewayId=设置网关ID
 
+CompositeSensor.AddANDOperationsGroup=添加与关系组
+CompositeSensorsCmp.BindSensorId:=绑定传感器ID:
+CompositeSensorsCmp.SensorValue:=传感器值
+CompositeSensorsCmp.Operator:=比较关系
+CompositeSensorsCmp.DataThreshold:=阈值
+
 MainWidget.Meshes=Mesh网络
 MainWidget.MeshStatusNameTitle=名称
 MainWidget.MeshStatusLumNumberTitle=灯数量
@@ -762,6 +768,7 @@ Brightness=亮度
 Status=状态
 Motion Sensor=微波感应传感器
 Gas Transducer=气体传感器
+Composite Sensor=复合传感器
 Lux Sensor=光照传感器
 Lux Value=照度
 Real Motion Sensor=实体微波传感器
@@ -940,6 +947,13 @@ ControlItemEditDialogFrameOfRelayGroup.TrigModeUpperBottomTip=超过上限值时
 ControlItemEditDialogFrameOfRelayGroup.TrigModeBottomUpperTip=低于下限值时继电器将被打开，反之超过上限值时继电器将被关闭（如空调制热）
 ControlItemEditDialogFrameOfRelayGroup.ThresholdMaxTip=上限值必须大于下限值
 ControlItemEditDialogFrameOfRelayGroup.ThresholdMinTip=上限值必须大于下限值
+
+Add AND Group=添加与关系组
+Added %1 sensors in %2 groups=已添加%1个传感器到%2个组
+Or=或者
+Greater than=大于
+Less than=小于
+Equal=等于
 
 @Replace
 HelpAboutFrame.CompanyLabel=${CompanyFullName}

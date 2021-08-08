@@ -57,6 +57,10 @@ public:
     int dimmingIntervalSec;
     int motionTypeTriggerShieldMSec;
 
+    //eg: CO.125>50&&TH.123[TEMP]<30&&FOR.105>5||HW.125==1&&RTH.101[VOL]<3.5
+    //Supported Operator: `>`, `<` and `==`
+    QString compositeSensorTypeCmpExpr;
+    int compositeSensorTypeTrigShieldMSec;
 
     virtual TimeLineControlItem *copyAll()=0;
     virtual void loadConfigData(TimeLineControlItem *controlItem);

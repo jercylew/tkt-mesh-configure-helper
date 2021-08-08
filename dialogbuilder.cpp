@@ -38,6 +38,8 @@
 #include "widget/allocswitchkeygroupframe.h"
 #include "widget/setmeshinfodialogframe.h"
 #include "widget/setgatewayiddialogframe.h"
+#include "widget/addandoperationgroupdialogframe.h"
+#include "widget/addandcomparisionitemdialogframe.h"
 
 #include "domain/sensor.h"
 #include "domain/virtualmotionsensor.h"
@@ -171,6 +173,29 @@ QDialog *DialogBuilder::buildAddNodeGroupDialog(MeshModel *meshModel, const QStr
 QDialog *DialogBuilder::buildSetMeshInfoDialog(SwitchMeshInfo *switchMeshInfo, const QString &title)
 {
     SetMeshInfoDialogFrame *frame = new SetMeshInfoDialogFrame(switchMeshInfo);
+    QDialog *dialog=buildDialog(frame, title);
+    connect(frame, SIGNAL(accept()), dialog, SLOT(accept()));
+    connect(frame, SIGNAL(reject()), dialog, SLOT(reject()));
+    return dialog;
+}
+
+QDialog *DialogBuilder::buildAddANDOperationGroupDialog(MeshModel *meshModel, const QString &title,
+                                         QVector<SensorDataComparision*> *pvecSensorsANDOperation)
+{
+    AddANDOperationGroupDialogFrame *frame = new AddANDOperationGroupDialogFrame(meshModel, pvecSensorsANDOperation);
+
+    QDialog *dialog=buildDialog(frame, title);
+    connect(frame, SIGNAL(accept()), dialog, SLOT(accept()));
+    connect(frame, SIGNAL(reject()), dialog, SLOT(reject()));
+    return dialog;
+}
+
+QDialog *DialogBuilder::buildAddANDOperationItemDialog(MeshModel *meshModel, const QString &title,
+                                         SensorDataComparision *ptrSensorsANDOperation)
+{
+    AddANDComparisionItemDialogFrame *frame = new AddANDComparisionItemDialogFrame(
+                ptrSensorsANDOperation, meshModel);
+
     QDialog *dialog=buildDialog(frame, title);
     connect(frame, SIGNAL(accept()), dialog, SLOT(accept()));
     connect(frame, SIGNAL(reject()), dialog, SLOT(reject()));
