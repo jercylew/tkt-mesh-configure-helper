@@ -41,15 +41,32 @@ QVariant TemplateTimeLineControlItemTableViewModel::data(const QModelIndex &inde
             }
             else if(item->controlType=="motion_sensor")
             {
-                return QString("[%1] %2").arg(tr("Motion Sensor")).arg(item->motionTypeBindSensorId);
+                return QString("[%1] %2")
+                        .arg(tr("Motion Sensor"), item->motionTypeBindSensorId);
             }
             else if(item->controlType=="lux_sensor")
             {
-                return QString("[%1] %2").arg(tr("Lux Sensor")).arg(item->luxTypeBindSensorId);
+                return QString("[%1] %2")
+                        .arg(tr("Lux Sensor"), item->luxTypeBindSensorId);
             }
             else if(item->controlType=="gas_transducer")
             {
-                return QString("[%1] %2").arg(tr("Gas Transducer")).arg(item->gasTrnsdcrTypeBindSensorId);
+                return QString("[%1] %2")
+                        .arg(tr("Gas Transducer"), item->gasTrnsdcrTypeBindSensorId);
+            }
+            else if(item->controlType=="composite_sensor")
+            {
+                if(item->compositeSensorTypeCmpExpr != "")
+                {
+                    QString strOutlineInfo = item->compositeSensorTypeCmpExpr.left(8)+"...";
+                    return QString("[%1] %2")
+                            .arg(tr("Global.CompositeSensor"),
+                                 strOutlineInfo);
+                }
+                else
+                {
+                    return QString("[%1] No Sensor!").arg(tr("Global.CompositeSensor"));
+                }
             }
             else if(item->controlType=="no_operation")
             {

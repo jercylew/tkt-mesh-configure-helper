@@ -77,6 +77,9 @@ void TimeLineControlItem::loadConfigData(TimeLineControlItem *controlItem)
     gasTrnsdcrTypeTrigBaseStatusOff = controlItem->gasTrnsdcrTypeTrigBaseStatusOff;
     gasTrnsdcrTypeBindSensorId = controlItem->gasTrnsdcrTypeBindSensorId;
 
+    compositeSensorTypeCmpExpr = controlItem->compositeSensorTypeCmpExpr;
+    compositeSensorTypeTrigShieldMSec = controlItem->compositeSensorTypeTrigShieldMSec;
+
     dimmingIntervalSec=controlItem->dimmingIntervalSec;
     motionTypeTriggerShieldMSec=controlItem->motionTypeTriggerShieldMSec;
 }
@@ -132,6 +135,9 @@ void TimeLineControlItem::controlDataFromJson(QJsonObject *controlDataJson)
     gasTrnsdcrTypeTrigBaseStatusOn = controlDataJson->value("gas_trnsdcr_type_trig_base_status_on").toBool();
     gasTrnsdcrTypeTrigBaseStatusOff = controlDataJson->value("gas_trnsdcr_type_trig_base_status_off").toBool();
     gasTrnsdcrTypeBindSensorId = controlDataJson->value("gas_trnsdcr_type_bind_sensor_id").toString();
+
+    compositeSensorTypeCmpExpr = controlDataJson->value("composite_sensor_type_cmp_expr").toString();
+    compositeSensorTypeTrigShieldMSec = controlDataJson->value("composite_sensor_type_trig_shield_msec").toInt();
 
     //Extra
     dimmingIntervalSec=controlDataJson->value("dim_interval_sec").toInt();
@@ -193,6 +199,10 @@ void TimeLineControlItem::controlDataToJson(QJsonObject *controlDataJson)
     controlDataJson->insert("gas_trnsdcr_type_trig_base_status_off", gasTrnsdcrTypeTrigBaseStatusOff);
     controlDataJson->insert("gas_trnsdcr_type_bind_sensor_id", gasTrnsdcrTypeBindSensorId);
 
+    //Composite Sensor
+    controlDataJson->insert("composite_sensor_type_cmp_expr", compositeSensorTypeCmpExpr);
+    controlDataJson->insert("composite_sensor_type_trig_shield_msec", compositeSensorTypeTrigShieldMSec);
+
     //Extra
     controlDataJson->insert("dim_interval_sec", dimmingIntervalSec);
     controlDataJson->insert("motion_type_trigger_shield_msec", motionTypeTriggerShieldMSec);
@@ -230,6 +240,9 @@ void TimeLineControlItem::controlDataToPropertyPairList(QList<QPair<QString, QSt
     propertyPairList->push_back(QPair<QString, QString>("gas_trnsdcr_type_trig_base_status_off", gasTrnsdcrTypeTrigBaseStatusOff?"true":"false"));
     propertyPairList->push_back(QPair<QString, QString>("gas_trnsdcr_type_bind_sensor_id", gasTrnsdcrTypeBindSensorId));
 
+    propertyPairList->push_back(QPair<QString, QString>("composite_sensor_type_cmp_expr", compositeSensorTypeCmpExpr));
+    propertyPairList->push_back(QPair<QString, QString>("composite_sensor_type_trig_shield_msec", QString::number(compositeSensorTypeTrigShieldMSec)));
+
     propertyPairList->push_back(QPair<QString, QString>("dimming_interval_sec", QString::number(dimmingIntervalSec)));
     propertyPairList->push_back(QPair<QString, QString>("motion_type_trigger_shield_msec", QString::number(motionTypeTriggerShieldMSec)));
 }
@@ -265,6 +278,9 @@ void TimeLineControlItem::controlDataFromPropertyPairList(QMap<QString, QString>
     gasTrnsdcrTypeTrigBaseStatusOn = (propertyMap->value("gas_trnsdcr_type_trig_base_status_on") == "true") ? true : false;
     gasTrnsdcrTypeTrigBaseStatusOff = (propertyMap->value("gas_trnsdcr_type_trig_base_status_off") == "true") ? true : false;
     gasTrnsdcrTypeBindSensorId = propertyMap->value("gas_trnsdcr_type_bind_sensor_id");
+
+    compositeSensorTypeCmpExpr = propertyMap->value("composite_sensor_type_cmp_expr");
+    compositeSensorTypeTrigShieldMSec = propertyMap->value("composite_sensor_type_trig_shield_msec").toInt();
 
     dimmingIntervalSec=propertyMap->value("dimming_interval_sec").toInt();
     motionTypeTriggerShieldMSec=propertyMap->value("motion_type_trigger_shield_msec").toInt();

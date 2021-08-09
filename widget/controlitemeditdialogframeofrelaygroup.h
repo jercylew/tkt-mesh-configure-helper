@@ -50,6 +50,8 @@ private:
     QString getCompositeSensorComparisionExpression();
     QString getAndCmpExpressionGroup(const QVector<SensorDataComparision*> &vecCmp);
     QString CmpOptr2String(QString strOptr);
+    void initCompositeSensorControlState(TimeLineControlItem *controlItem);
+    void addAndCmpGroupToView(const QVector<SensorDataComparision*> &vecCmp);
 
 signals:
     void accept();

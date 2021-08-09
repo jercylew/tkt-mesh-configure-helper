@@ -40,6 +40,7 @@ Global.Status=状态
 Global.MotionSensor=微波感应传感器
 Global.LuxSensor=光照传感器
 Global.GasTransducer=气体传感器
+Global.CompositeSensor=复合传感器
 Global.LuxValue=照度
 Global.RealMotionSensor=实体微波传感器
 Global.VirtualMotionSensor=虚拟微波传感器

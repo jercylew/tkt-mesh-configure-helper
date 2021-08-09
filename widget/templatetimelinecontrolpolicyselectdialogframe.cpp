@@ -88,7 +88,6 @@ void TemplateTimeLineControlPolicySelectDialogFrame::on_buttonRemove_clicked()
         return;
     }
     QString collectionId=index.data(Qt::UserRole).toString();
-    qDebug()<<"AAAAAAAAAAAAAAAAAA id="<<collectionId;
     m_templateTimeLineControlPolicyListEditModel->removeTemplateTimeLineControlPolicy(index.data(Qt::UserRole).toString());
 }
 

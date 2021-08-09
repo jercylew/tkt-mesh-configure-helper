@@ -98,6 +98,101 @@ void ControlItemEditDialogFrameOfRelayGroup::setControlItem(TimeLineControlItem 
     ui->spinGTThresholdMax->setValue(controlItem->gasTrnsdcrTypeMaxThreshold);
     ui->spinGTThresholdMin->setValue(controlItem->gasTrnsdcrTypeMinThreshold);
     ui->spinGTTriggerShieldMSec->setValue(controlItem->gasTrnsdcrTypeTrigShieldMSec);
+
+    //Composite Sensor
+    initCompositeSensorControlState(controlItem);
+}
+
+void ControlItemEditDialogFrameOfRelayGroup::initCompositeSensorControlState(TimeLineControlItem *controlItem)
+{
+    if (controlItem == nullptr)
+    {
+        return;
+    }
+
+    QString strCmpExpr = controlItem->compositeSensorTypeCmpExpr;
+    if (strCmpExpr == "")
+    {
+        return;
+    }
+
+    //Expr to Vector<Vector<SensorComparision*>>
+    QStringList lstANDGroups = strCmpExpr.split("||");
+    if (lstANDGroups.size() == 0)
+    {
+        return;
+    }
+    QVector<SensorDataComparision*> vecCmp;
+    QStringList::const_iterator constIterator;
+    for (constIterator = lstANDGroups.constBegin(); constIterator != lstANDGroups.constEnd();
+        ++constIterator)
+    {
+        QString strAndCmpItems = *constIterator;
+        QStringList lstCmpItems = strAndCmpItems.split("&&");
+        if (lstCmpItems.size() == 0)
+        {
+            continue;
+        }
+
+        vecCmp.clear();
+        QStringList::const_iterator itr;
+        for (itr = lstCmpItems.constBegin(); itr != lstCmpItems.constEnd();
+             itr++)
+        {
+            QString strCmpItem = *itr;
+            int nDataPos = -1;
+            QString strOptr = "";
+            if (strCmpItem.contains(">"))
+            {
+                strOptr = ">";
+                nDataPos = strCmpItem.indexOf(">") + 1;
+            }
+            else if (strCmpItem.contains("<"))
+            {
+                strOptr = "<";
+                nDataPos = strCmpItem.indexOf("<") + 1;
+            }
+            else if (strCmpItem.contains("=="))
+            {
+                strOptr = "==";
+                nDataPos = strCmpItem.indexOf("==") + 2;
+            }
+            else
+            {
+                continue;
+            }
+
+            double nDataValue = strCmpItem.mid(nDataPos).toDouble();
+            QString strSensorValue = "";
+            QString strSensorId = "";
+
+            if (strCmpItem.contains("[") && strCmpItem.contains("]"))
+            {
+                int nPos1 = strCmpItem.indexOf("[");
+                int nPos2 = strCmpItem.indexOf("]");
+
+                if (nPos1 >= nPos2)
+                {
+                    continue;
+                }
+                strSensorValue = strCmpItem.mid(nPos1, nPos2-nPos1+1);
+                strSensorId = strCmpItem.mid(0, nPos1);
+            }
+            else
+            {
+                strSensorId = strCmpItem.mid(0, nDataPos-strOptr.length());
+            }
+
+            SensorDataComparision* cmpItem = new SensorDataComparision;
+            cmpItem->m_dDataThresold = nDataValue;
+            cmpItem->m_strOperator = strOptr;
+            cmpItem->m_strSensorId = strSensorId;
+            cmpItem->m_strValue = strSensorValue;
+            vecCmp.append(cmpItem);
+        }
+
+        addAndCmpGroupToView(vecCmp);
+    }
 }
 
 void ControlItemEditDialogFrameOfRelayGroup::setType(const QString &type)
@@ -343,6 +438,11 @@ void ControlItemEditDialogFrameOfRelayGroup::on_btnAddANDGroup_clicked()
         return;
     }
 
+    addAndCmpGroupToView(vecCmp);
+}
+
+void ControlItemEditDialogFrameOfRelayGroup::addAndCmpGroupToView(const QVector<SensorDataComparision*> &vecCmp)
+{
     QTextEdit *txtANDGroup = new QTextEdit(ui->pageCompositeSensors);
     QString strHtml = QString("<div><div style='display:inline-block'>%1%2 %3 %4</div>")
             .arg(vecCmp.at(0)->m_strSensorId,

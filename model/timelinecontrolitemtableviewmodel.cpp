@@ -50,7 +50,9 @@ QVariant TimeLineControlItemTableViewModel::data(const QModelIndex &index, int r
                 Sensor *sensor=m_meshModel->sensorsModel()->getSensorBySensorId(item->motionTypeBindSensorId);
                 if(sensor!=NULL)
                 {
-                    return QString("[%1] %2").arg(tr("Global.MotionSensor")).arg(m_meshModel->sensorsModel()->getNodeName(sensor->sensorId()));
+                    return QString("[%1] %2")
+                            .arg(tr("Global.MotionSensor"),
+                                 m_meshModel->sensorsModel()->getNodeName(sensor->sensorId()));
                 }
                 else
                 {
@@ -62,7 +64,8 @@ QVariant TimeLineControlItemTableViewModel::data(const QModelIndex &index, int r
                 Sensor *sensor=m_meshModel->sensorsModel()->getSensorBySensorId(item->luxTypeBindSensorId);
                 if(sensor!=NULL)
                 {
-                    return QString("[%1] %2").arg(tr("Global.LuxSensor")).arg(m_meshModel->sensorsModel()->getNodeName(sensor->sensorId()));
+                    return QString("[%1] %2")
+                            .arg(tr("Global.LuxSensor"), m_meshModel->sensorsModel()->getNodeName(sensor->sensorId()));
                 }
                 else
                 {
@@ -74,11 +77,27 @@ QVariant TimeLineControlItemTableViewModel::data(const QModelIndex &index, int r
                 Sensor *sensor=m_meshModel->sensorsModel()->getSensorBySensorId(item->gasTrnsdcrTypeBindSensorId);
                 if(sensor!=NULL)
                 {
-                    return QString("[%1] %2").arg(tr("Global.GasTransducer")).arg(m_meshModel->sensorsModel()->getNodeName(sensor->sensorId()));
+                    return QString("[%1] %2")
+                            .arg(tr("Global.GasTransducer"),
+                                 m_meshModel->sensorsModel()->getNodeName(sensor->sensorId()));
                 }
                 else
                 {
                     return QString("[%1] No Sensor!").arg(tr("Global.GasTransducer"));
+                }
+            }
+            else if(item->controlType=="composite_sensor")
+            {
+                if(item->compositeSensorTypeCmpExpr != "")
+                {
+                    QString strOutlineInfo = item->compositeSensorTypeCmpExpr.left(8)+"...";
+                    return QString("[%1] %2")
+                            .arg(tr("Global.CompositeSensor"),
+                                 strOutlineInfo);
+                }
+                else
+                {
+                    return QString("[%1] No Sensor!").arg(tr("Global.CompositeSensor"));
                 }
             }
             else if(item->controlType=="no_operation")
