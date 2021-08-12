@@ -4,6 +4,7 @@
 #include "domain/temperaturehumiditysensor.h"
 #include "domain/refrgtemperaturehumiditysensor.h"
 #include "domain/realmotionsensor.h"
+#include "domain/realmotionandluxcamerasensor.h"
 #include "domain/handwashingsensor.h"
 #include "domain/uvlightsensor.h"
 #include "domain/uvsterilizer.h"
@@ -114,6 +115,17 @@ void AddANDComparisionItemDialogFrame::on_cmbBindSensorId_currentIndexChanged(co
         ui->cmbSensorValue->addItem("STERIZE", "STERIZE");
         ui->cmbSensorValue->addItem("WIFI", "WIFI");
         ui->cmbSensorValue->addItem("FUNC", "FUNC");
+    }
+    else if (strText.startsWith(REAL_MOTION_LUX_CAMERA_SHORT_TYPE_TEXT))
+    {
+        ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
+        ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
+        ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
+        ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
+        ui->cmbSensorValue->addItem("LUX1", "LUX1");
+        ui->cmbSensorValue->addItem("LUX2", "LUX2");
+        ui->cmbSensorValue->addItem("LUX3", "LUX3");
+        ui->cmbSensorValue->addItem("LUX4", "LUX4");
     }
     else
     {
