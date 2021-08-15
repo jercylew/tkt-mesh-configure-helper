@@ -132,5 +132,7 @@
         <file>images/alarm_loudspeaker_offline.png</file>
         <file>images/alarm_loudspeaker_online_off.png</file>
         <file>images/alarm_loudspeaker_online_on.png</file>
+        <file>images/currency_sensor.png</file>
+        <file>images/currency_sensor_small.png</file>
     </qresource>
 </RCC>

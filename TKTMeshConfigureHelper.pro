@@ -255,7 +255,9 @@ SOURCES += main.cpp\
     widget/drycontactrelayframe.cpp \
     domain/alarmloudspeaker.cpp \
     parser/alarmloudspeakerparser.cpp \
-    widget/alarmloudspeakerframe.cpp
+    widget/alarmloudspeakerframe.cpp \
+    domain/currencysensor.cpp \
+    parser/currencysensorparser.cpp
 
 HEADERS  += \
     domain/ozonesensor.h \
@@ -490,7 +492,9 @@ HEADERS  += \
     widget/drycontactrelayframe.h \
     domain/alarmloudspeaker.h \
     parser/alarmloudspeakerparser.h \
-    widget/alarmloudspeakerframe.h
+    widget/alarmloudspeakerframe.h \
+    domain/currencysensor.h \
+    parser/currencysensorparser.h
 
 FORMS    += \
     mainwindow.ui \

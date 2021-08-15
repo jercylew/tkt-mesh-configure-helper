@@ -17,6 +17,7 @@
 #define USER_NOTIFY_DATA_OF_SWITCH_SENSOR           ((char)0x09)  //开关传感器
 #define USER_NOTIFY_DATA_OF_SWITCH_SENSOR_2CH               ((char)0x11)  //2路开关传感器
 #define USER_NOTIFY_DATA_OF_FLAMMABLE_GAS           ((char)0x12)  //Flammable Gas Sensor
+#define USER_NOTIFY_DATA_OF_CURRENCY_SENSOR         ((char)0x13) //Currency Sensor
 #define USER_NOTIFY_DATA_OF_MOTION_AND_LUX_CAMERA_SENSOR    ((char)0x07) //人体感应和光照摄像头
 #define USER_NOTIFY_DATA_OF_TEMPERATURE_HUMIDITY_SENSOR     ((char)0x08) //温湿度传感器
 #define USER_NOTIFY_DATA_OF_STRESS_SENSOR           ((char)0x0B) //应力传感器
@@ -61,5 +62,6 @@
 #define NODE_TYPE_OF_HAND_WASHING_SENSOR        ((char)0x95)    //Hand Washing Sensor
 #define NODE_TYPE_OF_OZONE_SENSOR               ((char)0x92)    //OZONE Sensor
 #define NODE_TYPE_OF_FLAMMABLE_GAS_SENSOR       ((char)0x91)    //Flammable Gas Sensor
+#define NODE_TYPE_OF_CURRENCY_SENSOR            ((char)0x90)    //Currency Sensor
 
 #endif // MESH_DEFINE_H

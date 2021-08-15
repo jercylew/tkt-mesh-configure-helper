@@ -20,6 +20,7 @@
 #include "domain/uvlightsensor.h"
 #include "domain/handwashingsensor.h"
 #include "domain/flammablegassensor.h"
+#include "domain/currencysensor.h"
 
 #include "domain/onechannelluminaire.h"
 #include "domain/onechannelrelay.h"
@@ -55,6 +56,7 @@
 #include "parser/drycontactrelayparser.h"
 #include "parser/flammablegassensorparser.h"
 #include "parser/alarmloudspeakerparser.h"
+#include "parser/currencysensorparser.h"
 
 #include "mesh_define.h"
 
@@ -173,6 +175,11 @@ ParserManager::ParserManager(QObject *parent) : QObject(parent)
     m_sensorTypeTextToParserMap.insert(FlammableGasSensor::staticTypeText(), sensorParser);
     m_sensorTypeToParserMap.insert(Sensor::FlammableGasSensor, sensorParser);
     m_sensorCodeToParserMap.insert(USER_NOTIFY_DATA_OF_FLAMMABLE_GAS, sensorParser);
+
+    sensorParser = new CurrencySensorParser;
+    m_sensorTypeTextToParserMap.insert(CurrencySensor::staticTypeText(), sensorParser);
+    m_sensorTypeToParserMap.insert(Sensor::CurrencySensor, sensorParser);
+    m_sensorCodeToParserMap.insert(USER_NOTIFY_DATA_OF_CURRENCY_SENSOR, sensorParser);
 
     sensorParser=new RefrgTemperatureHumditySensorParser;
     m_sensorTypeTextToParserMap.insert(RefrgTemperatureHumiditySensor::staticTypeText(), sensorParser);

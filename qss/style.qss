@@ -455,6 +455,10 @@ QListView {
     background-image: url(":/images/flammable_gas_sensor_small.png");
 }
 
+#labelSensorNumberIcon[type="currency_sensor"]{
+    background-image: url(":/images/currency_sensor_small.png");
+}
+
 #buttonAddSensor{
     background-color: transparent;
     background-image: url(":/images/add.png");
@@ -921,6 +925,11 @@ NodeGroupFrame #frameGroupShadow
 #labelIcon[type="flammable_gas_sensor"]
 {
     border-image:url(:/images/flammable_gas_sensor.png);
+}
+
+#labelIcon[type="currency_sensor"]
+{
+    border-image:url(:/images/currency_sensor.png);
 }
 
 /*********** ControlItemEditDelegateFrame **********/
