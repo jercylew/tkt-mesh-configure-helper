@@ -59,6 +59,7 @@
 #include "domain/formaldehydesensor.h"
 #include "domain/flammablegassensor.h"
 #include "domain/alarmloudspeaker.h"
+#include "domain/currencysensor.h"
 #include "dialogbuilder.h"
 #include "parsermanager.h"
 
@@ -484,6 +485,11 @@ void MeshDetailsFrame::initSensorNumberDisplay()
     flammableGasSensorNumberDisplayFrame->setNumber(m_meshModel->sensorsModel()->sensorNumber(Sensor::FlammableGasSensor));
     m_sensorNumberDisplayFrameMap.insert(Sensor::FlammableGasSensor, flammableGasSensorNumberDisplayFrame);
     m_allSensorNumberDisplayFrameList.push_back(flammableGasSensorNumberDisplayFrame);
+
+    SensorNumberDisplayFrame *currencySensorNumberDisplayFrame=new SensorNumberDisplayFrame(CurrencySensor::staticTypeText(), "Global.CurrencySensor");
+    currencySensorNumberDisplayFrame->setNumber(m_meshModel->sensorsModel()->sensorNumber(Sensor::CurrencySensor));
+    m_sensorNumberDisplayFrameMap.insert(Sensor::CurrencySensor, currencySensorNumberDisplayFrame);
+    m_allSensorNumberDisplayFrameList.push_back(currencySensorNumberDisplayFrame);
 
     QHBoxLayout *layout=new QHBoxLayout;
     layout->setContentsMargins(0, 0, 0, 0);

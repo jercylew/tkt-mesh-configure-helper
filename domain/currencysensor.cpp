@@ -33,7 +33,7 @@ QString CurrencySensor::staticTypeText()
 
 QString CurrencySensor::dataText()
 {
-    return QString("CURRENCY: %1")
+    return QObject::tr("CURRENCY: %1")
             .arg(m_dCurrency);
 }
 
@@ -51,5 +51,10 @@ void CurrencySensor::setCurrency(double dCurrency)
 double CurrencySensor::getCurrency()
 {
     return m_dCurrency;
+}
+
+QString CurrencySensor::displayEnglishTypeText()
+{
+    return "Currency Sensor";
 }
 

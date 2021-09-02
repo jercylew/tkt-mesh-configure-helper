@@ -21,6 +21,7 @@ public:
 
     static QString staticTypeText();
     QString dataText();
+    QString displayEnglishTypeText();
     double dataValue(QString strValueName = "");
 
 private:
