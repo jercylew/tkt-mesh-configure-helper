@@ -687,8 +687,31 @@ NodeGroupFrame #frameGroupShadow
     background-color:transparent;
 }
 
-
 #WarningLightFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#DryContactRelayFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#OneChannelRealyFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#UVSterilizerFrame
+{
+    border-radius:10px;
+    background-color:transparent;
+}
+
+#DishSellingTableFrame
 {
     border-radius:10px;
     background-color:transparent;
@@ -824,6 +847,15 @@ NodeGroupFrame #frameGroupShadow
     border-image:url(:/images/uv_sterilizer_offline.png);
 }
 
+#labelIcon[status="dish_selling_table_online"]
+{
+    border-image:url(:/images/dish_selling_table_online.png);
+}
+
+#labelIcon[status="dish_selling_table_online"]
+{
+    border-image:url(:/images/dish_selling_table_offline.png);
+}
 
 /********** SensorFrame ************/
 #SensorFrame

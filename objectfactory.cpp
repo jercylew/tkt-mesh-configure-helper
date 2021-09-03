@@ -22,6 +22,7 @@
 #include "domain/ozonesensor.h"
 #include "domain/flammablegassensor.h"
 #include "domain/currencysensor.h"
+#include "domain/dishsellingtable.h"
 
 #include "domain/onechannelluminaire.h"
 #include "domain/onechannelrelay.h"
@@ -195,6 +196,7 @@ void ObjectFactory::loadMetaObjectInfo()
     qRegisterMetaType<DryContactRelay>(DryContactRelay::staticTypeText().toLatin1());
     qRegisterMetaType<AlarmLoudspeaker>(AlarmLoudspeaker::staticTypeText().toLatin1());
     qRegisterMetaType<CurrencySensor>(CurrencySensor::staticTypeText().toLatin1());
+    qRegisterMetaType<DishSellingTable>(DishSellingTable::staticTypeText().toLatin1());
 
     /************** TypeCode To TypeText *****************/
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_LUX_SENSOR, LuxSensor::staticTypeText());
@@ -217,6 +219,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_UV_STERILIZER, UVSterilizer::staticTypeText());
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_FLAMMABLE_GAS, FlammableGasSensor::staticTypeText());
     m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_CURRENCY_SENSOR, CurrencySensor::staticTypeText());
+    m_notifyCodeToTypeTextMap.insert(USER_NOTIFY_DATA_OF_DISH_SELLING_TABLE, DishSellingTable::staticTypeText());
 
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_LUX_SENSOR, LuxSensor::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_MOTION_SENSOR, RealMotionSensor::staticTypeText());
@@ -242,6 +245,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_UV_STERILIZER, UVSterilizer::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_FLAMMABLE_GAS_SENSOR, FlammableGasSensor::staticTypeText());
     m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_CURRENCY_SENSOR, CurrencySensor::staticTypeText());
+    m_nodeTypeCodeToTypeTextMap.insert(NODE_TYPE_OF_DISH_SELLING_TABLE, DishSellingTable::staticTypeText());
 
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_LUX_SENSOR);
     m_sensorNodeTypeSet.insert(NODE_TYPE_OF_MOTION_SENSOR);
@@ -288,6 +292,7 @@ void ObjectFactory::loadMetaObjectInfo()
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_UV_STERILIZER);
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY);
     m_executerNodeTypeSet.insert(NODE_TYPE_OF_ALARM_LOUDSPEAKER);
+    m_executerNodeTypeSet.insert(NODE_TYPE_OF_DISH_SELLING_TABLE);
 
     m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_LIGHT);
 //    m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_WARNING_LIGHT);
@@ -296,4 +301,5 @@ void ObjectFactory::loadMetaObjectInfo()
 //    m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_SOLAR_1CH_LUMINAIRE);
     m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_ADBOARD);
     m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_UV_STERILIZER);
+    m_executerUserDataTypeCodeSet.insert(USER_NOTIFY_DATA_OF_DISH_SELLING_TABLE);
 }

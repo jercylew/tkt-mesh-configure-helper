@@ -30,6 +30,7 @@
 #define USER_NOTIFY_DATA_OF_REFRG_TEMPERATURE_HUMIDITY_SENSOR     ((char)0x23) //Refrigerator Temperature Humidity Sensor
 #define USER_NOTIFY_DATA_OF_UV_STERILIZER           ((char)0x24) //紫外刀具消毒柜
 #define USER_NOTIFY_DATA_OF_OZONE                   ((char)0x0A) //Ozone Sensor
+#define USER_NOTIFY_DATA_OF_DISH_SELLING_TABLE      ((char)0x25) //Dish Selling Table
 
 /****网关类型码*****/
 #define NODE_TYPE_OF_USB_GATEWAY            ((char)0xA0) //网关
@@ -44,6 +45,7 @@
 #define NODE_TYPE_OF_UV_STERILIZER          ((char)0xF3) //紫外刀具消毒柜
 #define NODE_TYPE_OF_ALARM_LOUDSPEAKER      ((char)0xF4) //Alarm Loudspeaker
 #define NODE_TYPE_OF_DRY_CONTACT_RELAY      ((char)0xF5) //Dry Contact Relay
+#define NODE_TYPE_OF_DISH_SELLING_TABLE     ((char)0xF1) //Dish selling table
 
 /****传感器类型码*******/
 #define NODE_TYPE_OF_MOTION_SENSOR           ((char)0x9E)  //微波人体移动传感器

@@ -257,7 +257,10 @@ SOURCES += main.cpp\
     parser/alarmloudspeakerparser.cpp \
     widget/alarmloudspeakerframe.cpp \
     domain/currencysensor.cpp \
-    parser/currencysensorparser.cpp
+    parser/currencysensorparser.cpp \
+    domain/dishsellingtable.cpp \
+    parser/dishsellingtableparser.cpp \
+    widget/dishsellingtableframe.cpp
 
 HEADERS  += \
     domain/ozonesensor.h \
@@ -494,7 +497,10 @@ HEADERS  += \
     parser/alarmloudspeakerparser.h \
     widget/alarmloudspeakerframe.h \
     domain/currencysensor.h \
-    parser/currencysensorparser.h
+    parser/currencysensorparser.h \
+    domain/dishsellingtable.h \
+    parser/dishsellingtableparser.h \
+    widget/dishsellingtableframe.h
 
 FORMS    += \
     mainwindow.ui \
@@ -558,7 +564,8 @@ FORMS    += \
     widget/uvsterilizerframe.ui \
     widget/uvsterilizerconfdialog.ui \
     widget/drycontactrelayframe.ui \
-    widget/alarmloudspeakerframe.ui
+    widget/alarmloudspeakerframe.ui \
+    widget/dishsellingtableframe.ui
 
 DISTFILES += \
     app.rc

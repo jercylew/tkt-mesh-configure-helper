@@ -29,6 +29,7 @@
 #include "domain/warninglight.h"
 #include "domain/drycontactrelay.h"
 #include "domain/alarmloudspeaker.h"
+#include "domain/dishsellingtable.h"
 
 //Parsers
 #include "parser/luxsensorparser.h"
@@ -57,6 +58,7 @@
 #include "parser/flammablegassensorparser.h"
 #include "parser/alarmloudspeakerparser.h"
 #include "parser/currencysensorparser.h"
+#include "parser/dishsellingtableparser.h"
 
 #include "mesh_define.h"
 
@@ -207,6 +209,10 @@ ParserManager::ParserManager(QObject *parent) : QObject(parent)
     executerParser=new DryContactRelayParser;
     m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_DRY_CONTACT_RELAY, executerParser);
     m_executerTypeTextToParserMap.insert(DryContactRelay::staticTypeText(), executerParser);
+
+    executerParser=new DishSellingTableParser;
+    m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_DISH_SELLING_TABLE, executerParser);
+    m_executerTypeTextToParserMap.insert(DishSellingTable::staticTypeText(), executerParser);
 
     executerParser=new AlarmLoudspeakerParser;
     m_executerTypeCodeToParserMap.insert(NODE_TYPE_OF_ALARM_LOUDSPEAKER, executerParser);

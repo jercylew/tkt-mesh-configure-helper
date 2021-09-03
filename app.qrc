@@ -134,5 +134,7 @@
         <file>images/alarm_loudspeaker_online_on.png</file>
         <file>images/currency_sensor.png</file>
         <file>images/currency_sensor_small.png</file>
+        <file>images/dish_selling_table_offline.png</file>
+        <file>images/dish_selling_table_online.png</file>
     </qresource>
 </RCC>
