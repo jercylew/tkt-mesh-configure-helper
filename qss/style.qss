@@ -852,7 +852,7 @@ NodeGroupFrame #frameGroupShadow
     border-image:url(:/images/dish_selling_table_online.png);
 }
 
-#labelIcon[status="dish_selling_table_online"]
+#labelIcon[status="dish_selling_table_offline"]
 {
     border-image:url(:/images/dish_selling_table_offline.png);
 }

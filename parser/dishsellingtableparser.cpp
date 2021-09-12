@@ -22,7 +22,7 @@ void DishSellingTableParser::parseUserDataFrameToExecuter(const QByteArray &data
 
     if(table)
     {
-        table->setTemperature((quint16)(((quint8)dataFrame.at(12))*256+(quint8)dataFrame.at(13)));
+        table->setTemperature((int)dataFrame.at(13));
         table->setWaterLevel((quint16)(((quint8)dataFrame.at(14))*256+(quint8)dataFrame.at(15)));
         table->setHeating(dataFrame.at(16) & 0x01);
         table->setWaterUp(dataFrame.at(16) & 0x02);

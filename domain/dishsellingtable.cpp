@@ -49,21 +49,21 @@ QString DishSellingTable::dataText()
 
     if (m_bIsHeating)
     {
-        strStatMsg.append("Heating, ");
+        strStatMsg.append(QObject::tr("Heating, "));
     }
     if (m_bIsWaterUp)
     {
-        strStatMsg.append("Water up, ");
+        strStatMsg.append(QObject::tr("Water up, "));
     }
     if (m_bIsTempError)
     {
-        strStatMsg.append("Temp Error, ");
+        strStatMsg.append(QObject::tr("Temp Error, "));
     }
     if (m_bIsWaterLevelError)
     {
-        strStatMsg.append("Water Level Error");
+        strStatMsg.append(QObject::tr("Water Level Error"));
     }
-    return QString("TEMP: %1, WATER LVL: %2, %3")
+    return QObject::tr("TEMP: %1, WATER LVL: %2, %3")
             .arg(m_nTemperature)
             .arg(m_nWaterLevel)
             .arg(strStatMsg);

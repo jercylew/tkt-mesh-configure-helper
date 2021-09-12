@@ -136,5 +136,9 @@
         <file>images/currency_sensor_small.png</file>
         <file>images/dish_selling_table_offline.png</file>
         <file>images/dish_selling_table_online.png</file>
+        <file>images/dst_heating.png</file>
+        <file>images/dst_temp_error.png</file>
+        <file>images/dst_water_level_error.png</file>
+        <file>images/dst_water_up.png</file>
     </qresource>
 </RCC>
