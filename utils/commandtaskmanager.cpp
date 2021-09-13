@@ -220,6 +220,23 @@ void CommandTaskManager::runSwitchKeyGroupSetup(quint8 key, quint8 group, bool h
     runCommand(command);
 }
 
+void CommandTaskManager::runDishSellingTableConfigCommand(QList<quint16> addrList,
+                                      qint8 nMaxTemp, qint16 nMaxWaterLevel)
+{
+    QList<ControlCommand*> tmpList;
+    for(quint16 addr : addrList)
+    {
+        ControlCommand *command = nullptr;
+        command = new ControlCommand(CommandManager::getInstance()->getDishSellingTableConfigCommand(addr,
+                         nMaxTemp, nMaxWaterLevel), false, "DishSellingTableConfig");
+
+        command->setLogExtraText(QString("Address: %1, MaxTemp: %2, MaxWaterLevel: %3")
+                                 .arg(addr&0xFF).arg(nMaxTemp).arg(nMaxWaterLevel));
+        tmpList.push_back(command);
+    }
+    runHighestPriorityCommands(tmpList);
+}
+
 void CommandTaskManager::runUVSterilizingCommand(QList<quint16> addrList, qint8 nSterilizeTime, qint16 nCycleTime, bool bAutoCycle)
 {
     QList<ControlCommand*> tmpList;

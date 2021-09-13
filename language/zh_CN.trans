@@ -329,6 +329,10 @@ Sterilize Immediately=立即消毒
 Auto Cycle=自动循环
 min=分钟
 
+DishSellingTableConfDialog.Config=保温售菜台控制
+DishSellingTableConfDialog.MaxTemp=最高温度
+DishSellingTableConfDialog.MaxWaterLevel=最高水位
+
 NodeGroupFrame.GroupName=组名称
 NodeGroupFrame.TotalPower=总功率
 NodeGroupFrame.Nodes=节点
@@ -721,6 +725,7 @@ Triggered State:=触发状态:
 Base State:=基准状态:
 Special Control=特殊控制
 Start Sterilizing=启动消毒
+Configure Dish Selling Table=配置保温售菜台
 Display Mode:=显示模式
 Special Control Of %1=%1特殊控制
 Group Special Control Of %1=%1组特殊控制

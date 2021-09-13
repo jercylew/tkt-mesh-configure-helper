@@ -59,6 +59,7 @@ private:
     QAction *actionStartSterilize;
     QAction *actionWarningLightAlarmOn; //=Off
     QAction *actionWarningLightAlarmOff;   //=On
+    QAction *actionConfigDishSellingTable;
     QMenu *menuGrouping;
 
     QMenu *menuOrder;
@@ -134,6 +135,7 @@ private slots:
     void doActionFindLum();
     void doActionScheduleControlSettings();
     void doActionStartSterilizing();
+    void doActionConfigDishSellingTable();
 
     void doActionWarningLighAlarmOn();
     void doActionWarningLighAlarmOff();

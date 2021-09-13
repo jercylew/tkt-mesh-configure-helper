@@ -15,6 +15,7 @@
 #include "widget/grouppropertiesdialog.h"
 #include "widget/addnodegroupdialogframe.h"
 #include "widget/uvsterilizerconfdialog.h"
+#include "widget/dishsellingtableconfdialog.h"
 #include <QScrollBar>
 #include "widget/timelinecontrolitemseditdialogframe.h"
 #include "dialogbuilder.h"
@@ -60,6 +61,7 @@
 #include "domain/flammablegassensor.h"
 #include "domain/alarmloudspeaker.h"
 #include "domain/currencysensor.h"
+#include "domain/dishsellingtable.h"
 #include "dialogbuilder.h"
 #include "parsermanager.h"
 
@@ -290,6 +292,8 @@ void MeshDetailsFrame::initMenus()
     connect(actionWarningLightAlarmOn, SIGNAL(triggered(bool)), this, SLOT(doActionWarningLighAlarmOn()));
     actionWarningLightAlarmOff=new QAction(tr("Stop Alarm"));
     connect(actionWarningLightAlarmOff, SIGNAL(triggered(bool)), this, SLOT(doActionWarningLighAlarmOff()));
+    actionConfigDishSellingTable=new QAction(tr("Configure Dish Selling Table"));
+    connect(actionConfigDishSellingTable, SIGNAL(triggered(bool)), this, SLOT(doActionConfigDishSellingTable()));
 
     menuGrouping=new QMenu(tr("MeshDetailsFrame.Grouping"));
 
@@ -674,6 +678,10 @@ void MeshDetailsFrame::fillExecuterMenus()
         {
             menuExecuters->addAction(actionWarningLightAlarmOn);
             menuExecuters->addAction(actionWarningLightAlarmOff);
+        }
+        if (e->typeText() == DishSellingTable::staticTypeText())
+        {
+            menuExecuters->addAction(actionConfigDishSellingTable);
         }
         else
         {
@@ -1112,6 +1120,49 @@ void MeshDetailsFrame::doActionStartSterilizing()
         }
 
         UVSterilizerConfDialog *dialog=new UVSterilizerConfDialog(m_meshModel,
+                                                                  addrList,
+                                                                  this);
+
+        dialog->exec();
+        dialog->deleteLater();
+    }
+//    else if(menuContext==ui->listNodeGroups)
+//    {
+//        QModelIndex index=ui->listNodeGroups->currentIndex();
+//        if(!index.isValid())
+//        {
+//            return;
+//        }
+//        NodeGroup *group=m_meshModel->nodeGroupsModel()->getNodeGroup((quint8)(index.data(Qt::UserRole).toInt()));
+//        if(group==NULL)
+//        {
+//            return;
+//        }
+//        LuminaireDimmingDialog *dialog=new LuminaireDimmingDialog(m_meshModel, group->getId(), group->getBrightness(), this);
+//        dialog->exec();
+//        group->setBrightness(dialog->getCurrentBrightness());
+//        dialog->deleteLater();
+//    }
+}
+
+void MeshDetailsFrame::doActionConfigDishSellingTable()
+{
+    if(checkAndPopupManuallyControlWarning())
+    {
+        return;
+    }
+    if(menuContext==ui->listExecuterBody)
+    {
+        QModelIndexList list=ui->listExecuterBody->selectionModel()->selectedIndexes();
+        QList<quint16> addrList;
+        int len=list.size();
+        for(int i=0; i<len; i++)
+        {
+            Executer *l=m_executerListViewModel->executerListModel()->at(list.at(i).row());
+            addrList.push_back(l->getBluetoothAddress());
+        }
+
+        DishSellingTableConfDialog *dialog=new DishSellingTableConfDialog(m_meshModel,
                                                                   addrList,
                                                                   this);
 

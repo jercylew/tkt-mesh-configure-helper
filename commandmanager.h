@@ -22,6 +22,7 @@ public:
     QByteArray getWarningLightAlarmOnCommand(quint8 addr);
     QByteArray getWarningLightAlarmOffCommand(quint8 addr);
     QByteArray getUVSterilizeCommandAutoCycle(quint8 addr, qint8 nSterizeTime, qint16 nCycleTime);
+    QByteArray getDishSellingTableConfigCommand(quint8 addr, qint8 nMaxTemp, qint16 nMaxWaterLevel);
     QByteArray getUVSterilizeCommandImmediately(quint8 addr, qint8 nSterizeTime);
     QByteArray getDimmingCommand(quint8 addr, int brightness);
     QByteArray getAllDimmingCommand(quint8 brightness);
