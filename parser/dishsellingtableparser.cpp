@@ -22,12 +22,12 @@ void DishSellingTableParser::parseUserDataFrameToExecuter(const QByteArray &data
 
     if(table)
     {
-        table->setTemperature((int)dataFrame.at(13));
-        table->setWaterLevel((quint16)(((quint8)dataFrame.at(14))*256+(quint8)dataFrame.at(15)));
-        table->setHeating(dataFrame.at(16) & 0x01);
-        table->setWaterUp(dataFrame.at(16) & 0x02);
-        table->setTempError(dataFrame.at(16) & 0x03);
-        table->setWaterLevelError(dataFrame.at(16) & 0x04);
+        table->setTemperature((int)dataFrame.at(12));
+        table->setWaterLevel((quint16)(((quint8)dataFrame.at(13))*256+(quint8)dataFrame.at(14)));
+        table->setHeating(dataFrame.at(15) & 0x01);
+        table->setWaterUp(dataFrame.at(15) & 0x02);
+        table->setTempError(dataFrame.at(15) & 0x03);
+        table->setWaterLevelError(dataFrame.at(15) & 0x04);
     }
 }
 
@@ -38,12 +38,12 @@ void DishSellingTableParser::updateExecuterFromOnlineStatus(MeshModel *meshModel
     DishSellingTable *oldOne=static_cast<DishSellingTable*>(oldExecuter);
     if(newOne!=NULL && oldOne!=NULL)
     {
-        oldOne->setHeating(oldOne->isHeating());
-        oldOne->setWaterUp(oldOne->isWaterUp());
-        oldOne->setWaterLevelError(oldOne->isWaterLevelError());
-        oldOne->setTempError(oldOne->isTempError());
-        oldOne->setTemperature(oldOne->getTemperature());
-        oldOne->setWaterLevel(oldOne->getWaterLevel());
+        oldOne->setHeating(newOne->isHeating());
+        oldOne->setWaterUp(newOne->isWaterUp());
+        oldOne->setWaterLevelError(newOne->isWaterLevelError());
+        oldOne->setTempError(newOne->isTempError());
+        oldOne->setTemperature(newOne->getTemperature());
+        oldOne->setWaterLevel(newOne->getWaterLevel());
     }
 }
 
@@ -54,12 +54,12 @@ void DishSellingTableParser::updateExecuterFromUserDataNotify(MeshModel *meshMod
     DishSellingTable *oldOne=static_cast<DishSellingTable*>(oldExecuter);
     if(newOne!=NULL && oldOne!=NULL)
     {
-        oldOne->setHeating(oldOne->isHeating());
-        oldOne->setWaterUp(oldOne->isWaterUp());
-        oldOne->setWaterLevelError(oldOne->isWaterLevelError());
-        oldOne->setTempError(oldOne->isTempError());
-        oldOne->setTemperature(oldOne->getTemperature());
-        oldOne->setWaterLevel(oldOne->getWaterLevel());
+        oldOne->setHeating(newOne->isHeating());
+        oldOne->setWaterUp(newOne->isWaterUp());
+        oldOne->setWaterLevelError(newOne->isWaterLevelError());
+        oldOne->setTempError(newOne->isTempError());
+        oldOne->setTemperature(newOne->getTemperature());
+        oldOne->setWaterLevel(newOne->getWaterLevel());
     }
 }
 
