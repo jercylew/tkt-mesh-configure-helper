@@ -26,6 +26,8 @@ private slots:
     void on_buttonDialogCancel_clicked();
 
 private:
+    bool validateMeshNamePass(QString strValue);
+
     Ui::SetMeshInfoDialogFrame *ui;
     SwitchMeshInfo *m_ptrSwitchMeshInfo;
 

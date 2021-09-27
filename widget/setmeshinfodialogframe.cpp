@@ -29,12 +29,11 @@ void SetMeshInfoDialogFrame::changeEvent(QEvent *ev)
 
 void SetMeshInfoDialogFrame::on_buttonDialogOk_clicked()
 {
-    if(ui->edtMeshName->text().size() < 1 ||
-            ui->edtMeshName->text().size() > 16 ||
-            ui->edtMeshPassword->text().size() < 1 ||
-            ui->edtMeshPassword->text().size() > 16)
+    if(!validateMeshNamePass(ui->edtMeshName->text()) ||
+            !validateMeshNamePass(ui->edtMeshPassword->text()))
     {
-        QMessageBox::critical(this, "设置网关MESH名", "MESH名及其密码长度不能为空且不能超过17");
+        QMessageBox::critical(this, "设置网关MESH名",
+                              "MESH名及其密码长度不能为空，不能包含空格，特殊字符，且不能超过17个字符");
         return;
     }
 
@@ -46,4 +45,27 @@ void SetMeshInfoDialogFrame::on_buttonDialogOk_clicked()
 void SetMeshInfoDialogFrame::on_buttonDialogCancel_clicked()
 {
     emit reject();
+}
+
+bool SetMeshInfoDialogFrame::validateMeshNamePass(QString strValue)
+{
+    if (strValue.length() < 4 ||
+            strValue.length() >= 16 ||
+            strValue.contains(" ") ||
+            strValue.contains('\t') ||
+            strValue.contains('\n'))
+    {
+        return false;
+    }
+
+    for (int i = 0;i < strValue.length();i++)
+    {
+        QChar ch = strValue.at(i);
+        if (ch.isNonCharacter())
+        {
+            return false;
+        }
+    }
+
+    return true;
 }
