@@ -254,18 +254,17 @@ QByteArray CommandManager::getSetGroupADBoardDisplayModeCommand(quint8 groupId, 
 
 QByteArray CommandManager::getUVSterilizeCommandAutoCycle(quint8 addr, qint8 nSterizeTime, qint16 nCycleTime)
 {
-    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 f3 01 02 02 00 00 00");
+    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 f3 11 02 02 01 02 00 00 00 00");
     data[10]=(char)(sequenceNumber);
     data[11]=(char)(sequenceNumber>>8);
     data[12]=(char)(sequenceNumber>>16);
     data[15]=(char)(addr);
 
-    data[17] = static_cast<char>(0xf3); //Command
-    data[18] = static_cast<char>(0x01); //Type: UV Sterilize
-    data[19] = static_cast<char>(0x00); //Auto Cycle
-    data[20] = static_cast<char>(nCycleTime>>8); //Cycle Time: High Byte
-    data[21] = static_cast<char>(nCycleTime&0xff); //Cycle Time: Low Byte
-    data[22] = static_cast<char>(nSterizeTime&0xff); //Sterilize Time
+    data[20] = static_cast<char>(0x01); //Type: UV Sterilize
+    data[21] = static_cast<char>(0x00); //Auto Cycle
+    data[22] = static_cast<char>(nCycleTime>>8); //Cycle Time: High Byte
+    data[23] = static_cast<char>(nCycleTime&0xff); //Cycle Time: Low Byte
+    data[24] = static_cast<char>(nSterizeTime&0xff); //Sterilize Time
 
     sequenceNumber++;
     return data;
@@ -289,16 +288,15 @@ QByteArray CommandManager::getDishSellingTableConfigCommand(quint8 addr, qint8 n
 
 QByteArray CommandManager::getUVSterilizeCommandImmediately(quint8 addr, qint8 nSterizeTime)
 {
-    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 f3 01 02 02 00 00 00");
+    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 f3 11 02 02 01 02 00 00 00 00");
     data[10]=(char)(sequenceNumber);
     data[11]=(char)(sequenceNumber>>8);
     data[12]=(char)(sequenceNumber>>16);
     data[15]=(char)(addr);
 
-    data[17] = static_cast<char>(0xf3); //Command
-    data[18] = static_cast<char>(0x01); //Type: UV Sterilize
-    data[19] = static_cast<char>(0x01); //Immediate
-    data[20] = static_cast<char>(nSterizeTime&0xff); //Sterilize Time
+    data[20] = static_cast<char>(0x01); //Type: UV Sterilize
+    data[21] = static_cast<char>(0x01); //Immediate
+    data[22] = static_cast<char>(nSterizeTime&0xff); //Sterilize Time
 
     sequenceNumber++;
     return data;
