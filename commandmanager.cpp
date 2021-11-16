@@ -273,18 +273,15 @@ QByteArray CommandManager::getUVSterilizeCommandAutoCycle(quint8 addr, qint8 nSt
 
 QByteArray CommandManager::getDishSellingTableConfigCommand(quint8 addr, qint8 nMaxTemp, qint16 nMaxWaterLevel)
 {
-    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 f3 01 02 02 00 00 00");
+    QByteArray data=QByteArray::fromHex("00 02 15 11 00 04 00 12 15 00 00 00 00 00 00 00 00 f3 11 02 02 01 02 00 00 00 00");
     data[10]=(char)(sequenceNumber);
     data[11]=(char)(sequenceNumber>>8);
     data[12]=(char)(sequenceNumber>>16);
     data[15]=(char)(addr);
 
-    data[17] = static_cast<char>(0xf3); //Command
-    data[18] = static_cast<char>(0x02); //Type: Dish Selling Table
-    data[19] = static_cast<char>(0x01); //Auto Cycle
-    data[20] = static_cast<char>(nMaxTemp&0xff); //Max Temperature
-    data[21] = static_cast<char>(nMaxWaterLevel>>8); //Max Water Level: High Byte
-    data[22] = static_cast<char>(nMaxWaterLevel&0xff); //Max Water Level: Low Byte
+    data[22] = static_cast<char>(nMaxTemp&0xff); //Max Temperature
+    data[23] = static_cast<char>(nMaxWaterLevel>>8); //Max Water Level: High Byte
+    data[24] = static_cast<char>(nMaxWaterLevel&0xff); //Max Water Level: Low Byte
 
     sequenceNumber++;
     return data;
