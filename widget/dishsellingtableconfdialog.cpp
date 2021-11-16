@@ -5,6 +5,7 @@
 
 #include <QGraphicsDropShadowEffect>
 #include <QDebug>
+#include <QIntValidator>
 
 DishSellingTableConfDialog::DishSellingTableConfDialog(MeshModel *meshModel, QList<quint16> addrList, QWidget *parent) :
     QDialog(parent),
