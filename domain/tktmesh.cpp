@@ -35,6 +35,16 @@ void TKTMesh::setHostName(const QString &hostName)
     m_hostName = hostName;
 }
 
+QString TKTMesh::sceneName() const
+{
+    return m_sceneName;
+}
+
+void TKTMesh::setSceneName(const QString &sceneName)
+{
+    m_sceneName = sceneName;
+}
+
 QString TKTMesh::hostDescription() const
 {
     return m_hostDescription;
@@ -91,6 +101,7 @@ void TKTMesh::load(TKTMesh *tktMesh)
     setHostCode(tktMesh->hostCode());
     setHostKey(tktMesh->hostKey());
     setHostName(tktMesh->hostName());
+    setSceneName(tktMesh->sceneName());
     setHostDescription(tktMesh->hostDescription());
     setHostIP(tktMesh->hostIP());
     setHostPeerIP(tktMesh->hostPeerIP());
@@ -111,6 +122,7 @@ TKTMesh *TKTMesh::copy()
     tktMesh->setHostCode(this->m_hostCode);
     tktMesh->setHostKey(this->m_hostKey);
     tktMesh->setHostName(this->m_hostName);
+    tktMesh->setSceneName(this->m_sceneName);
     tktMesh->setHostDescription(this->m_hostDescription);
     tktMesh->setHostIP(this->m_hostIP);
     tktMesh->setHostPeerIP(this->m_hostPeerIP);

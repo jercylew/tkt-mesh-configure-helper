@@ -25,6 +25,7 @@ void GetHostInfoCallback::taskFinished(bool ok, AsyncApiRequestTask *asyncApiReq
 
             QJsonObject hostData=data.value("host_data").toObject();
             m_tktMesh->setHostName(hostData.value("host_name").toString());
+            m_tktMesh->setSceneName(hostData.value("scene_name").toString());
             m_tktMesh->setHostDescription(hostData.value("host_description").toString());
             m_tktMesh->setHostRegistered(hostData.value("host_registered").toBool());
             m_tktMesh->setPlatformAddress(hostData.value("platform_address").toString());

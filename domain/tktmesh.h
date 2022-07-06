@@ -17,6 +17,9 @@ public:
     QString hostName() const;
     void setHostName(const QString &hostName);
 
+    QString sceneName() const;
+    void setSceneName(const QString &sceneName);
+
     QString hostDescription() const;
     void setHostDescription(const QString &hostDescription);
 
@@ -78,6 +81,7 @@ private:
     QString m_hostID;
     QString m_hostCode;
     QString m_hostName;
+    QString m_sceneName;
     QString m_hostDescription;
     QString m_hostKey;
     QString m_hostIP;

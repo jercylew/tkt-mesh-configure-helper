@@ -37,6 +37,7 @@ TKTMesh *TKTMeshDiscoverHelper__asyncScanTKTMesh(const QHostAddress &address, in
     tktMesh->setHostCode(tktMeshJson.value("host_code").toString());
     QJsonObject hostDataJson=tktMeshJson.value("host_data").toObject();
     tktMesh->setHostName(hostDataJson.value("host_name").toString());
+    tktMesh->setSceneName(hostDataJson.value("scene_name").toString());
     tktMesh->setHostDescription(hostDataJson.value("host_description").toString());
     tktMesh->setHostKey(hostDataJson.value("skey").toString());
     tktMesh->setHostIP(hostDataJson.value("host_ip").toString());

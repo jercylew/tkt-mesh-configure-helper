@@ -45,6 +45,7 @@ TKTMesh *TKTMeshUpdateDiscoverHelper__asyncScanTKTMesh(const QHostAddress &addre
     tktMesh->setHostID(hostID);
     tktMesh->setPlatform(dataObj.value("platform").toString());
     tktMesh->setHostName(dataObj.value("host_name").toString());
+    tktMesh->setSceneName(dataObj.value("scene_name").toString());
     tktMesh->setUpdateDescription(dataObj.value("update_description").toString());
     tktMesh->setHostPeerIP(tcpSocket.peerAddress().toString());
     tcpSocket.close();

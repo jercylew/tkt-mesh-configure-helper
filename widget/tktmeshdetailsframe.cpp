@@ -55,16 +55,21 @@ TKTMeshDetailsFrame::TKTMeshDetailsFrame(TKTMeshModel *tktMeshModel, AbstractCal
     m_meshModel=NULL;
     m_meshInfoWidget=NULL;
 
+    qDebug() << "TKTMeshDetailsFrame::TKTMeshDetailsFrame"
+             << "Scene:" << m_tktMeshModel->tktMesh()->sceneName();
+
     if(this->m_tktMeshModel->tktMesh()->inCloudConfigMode())
     {
-        ui->labelTKTMeshTitle->setText(QString("【云配置模式】 主机ID: %1")
-                                       .arg(m_tktMeshModel->tktMesh()->hostID()));
+        ui->labelTKTMeshTitle->setText(QString("【云配置模式】 主机ID: %1 场地：%2")
+                                       .arg(m_tktMeshModel->tktMesh()->hostID())
+                                       .arg(m_tktMeshModel->tktMesh()->sceneName()));
     }
     else
     {
-        ui->labelTKTMeshTitle->setText(QString("【本地配置模式】 主机ID: %1, 主机通信IP: %2")
+        ui->labelTKTMeshTitle->setText(QString("【本地配置模式】 主机ID: %1, 主机通信IP: %2 场地：%3")
                                        .arg(m_tktMeshModel->tktMesh()->hostID())
-                                       .arg(m_tktMeshModel->tktMesh()->hostPeerIP()));
+                                       .arg(m_tktMeshModel->tktMesh()->hostPeerIP())
+                                       .arg(m_tktMeshModel->tktMesh()->sceneName()));
     }
 
     ui->labelConnectionStatus->setText("已连接");
@@ -127,6 +132,20 @@ void TKTMeshDetailsFrame::reloadHostInfo()
     ui->linePlatformPort->setText(QString::number(m_tktMeshModel->tktMesh()->platformPort()));
     ui->lineCloudConfigAddress->setText(m_tktMeshModel->tktMesh()->cloudConfigAddress());
     ui->lineCloudConfigPort->setText(QString::number(m_tktMeshModel->tktMesh()->cloudConfigPort()));
+
+    if(this->m_tktMeshModel->tktMesh()->inCloudConfigMode())
+    {
+        ui->labelTKTMeshTitle->setText(QString("【云配置模式】 主机ID: %1 场地：%2")
+                                       .arg(m_tktMeshModel->tktMesh()->hostID())
+                                       .arg(m_tktMeshModel->tktMesh()->sceneName()));
+    }
+    else
+    {
+        ui->labelTKTMeshTitle->setText(QString("【本地配置模式】 主机ID: %1, 主机通信IP: %2 场地：%3")
+                                       .arg(m_tktMeshModel->tktMesh()->hostID())
+                                       .arg(m_tktMeshModel->tktMesh()->hostPeerIP())
+                                       .arg(m_tktMeshModel->tktMesh()->sceneName()));
+    }
 }
 
 void TKTMeshDetailsFrame::loadMesh(Mesh *mesh)
