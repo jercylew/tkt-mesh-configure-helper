@@ -744,6 +744,7 @@ Done=确定
 Apply=应用
 Quit=退出
 Error=错误
+Copy=复制
 
 @Replace
 Global.CompanyName=${CompanyShortName}

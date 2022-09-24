@@ -2,6 +2,7 @@
 #define MESHDEVICELISTFRAME_H
 
 #include <QFrame>
+#include <QMenu>
 #include "callback/abstractcallbackinvoker.h"
 #include "callback/abstractcallbackalerter.h"
 
@@ -29,12 +30,20 @@ private slots:
 
     void on_buttonMeshClose_clicked();
 
+    void doActionCopy();
+
+    void on_tableMeshNode_customContextMenuRequested(const QPoint &pos);
+
 private:
+    void initMenuAndAction();
+
     Ui::MeshDeviceListFrame *ui;
     QString m_meshUUID;
     TKTMeshModel *m_tktMeshModel;
     MeshNodesModel *m_meshNodesModel;
     AbstractCallbackAlerter *m_alerter;
+    QMenu *m_menu;
+    QAction *m_actionCopy;
 
 signals:
     void backToTKTMeshPage();

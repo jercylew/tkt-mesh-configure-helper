@@ -1,6 +1,8 @@
 #include "meshdevicelistframe.h"
 #include "ui_meshdevicelistframe.h"
 
+#include <QClipboard>
+
 #include "model/tktmeshmodel.h"
 #include "model/meshnodesmodel.h"
 #include "model/meshnodetableviewmodel.h"
@@ -27,7 +29,7 @@ MeshDeviceListFrame::MeshDeviceListFrame(TKTMeshModel *tktMeshModel, const QStri
     ui->tableMeshNode->verticalHeader()->setVisible( true );
     ui->tableMeshNode->horizontalHeader()->setStretchLastSection( true );
     ui->tableMeshNode->setSelectionMode(QTableView::ExtendedSelection);
-    ui->tableMeshNode->setSelectionBehavior(QTableView::SelectRows);
+    ui->tableMeshNode->setSelectionBehavior(QTableView::SelectItems);
 
     ui->buttonMeshClose->setCursor(Qt::PointingHandCursor);
 
@@ -38,6 +40,8 @@ MeshDeviceListFrame::MeshDeviceListFrame(TKTMeshModel *tktMeshModel, const QStri
     ui->tableMeshNode->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Interactive);
     ui->tableMeshNode->horizontalHeader()->setSectionResizeMode(5, QHeaderView::Stretch);
     ui->tableMeshNode->horizontalHeader()->setSectionResizeMode(6, QHeaderView::Stretch);
+
+    initMenuAndAction();
 }
 
 MeshDeviceListFrame::~MeshDeviceListFrame()
@@ -82,7 +86,59 @@ void MeshDeviceListFrame::on_buttonGetAllNode_clicked()
     m_tktMeshModel->tktMeshConnectionHolder()->apiWorkerController()->runAsyncTask(asyncTask);
 }
 
+void MeshDeviceListFrame::on_tableMeshNode_customContextMenuRequested(const QPoint &pos)
+{
+    m_menu->exec(ui->tableMeshNode->mapToGlobal(pos));
+}
+
 void MeshDeviceListFrame::on_buttonMeshClose_clicked()
 {
     emit backToTKTMeshPage();
+}
+
+void MeshDeviceListFrame::initMenuAndAction()
+{
+    m_menu = new QMenu(this);
+
+    m_actionCopy = new QAction(tr("Copy"));
+    connect(m_actionCopy, SIGNAL(triggered(bool)), this, SLOT(doActionCopy()));
+    m_menu->addAction(m_actionCopy);
+}
+
+void MeshDeviceListFrame::doActionCopy()
+{
+    QAbstractItemModel * model = ui->tableMeshNode->model();
+    QItemSelectionModel * selection = ui->tableMeshNode->selectionModel();
+    QModelIndexList indexes = selection->selectedIndexes();
+
+    QString selected_text;
+    bool bIsFirstItem = true;
+    QModelIndex firstItemIndex = indexes.first();
+    int preRow = firstItemIndex.row();
+
+    foreach(const QModelIndex &current, indexes)
+    {
+        if (current.row() != preRow)
+        {
+            selected_text.append('\n');
+        }
+        else
+        {
+            if (bIsFirstItem)
+            {
+                bIsFirstItem = false;
+            }
+            else
+            {
+                selected_text.append('\t');
+            }
+        }
+
+        QVariant data = model->data(current);
+        QString text = data.toString();
+        selected_text.append(text);
+        preRow = current.row();
+    }
+
+    qApp->clipboard()->setText(selected_text);
 }
