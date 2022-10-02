@@ -8,8 +8,17 @@ QT       += core gui network concurrent sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+qtHaveModule(opengl) {
+        DEFINES += QT_OPENGL_SUPPORT
+        QT += opengl
+}
+
 TARGET = TKTMeshConfigureHelper
 TEMPLATE = app
+
+SHARED_FOLDER = ./shared
+
+include($$SHARED_FOLDER/shared.pri)
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings

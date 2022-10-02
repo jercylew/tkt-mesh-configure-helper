@@ -21,6 +21,7 @@
 #include "callback/getmeshallnodescallback.h"
 #include "callback/defaultcallback.h"
 #include <QMessageBox>
+#include <QStyleFactory>
 #include "domain/bluetoothnode.h"
 #include "callback/getallcomcallback.h"
 #include <QPaintEvent>
@@ -37,6 +38,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->stackedWidget->setCurrentWidget(ui->pageTKTMeshList);
+
+    ui->cmbTargetHostId->setStyle(QStyleFactory::create("Fusion"));
 
     m_tktMeshesModel=new TKTMeshesModel(this);
     m_tktMeshTableViewModel=new TKTMeshTableViewModel(m_tktMeshesModel, this);

@@ -164,7 +164,7 @@
              <item>
               <widget class="QTabWidget" name="tabTKTMeshDetails">
                <property name="currentIndex">
-                <number>2</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="tabHostInfo">
                 <attribute name="title">
@@ -640,7 +640,7 @@
                        <widget class="QPushButton" name="buttonAddMesh">
                         <property name="minimumSize">
                          <size>
-                          <width>0</width>
+                          <width>100</width>
                           <height>30</height>
                          </size>
                         </property>
@@ -653,7 +653,7 @@
                        <widget class="QPushButton" name="buttonRemoveMesh">
                         <property name="minimumSize">
                          <size>
-                          <width>0</width>
+                          <width>100</width>
                           <height>30</height>
                          </size>
                         </property>
@@ -666,7 +666,7 @@
                        <widget class="QPushButton" name="buttonRenameMesh">
                         <property name="minimumSize">
                          <size>
-                          <width>0</width>
+                          <width>100</width>
                           <height>30</height>
                          </size>
                         </property>

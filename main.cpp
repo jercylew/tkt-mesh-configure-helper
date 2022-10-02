@@ -11,6 +11,7 @@
 #include <QLockFile>
 #include <iostream>
 #include <QTextCodec>
+#include "arthurstyle.h"
 
 QString loadStyleSheet()
 {
@@ -27,6 +28,7 @@ QString loadStyleSheet()
 
 int main(int argc, char *argv[])
 {
+    QStyle *arthurStyle = new ArthurStyle();
     QApplication a(argc, argv);
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
     QLockFile lockFile(QDir::tempPath()+"/tktmesh_configure_helper.lock");
@@ -42,9 +44,17 @@ int main(int argc, char *argv[])
     a.setStyleSheet(loadStyleSheet());
     LanguageManager::instance()->changeLanguage("zh_CN");
 
+    QApplication::setStyle(arthurStyle);
     MainWindow w;
     w.setWindowTitle("TKTMesh配置助手");
     w.setMinimumSize(1300, 920);
+//    w.setStyle(arthurStyle);
+
+    QList<QWidget *> widgets = w.findChildren<QWidget *>();
+    foreach (QWidget *w, widgets) {
+//        w->setStyle(arthurStyle);
+        w->setAttribute(Qt::WA_AcceptTouchEvents);
+    }
     w.show();
 
     return a.exec();

@@ -24,6 +24,7 @@
 #include <QPaintEvent>
 #include <QPainter>
 #include <QTime>
+#include <QStyleFactory>
 #include "model/nodegroupsmodel.h"
 #include "callback/getmeshallgroupcallback.h"
 #include "domain/nodegroup.h"
@@ -74,6 +75,7 @@ TKTMeshDetailsFrame::TKTMeshDetailsFrame(TKTMeshModel *tktMeshModel, AbstractCal
 
     ui->labelConnectionStatus->setText("已连接");
     ui->labelConnectionStatus->setStyleSheet("color:#0000FF;");
+    ui->combComName->setStyle(QStyleFactory::create("Fusion"));
 
     m_meshesModel=new MeshesModel(this);
     MeshTableViewModel *meshTableViewModel=new MeshTableViewModel(m_meshesModel, this);
