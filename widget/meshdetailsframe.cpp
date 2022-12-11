@@ -8,6 +8,7 @@
 #include "utils/tools.h"
 #include <QMenu>
 #include <QAction>
+#include <QStyleFactory>
 #include "commandmanager.h"
 #include "utils/nofocuslineitemdelegate.h"
 #include <QModelIndexList>
@@ -64,6 +65,7 @@
 #include "domain/dishsellingtable.h"
 #include "dialogbuilder.h"
 #include "parsermanager.h"
+#include "arthurstyle.h"
 
 #define MAX_NUMBER_OF_SENSOR_NUMBER_DISPLAY_FRAME_PERPAGE   8
 
@@ -72,6 +74,9 @@ MeshDetailsFrame::MeshDetailsFrame(MeshModel *meshModel, QWidget *parent) :
     ui(new Ui::MeshDetailsFrame)
 {
     ui->setupUi(this);
+    ui->listExecuterBody->setStyle(QStyleFactory::create("Fusion"));
+    ui->listNodeGroups->setStyle(QStyleFactory::create("Fusion"));
+    ui->listSensor->setStyle(QStyleFactory::create("Fusion"));
 
     m_mapExecuterType[ADBoard::staticTypeText()] = NodeGroup::ADBoardGroup;
     m_mapExecuterType[OneChannelLuminaire::staticTypeText()] = NodeGroup::LuminaireGroup;

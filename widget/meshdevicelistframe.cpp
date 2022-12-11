@@ -2,6 +2,7 @@
 #include "ui_meshdevicelistframe.h"
 
 #include <QClipboard>
+#include <QStyleFactory>
 
 #include "model/tktmeshmodel.h"
 #include "model/meshnodesmodel.h"
@@ -11,6 +12,7 @@
 #include "utils/tktmeshconnectionholder.h"
 #include "utils/tktmeshapiworkercontroller.h"
 #include "callback/getmeshallnodescallback.h"
+#include "arthurstyle.h"
 
 MeshDeviceListFrame::MeshDeviceListFrame(TKTMeshModel *tktMeshModel, const QString &meshUUID, AbstractCallbackAlerter *alerter, QWidget *parent) :
     QFrame(parent),
@@ -24,7 +26,6 @@ MeshDeviceListFrame::MeshDeviceListFrame(TKTMeshModel *tktMeshModel, const QStri
     m_meshNodesModel=new MeshNodesModel(this);
     MeshNodeTableViewModel *m_meshNodeTableViewModel=new MeshNodeTableViewModel(m_meshNodesModel);
     ui->tableMeshNode->setModel(m_meshNodeTableViewModel);
-
     ui->tableMeshNode->setEditTriggers(QTableView::NoEditTriggers);
     ui->tableMeshNode->verticalHeader()->setVisible( true );
     ui->tableMeshNode->horizontalHeader()->setStretchLastSection( true );
@@ -103,6 +104,8 @@ void MeshDeviceListFrame::initMenuAndAction()
     m_actionCopy = new QAction(tr("Copy"));
     connect(m_actionCopy, SIGNAL(triggered(bool)), this, SLOT(doActionCopy()));
     m_menu->addAction(m_actionCopy);
+//    ui->tableMeshNode->setStyle(QStyleFactory::create("Fusion"));
+    m_menu->setStyle(QStyleFactory::create("Fusion"));
 }
 
 void MeshDeviceListFrame::doActionCopy()
