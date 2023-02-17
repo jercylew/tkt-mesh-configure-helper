@@ -44,14 +44,15 @@ int main(int argc, char *argv[])
     a.setStyleSheet(loadStyleSheet());
     LanguageManager::instance()->changeLanguage("zh_CN");
 
-    QApplication::setStyle(arthurStyle);
+//    QApplication::setStyle(arthurStyle);
     MainWindow w;
     w.setWindowTitle("TKTMesh配置助手");
     w.setMinimumSize(1300, 920);
 //    w.setStyle(arthurStyle);
 
     QList<QWidget *> widgets = w.findChildren<QWidget *>();
-    foreach (QWidget *w, widgets) {
+    foreach (QWidget *w, widgets)
+    {
 //        w->setStyle(arthurStyle);
         w->setAttribute(Qt::WA_AcceptTouchEvents);
     }
