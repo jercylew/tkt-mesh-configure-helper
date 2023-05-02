@@ -32,8 +32,20 @@ void AddANDComparisionItemDialogFrame::populateCmbData()
         ui->cmbBindSensorId->addItem(m_ptrMeshModel->sensorsModel()->at(i)->sensorId(),
                                      m_ptrMeshModel->sensorsModel()->at(i)->typeText());
     }
-    ui->cmbCmpOperator->addItem(">", ">");
-    ui->cmbCmpOperator->addItem("<", "<");
+
+    //Add modbus sensors
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_1_0[漏电流]", "modbus_ttyS0_1_0");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_2_0[总线路温度]", "modbus_ttyS0_2_0");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_2_1[空调温度]", "modbus_ttyS0_2_1");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_2_2[插座温度]", "modbus_ttyS0_2_2");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_3_0[空调电流]", "modbus_ttyS0_3_0");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_3_1[照明1电流]", "modbus_ttyS0_3_1");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_3_2[照明2电流]", "modbus_ttyS0_3_2");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_3_3[紫外灯电流]", "modbus_ttyS0_3_3");
+    ui->cmbBindSensorId->addItem("modbus_ttyS0_3_4[插座电流]", "modbus_ttyS0_3_4");
+
+//    ui->cmbCmpOperator->addItem(">", ">");
+//    ui->cmbCmpOperator->addItem("<", "<");
 }
 
 bool AddANDComparisionItemDialogFrame::isSensorBooleanData(QString strSensorId, QString strValue)
@@ -119,9 +131,9 @@ void AddANDComparisionItemDialogFrame::on_cmbBindSensorId_currentIndexChanged(co
     else if (strText.startsWith(REAL_MOTION_LUX_CAMERA_SHORT_TYPE_TEXT))
     {
         ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
-        ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
-        ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
-        ui->cmbSensorValue->addItem("TRIG1", "TRIG1");
+        ui->cmbSensorValue->addItem("TRIG2", "TRIG2");
+        ui->cmbSensorValue->addItem("TRIG3", "TRIG3");
+        ui->cmbSensorValue->addItem("TRIG4", "TRIG4");
         ui->cmbSensorValue->addItem("LUX1", "LUX1");
         ui->cmbSensorValue->addItem("LUX2", "LUX2");
         ui->cmbSensorValue->addItem("LUX3", "LUX3");
